@@ -7,9 +7,9 @@ import Head from "next/head";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Skypass - дешёвые авиабилеты</title>
-        <meta name="description" content="Поиск дешёвых авиабилетов" />
+     <Head>
+        <title>Skypass - billets d&lsquo;avion pas chers</title>
+        <meta name="description" content="Recherche de billets d'avion pas chers" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />

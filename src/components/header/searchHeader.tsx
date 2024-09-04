@@ -4,16 +4,17 @@ import { LogoIcon } from "../icons/logo";
 import { useRouter } from "next/router";
 
 export const SearchHeader = () => {
-    const [departure, setDeparture] = useState("Москва");
-    const [arrival, setArrival] = useState("Стамбул");
-    const [date, setDate] = useState("11 сентября, ср");
+    const [departure, setDeparture] = useState("Moscou");
+    const [arrival, setArrival] = useState("Istanbul");
+    const [date, setDate] = useState("11 septembre, mer");
     const [returnDate, setReturnDate] = useState("");
-    const [passengers, setPassengers] = useState("1 пассажир");
+    const [passengers, setPassengers] = useState("1 passager");
+
 
     const router = useRouter();
 
     const handleSearch = () => {
-        // Здесь можно добавить логику поиска
+
     };
 
     return (
@@ -21,7 +22,7 @@ export const SearchHeader = () => {
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center mb-4">
                     <Link href="/">
-                        <LogoIcon />
+                        Skypass
                     </Link>
                     <div className="flex items-center space-x-4">
                         <button className="text-white">
@@ -63,9 +64,9 @@ export const SearchHeader = () => {
                     <div className="text-sm text-gray-500">{date}</div>
                 </div>
                 <div className="flex space-x-2 overflow-x-auto pb-2">
-                    <button className="bg-white text-blue-600 px-4 py-2 rounded-full text-sm whitespace-nowrap">Пересадки</button>
-                    <button className="bg-white text-blue-600 px-4 py-2 rounded-full text-sm whitespace-nowrap">Багаж и тариф</button>
-                    <button className="bg-white text-blue-600 px-4 py-2 rounded-full text-sm whitespace-nowrap">Время</button>
+                    <button className="bg-white text-blue-600 px-4 py-2 rounded-full text-sm whitespace-nowrap">Escales</button>
+                    <button className="bg-white text-blue-600 px-4 py-2 rounded-full text-sm whitespace-nowrap">Bagages et tarif</button>
+                    <button className="bg-white text-blue-600 px-4 py-2 rounded-full text-sm whitespace-nowrap">Horaires</button>
                 </div>
             </div>
         </header>

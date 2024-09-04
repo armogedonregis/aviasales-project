@@ -8,54 +8,54 @@ import { SearchHeader } from "@/components/header/searchHeader";
 const Filters = () => {
     return (
         <div className="bg-white rounded-lg shadow-md p-4 mb-4">
-            <h2 className="font-semibold mb-4">Фильтры</h2>
+            <h2 className="font-semibold mb-4">Filtres</h2>
 
             <button className="w-full text-left text-blue-600 mb-4">
-                ❤️ Сохранить поиск
+                ❤️ Enregistrer la recherche
             </button>
 
             <div className="mb-4">
-                <h3 className="font-semibold mb-2">Пересадки</h3>
+                <h3 className="font-semibold mb-2">Escales</h3>
                 <label className="flex items-center mb-2">
                     <input type="checkbox" className="mr-2" />
-                    <span>Прямые рейсы</span>
+                    <span>Vols directs</span>
                     <span className="ml-auto text-gray-500">37 999₽</span>
                 </label>
                 <label className="flex items-center">
                     <input type="checkbox" className="mr-2" />
-                    <span>1 пересадка</span>
+                    <span>1 escale</span>
                     <span className="ml-auto text-gray-500">43 811₽</span>
                 </label>
             </div>
 
             <div className="mb-4">
-                <h3 className="font-semibold mb-2">Длительность пересадок</h3>
+                <h3 className="font-semibold mb-2">Durée des escales</h3>
                 <input type="range" className="w-full" min="0" max="24" step="1" />
                 <div className="flex justify-between text-sm text-gray-500">
-                    <span>До 24ч</span>
+                    <span>Jusqu&lsquo;à 24h</span>
                 </div>
             </div>
 
-            <button className="text-blue-600 mb-4">Если комфорт важнее</button>
+            <button className="text-blue-600 mb-4">Si le confort est plus important</button>
 
             <label className="flex items-center mb-4">
                 <input type="checkbox" className="mr-2" />
-                <span>Без ночных пересадок</span>
+                <span>Sans escales nocturnes</span>
             </label>
 
             {[
-                "Вылет в Стамбул",
-                "Багаж и тариф",
-                "Авиакомпании",
-                "Альянсы",
-                "Время в пути",
-                "Аэропорты пересадок",
-                "Аэропорты в Москве",
-                "Аэропорты в Стамбуле",
-                "Стоимость",
-                "Агентства",
-                "Способы оплаты",
-                "Сортировка"
+                "Départ pour Istanbul",
+                "Bagages et tarif",
+                "Compagnies aériennes",
+                "Alliances",
+                "Temps de vol",
+                "Aéroports de correspondance",
+                "Aéroports à Moscou",
+                "Aéroports à Istanbul",
+                "Prix",
+                "Agences",
+                "Modes de paiement",
+                "Tri"
             ].map((filter, index) => (
                 <div key={index} className="mb-2">
                     <button className="flex justify-between items-center w-full text-left">
@@ -93,7 +93,7 @@ const SearchResult = ({ flight }: { flight: Flight }) => (
     <div className="bg-white rounded-lg shadow-md p-4 mb-4">
         <div className="flex justify-between items-start mb-2">
             <div className={`text-xs font-semibold ${flight.cheapest ? 'text-green-500 bg-green-100' : flight.twoDirectFlights ? 'text-purple-500 bg-purple-100' : ''} rounded-full px-2 py-0.5 inline-block`}>
-                {flight.cheapest ? 'Самый дешёвый' : flight.twoDirectFlights ? 'Всего два прямых' : ''}
+                {flight.cheapest ? 'Le moins cher' : flight.twoDirectFlights ? 'Seulement deux vols directs' : ''}
             </div>
             <button className="text-gray-400">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -103,7 +103,7 @@ const SearchResult = ({ flight }: { flight: Flight }) => (
         </div>
         <div className="flex justify-between items-center mb-2">
             <div className="text-2xl font-bold">{flight.price}₽</div>
-            <div className="text-sm text-gray-500">{flight.baggage ? `С багажом ${flight.baggagePrice}кг` : 'Без багажа'}</div>
+            <div className="text-sm text-gray-500">{flight.baggage ? `Avec bagages ${flight.baggagePrice}kg` : 'Sans bagages'}</div>
         </div>
         <div className="flex items-center mb-2">
             <img src={flight.airlineLogo} alt={flight.airline} className="h-6 mr-2" />
@@ -119,7 +119,7 @@ const SearchResult = ({ flight }: { flight: Flight }) => (
             </div>
         </div>
         <div className="text-xs text-gray-500 mb-2">
-            {flight.duration} / {flight.direct ? 'Прямой' : `${flight.stops} пересадка`}
+            {flight.duration} / {flight.direct ? 'Direct' : `${flight.stops} escale`}
         </div>
     </div>
 );
@@ -291,8 +291,8 @@ export default function Search() {
     return (
         <>
             <Head>
-                <title>Поиск билетов - Skypass</title>
-                <meta name="description" content="Результаты поиска авиабилетов" />
+                <title>Recherche de billets - Skypass</title>
+                <meta name="description" content="Résultats de la recherche de billets d'avion" />
             </Head>
             <SearchHeader />
             <main className="bg-gray-100 min-h-screen">
@@ -306,16 +306,23 @@ export default function Search() {
                                 </svg>
                             </button>
                         </div>
-                        <div className="text-sm text-gray-500">11 сентября</div>
+                        <div className="text-sm text-gray-500">11 septembre</div>
                     </div>
                     <div className="flex space-x-2 mb-4 overflow-x-auto">
-                        <button className="bg-white rounded-full px-4 py-2 text-sm whitespace-nowrap">Пересадки</button>
-                        <button className="bg-white rounded-full px-4 py-2 text-sm whitespace-nowrap">Багаж и тариф</button>
-                        <button className="bg-white rounded-full px-4 py-2 text-sm whitespace-nowrap">Время</button>
+                        <button className="bg-white rounded-full px-4 py-2 text-sm whitespace-nowrap">Escales</button>
+                        <button className="bg-white rounded-full px-4 py-2 text-sm whitespace-nowrap">Bagages et tarif</button>
+                        <button className="bg-white rounded-full px-4 py-2 text-sm whitespace-nowrap">Horaires</button>
                     </div>
-                    {flights.map((flight, index) => (
-                        <SearchResult key={index} flight={flight} />
-                    ))}
+                    <div className="flex flex-col lg:flex-row">
+                        <div className="hidden lg:block lg:w-1/4 mb-4 lg:mb-0 lg:mr-4">
+                            <Filters />
+                        </div>
+                        <div className="w-full lg:w-3/4">
+                            {flights.map((flight, index) => (
+                                <SearchResult key={index} flight={flight} />
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </main>
             <Footer />

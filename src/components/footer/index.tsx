@@ -2,12 +2,12 @@ import { useState } from "react";
 
 export const Footer = () => {
     const categories = [
-        { title: "СТРАНЫ", items: ["Россия", "Таиланд", "Черногория", "Кипр", "Болгария", "Грузия", "Все страны →"] },
-        { title: "ГОРОДА", items: ["Москва", "Санкт-Петербург", "Адлер", "Екатеринбург", "Лондон", "Все города →"] },
-        { title: "АВИАКОМПАНИИ", items: ["Аэрофлот", "Air France", "Alitalia", "Air Baltic", "Emirates", "KLM", "Все авиакомпании →"] },
-        { title: "АЭРОПОРТЫ", items: ["Шереметьево", "Курумоч", "Домодедово", "Толмачево", "Владивосток", "Гамбург", "Все аэропорты →"] },
-        { title: "СЕРВИСЫ", items: ["Куда угодно", "Журнал ПСКР", "Поддержка"] },
-        { title: "НАПРАВЛЕНИЯ", items: ["Москва – Сочи", "Москва – Тиват", "Москва – Минеральные Воды", "Санкт-Петербург – Москва", "Москва – Бангкок"] },
+        { title: "PAYS", items: ["Russie", "Thaïlande", "Monténégro", "Chypre", "Bulgarie", "Géorgie", "Tous les pays →"] },
+        { title: "VILLES", items: ["Moscou", "Saint-Pétersbourg", "Adler", "Ekaterinbourg", "Londres", "Toutes les villes →"] },
+        { title: "COMPAGNIES AÉRIENNES", items: ["Aeroflot", "Air France", "Alitalia", "Air Baltic", "Emirates", "KLM", "Toutes les compagnies →"] },
+        { title: "AÉROPORTS", items: ["Sheremetyevo", "Kurumoch", "Domodedovo", "Tolmachevo", "Vladivostok", "Hambourg", "Tous les aéroports →"] },
+        { title: "SERVICES", items: ["N'importe où", "Magazine PSKR", "Support"] },
+        { title: "DESTINATIONS", items: ["Moscou – Sotchi", "Moscou – Tivat", "Moscou – Eaux Minérales", "Saint-Pétersbourg – Moscou", "Moscou – Bangkok"] },
     ];
 
     const [openCategory, setOpenCategory] = useState<number | null>(null);
@@ -17,19 +17,19 @@ export const Footer = () => {
     };
 
     const socialIcons = [
-        { name: "vk", label: "ВКонтакте" },
+        { name: "vk", label: "VKontakte" },
         { name: "telegram", label: "Telegram" },
         { name: "twitter", label: "Twitter" },
         { name: "tiktok", label: "TikTok" },
-        { name: "zen", label: "Дзен" },
+        { name: "zen", label: "Zen" },
         { name: "viber", label: "Viber" },
         { name: "youtube", label: "YouTube" }
     ];
 
-    const links = ["О нас", "Партнёрская программа", "Реклама", "Пресс-центр", "Вакансии", "Поддержка", "Юридические документы"];
+    const links = ["À propos", "Programme partenaire", "Publicité", "Centre de presse", "Carrières", "Support", "Documents juridiques"];
 
     return (
-        <footer className="bg-white py-4 md:py-8 border-t">
+<footer className="bg-white py-4 md:py-8 border-t">
             <div className="container mx-auto px-4">
                 <div className="hidden md:grid grid-cols-6 gap-8 mb-8">
                     {categories.map((category, index) => (
@@ -50,14 +50,14 @@ export const Footer = () => {
                         <div className="flex items-start mb-2">
                             <span className="text-red-500 text-2xl mr-2">❤️</span>
                             <p className="text-sm">
-                                Знаем, как экономить на отдыхе,<br />
-                                ловить скидки и летать без визы.<br />
-                                И вам расскажем
+                                Nous savons comment économiser sur les vacances,<br />
+                                attraper des réductions et voler sans visa.<br />
+                                Et nous vous le dirons
                             </p>
                         </div>
                         <input
                             type="email"
-                            placeholder="На какую почту слать письма"
+                            placeholder="À quelle adresse envoyer les e-mails"
                             className="w-full p-2 border rounded bg-white"
                         />
                     </div>
@@ -86,19 +86,19 @@ export const Footer = () => {
                     <div className="flex items-center">
                         <span className="text-red-500 text-2xl mr-2">❤️</span>
                         <p className="text-sm">
-                            Знаем, как экономить на отдыхе,<br />
-                            ловить скидки и летать без визы.<br />
-                            И вам расскажем
+                            Nous savons comment économiser sur les vacances,<br />
+                            attraper des réductions et voler sans visa.<br />
+                            Et nous vous le dirons
                         </p>
                     </div>
                     <div className="flex-1 mx-8">
-                        <input type="email" placeholder="На какую почту слать письма" className="w-full p-2 border rounded" />
+                        <input type="email" placeholder="À quelle adresse envoyer les e-mails" className="w-full p-2 border rounded" />
                     </div>
                     <div className="text-sm">
-                        <p>В приложении удобнее</p>
-                        <p className="text-gray-500">Там суперыбстрый поиск и легче следить за ценами на билеты</p>
+                        <p>C&lsquo;est plus pratique dans l&lsquo;application</p>
+                        <p className="text-gray-500">La recherche y est super rapide et il est plus facile de suivre les prix des billets</p>
                     </div>
-                    <img src="/qr-code.png" alt="QR Code" className="w-24 h-24" />
+                    <img src="/qr-code.png" alt="Code QR" className="w-24 h-24" />
                 </div>
                 <div className="flex justify-center space-x-6 mb-4 mt-4">
                     {socialIcons.map((icon) => (
@@ -113,7 +113,7 @@ export const Footer = () => {
                     ))}
                 </div>
                 <div className="text-center text-xs text-gray-500">
-                    ©2024, Skypass — дешевые авиабилеты
+                    ©2024, Skypass — billets d&lsquo;avion pas chers
                 </div>
             </div>
         </footer>

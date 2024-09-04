@@ -11,35 +11,35 @@ interface Direction {
 }
 
 export const PopularDirection: React.FC = () => {
-  const directions: Direction[] = [
-    { city: 'Ташкент', country: 'Узбекистан', flag: '🇺🇿' },
-    { city: 'Стамбул', country: 'Турция', flag: '🇹🇷' },
-    { city: 'Ереван', country: 'Армения', flag: '🇦🇲' },
-    { city: 'Анталья', country: 'Турция', flag: '🇹🇷' },
-    { city: 'Баку', country: 'Азербайджан', flag: '🇦🇿' },
-    { city: 'Душанбе', country: 'Таджикистан', flag: '🇹🇯' },
-    { city: 'Дубай', country: 'ОАЭ', flag: '🇦🇪' },
-    { city: 'Пхукет', country: 'Таиланд', flag: '🇹🇭' },
-    { city: 'Ош', country: 'Кыргызстан', flag: '🇰🇬' },
-    { city: 'Бишкек', country: 'Кыргызстан', flag: '🇰🇬' },
-    { city: 'Бангкок', country: 'Таиланд', flag: '🇹🇭' },
-    { city: 'Самарканд', country: 'Узбекистан', flag: '🇺🇿' },
-  ];
+    const directions: Direction[] = [
+        { city: 'Tachkent', country: 'Ouzbékistan', flag: '🇺🇿' },
+        { city: 'Istanbul', country: 'Turquie', flag: '🇹🇷' },
+        { city: 'Erevan', country: 'Arménie', flag: '🇦🇲' },
+        { city: 'Antalya', country: 'Turquie', flag: '🇹🇷' },
+        { city: 'Bakou', country: 'Azerbaïdjan', flag: '🇦🇿' },
+        { city: 'Douchanbé', country: 'Tadjikistan', flag: '🇹🇯' },
+        { city: 'Dubaï', country: 'EAU', flag: '🇦🇪' },
+        { city: 'Phuket', country: 'Thaïlande', flag: '🇹🇭' },
+        { city: 'Och', country: 'Kirghizistan', flag: '🇰🇬' },
+        { city: 'Bichkek', country: 'Kirghizistan', flag: '🇰🇬' },
+        { city: 'Bangkok', country: 'Thaïlande', flag: '🇹🇭' },
+        { city: 'Samarcande', country: 'Ouzbékistan', flag: '🇺🇿' },
+      ];
 
-  const helpTopics = [
-    'Не пришёл билет',
-    'Возврат или обмен билета',
-    'Про багаж',
-    'Изменение паспортных данных',
-    'Перелёты с детьми',
-  ];
+      const helpTopics = [
+        'Billet non reçu',
+        'Remboursement ou échange de billet',
+        'À propos des bagages',
+        'Modification des données du passeport',
+        'Voyager avec des enfants',
+      ];
 
   return (
     <div className="flex flex-col lg:flex-row justify-between mt-8 mx-auto max-w-6xl px-4">
       <div className="w-full lg:w-2/3 lg:pr-8 mb-8 lg:mb-0">
         <h2 className="text-xl md:text-2xl font-bold mb-4 flex items-start gap-2">
           <PopularIcon />
-          Популярные направления
+          Destinations populaires
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {directions.map((direction, index) => (
@@ -59,7 +59,7 @@ export const PopularDirection: React.FC = () => {
       <div className="w-full lg:w-1/3">
         <h2 className="text-xl md:text-2xl font-bold mb-4 flex items-center gap-2">
           <PopularHelp />
-          Помощь и советы
+          Aide et conseils
         </h2>
         <div className="space-y-2">
           {helpTopics.map((topic, index) => (
@@ -69,7 +69,7 @@ export const PopularDirection: React.FC = () => {
             </div>
           ))}
           <button className="w-full border border-blue-500 text-blue-500 rounded-lg p-2 mt-4 hover:bg-blue-50 transition-colors">
-            СМОТРЕТЬ ВЕСЬ РАЗДЕЛ →
+            VOIR TOUTE LA SECTION →
           </button>
         </div>
       </div>
