@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export const Footer = () => {
     const categories = [
         { title: "СТРАНЫ", items: ["Россия", "Таиланд", "Черногория", "Кипр", "Болгария", "Грузия", "Все страны →"] },
@@ -8,25 +10,51 @@ export const Footer = () => {
         { title: "НАПРАВЛЕНИЯ", items: ["Москва – Сочи", "Москва – Тиват", "Москва – Минеральные Воды", "Санкт-Петербург – Москва", "Москва – Бангкок"] },
     ];
 
+    const [openCategory, setOpenCategory] = useState<number | null>(null);
+
+    const toggleCategory = (index: number) => {
+        setOpenCategory(openCategory === index ? null : index);
+    };
+
+    const socialIcons = [
+        { name: "vk", label: "ВКонтакте" },
+        { name: "telegram", label: "Telegram" },
+        { name: "twitter", label: "Twitter" },
+        { name: "tiktok", label: "TikTok" },
+        { name: "zen", label: "Дзен" },
+        { name: "viber", label: "Viber" },
+        { name: "youtube", label: "YouTube" }
+    ];
+
+    const links = ["О нас", "Партнёрская программа", "Реклама", "Пресс-центр", "Вакансии", "Поддержка", "Юридические документы"];
+
     return (
-        <footer className="bg-gray-100 py-8">
+        <footer className="bg-white py-4">
             <div className="container mx-auto px-4">
-                <div className="grid grid-cols-6 gap-4 mb-8">
+                <div className="mb-4">
                     {categories.map((category, index) => (
-                        <div key={index}>
-                            <h3 className="text-sm font-semibold mb-2">{category.title}</h3>
-                            <ul className="text-sm">
-                                {category.items.map((item, itemIndex) => (
-                                    <li key={itemIndex} className="mb-1">
-                                        <a href="#" className={`hover:text-blue-500 ${item.includes('→') ? 'text-blue-500' : ''}`}>{item}</a>
-                                    </li>
-                                ))}
-                            </ul>
+                        <div key={index} className="border-b">
+                            <button
+                                className="w-full py-3 flex justify-between items-center text-left"
+                                onClick={() => toggleCategory(index)}
+                            >
+                                <span className="font-semibold">{category.title}</span>
+                                <span className={`transform transition-transform ${openCategory === index ? 'rotate-180' : ''}`}>▼</span>
+                            </button>
+                            {openCategory === index && (
+                                <ul className="py-2">
+                                    {category.items.map((item, itemIndex) => (
+                                        <li key={itemIndex} className="py-1">
+                                            <a href="#" className={`text-sm ${item.includes('→') ? 'text-blue-500' : ''}`}>{item}</a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </div>
                     ))}
                 </div>
-                <div className="bg-white p-4 rounded-lg flex justify-between items-center mb-8">
-                    <div className="flex items-center">
+                <div className="bg-gray-100 p-4 rounded-lg mb-4">
+                    <div className="flex items-center mb-2">
                         <span className="text-red-500 text-2xl mr-2">❤️</span>
                         <p className="text-sm">
                             Знаем, как экономить на отдыхе,<br />
@@ -34,31 +62,23 @@ export const Footer = () => {
                             И вам расскажем
                         </p>
                     </div>
-                    <div className="flex-1 mx-8">
-                        <input type="email" placeholder="На какую почту слать письма" className="w-full p-2 border rounded" />
-                    </div>
-                    <div className="text-sm">
-                        <p>В приложении удобнее</p>
-                        <p className="text-gray-500">Там суперыбстрый поиск и легче следить за ценами на билеты</p>
-                    </div>
-                    <img src="/qr-code.png" alt="QR Code" className="w-24 h-24" />
+                    <input type="email" placeholder="На какую почту слать письма" className="w-full p-2 border rounded mb-2" />
                 </div>
-                <div className="flex justify-center space-x-4 mb-4">
-                    {["ВКонтакте", "Telegram", "Twitter", "TikTok", "Дзен", "Viber", "YouTube"].map((social, index) => (
-                        <a key={index} href="#" className="text-blue-500 hover:underline">{social}</a>
+                <div className="flex justify-center space-x-6 mb-4">
+                    {socialIcons.map((icon) => (
+                        <a key={icon.name} href="#" className="text-blue-500 flex gap-2 items-center">
+                            <img src={`/assets/vector/${icon.name}.svg`} alt={icon.label} className="w-6 h-6 mb-1" />
+                            <span className="text-xs lg:inline hidden">{icon.label}</span>
+                        </a>
                     ))}
                 </div>
-                <div className="text-center text-sm text-gray-500">
-                    <a href="#" className="hover:underline">О нас</a> • 
-                    <a href="#" className="hover:underline"> Партнёрская программа</a> • 
-                    <a href="#" className="hover:underline"> Реклама</a> • 
-                    <a href="#" className="hover:underline"> Пресс-центр</a> • 
-                    <a href="#" className="hover:underline"> Вакансии</a> • 
-                    <a href="#" className="hover:underline"> Поддержка</a> • 
-                    <a href="#" className="hover:underline"> Юридические документы</a>
+                <div className="flex flex-wrap justify-center gap-2 mb-4 text-xs text-gray-500">
+                    {links.map((link, index) => (
+                        <a key={index} href="#" className="hover:underline">{link}</a>
+                    ))}
                 </div>
-                <div className="text-center text-sm text-gray-500 mt-2">
-                    © 2007–2024, Авиасейлс — дешевые авиабилеты
+                <div className="text-center text-xs text-gray-500 mb-2">
+                    ©2024, Skypass — дешевые авиабилеты
                 </div>
             </div>
         </footer>

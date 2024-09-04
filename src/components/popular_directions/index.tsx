@@ -35,13 +35,13 @@ export const PopularDirection: React.FC = () => {
   ];
 
   return (
-    <div className="flex justify-between mt-8 mx-auto max-w-6xl">
-      <div className="w-2/3 pr-8">
-        <h2 className="text-2xl font-bold mb-4 flex items-start gap-2">
+    <div className="flex flex-col lg:flex-row justify-between mt-8 mx-auto max-w-6xl px-4">
+      <div className="w-full lg:w-2/3 lg:pr-8 mb-8 lg:mb-0">
+        <h2 className="text-xl md:text-2xl font-bold mb-4 flex items-start gap-2">
           <PopularIcon />
           Популярные направления
         </h2>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {directions.map((direction, index) => (
             <div key={index} className="bg-gray-100 rounded-lg p-3 flex items-center justify-between">
               <div className="flex items-center">
@@ -56,8 +56,8 @@ export const PopularDirection: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="w-1/3">
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-5">
+      <div className="w-full lg:w-1/3">
+        <h2 className="text-xl md:text-2xl font-bold mb-4 flex items-center gap-2">
           <PopularHelp />
           Помощь и советы
         </h2>

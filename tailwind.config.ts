@@ -8,7 +8,8 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          navbar: "rgba(17, 33, 56, 0.12)"
+          navbar: "rgba(17, 33, 56, 0.12)",
+          calendar: "#eff1f4"
         }
       }
     },

@@ -1,7 +1,6 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { PopularDirection } from "@/components/popular_directions";
-import { SearchForm } from "@/components/search_form";
 import Head from "next/head";
 
 
@@ -9,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Aviasales - дешёвые авиабилеты</title>
+        <title>Skypass - дешёвые авиабилеты</title>
         <meta name="description" content="Поиск дешёвых авиабилетов" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
