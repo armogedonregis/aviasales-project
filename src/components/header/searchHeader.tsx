@@ -21,7 +21,7 @@ export const SearchHeader = () => {
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center mb-4">
                     <Link href="/">
-                        <LogoIcon className="w-8 h-8" />
+                        <LogoIcon />
                     </Link>
                     <div className="flex items-center space-x-4">
                         <button className="text-white">
