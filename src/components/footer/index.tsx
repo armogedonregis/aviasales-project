@@ -29,9 +29,38 @@ export const Footer = () => {
     const links = ["О нас", "Партнёрская программа", "Реклама", "Пресс-центр", "Вакансии", "Поддержка", "Юридические документы"];
 
     return (
-        <footer className="bg-white py-4">
+        <footer className="bg-white py-4 md:py-8 border-t">
             <div className="container mx-auto px-4">
-                <div className="mb-4">
+                <div className="hidden md:grid grid-cols-6 gap-8 mb-8">
+                    {categories.map((category, index) => (
+                        <div key={index}>
+                            <h3 className="font-semibold mb-4">{category.title}</h3>
+                            <ul>
+                                {category.items.map((item, itemIndex) => (
+                                    <li key={itemIndex} className="mb-2">
+                                        <a href="#" className={`text-sm ${item.includes('→') ? 'text-blue-500' : 'text-gray-600'}`}>{item}</a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+                <div className="md:hidden">
+                    <div className="bg-gray-100 p-4 rounded-lg mb-4">
+                        <div className="flex items-start mb-2">
+                            <span className="text-red-500 text-2xl mr-2">❤️</span>
+                            <p className="text-sm">
+                                Знаем, как экономить на отдыхе,<br />
+                                ловить скидки и летать без визы.<br />
+                                И вам расскажем
+                            </p>
+                        </div>
+                        <input
+                            type="email"
+                            placeholder="На какую почту слать письма"
+                            className="w-full p-2 border rounded bg-white"
+                        />
+                    </div>
                     {categories.map((category, index) => (
                         <div key={index} className="border-b">
                             <button
@@ -53,8 +82,8 @@ export const Footer = () => {
                         </div>
                     ))}
                 </div>
-                <div className="bg-gray-100 p-4 rounded-lg mb-4">
-                    <div className="flex items-center mb-2">
+                <div className="bg-white p-4 rounded-lg hidden lg:flex justify-between items-center mb-8">
+                    <div className="flex items-center">
                         <span className="text-red-500 text-2xl mr-2">❤️</span>
                         <p className="text-sm">
                             Знаем, как экономить на отдыхе,<br />
@@ -62,13 +91,19 @@ export const Footer = () => {
                             И вам расскажем
                         </p>
                     </div>
-                    <input type="email" placeholder="На какую почту слать письма" className="w-full p-2 border rounded mb-2" />
+                    <div className="flex-1 mx-8">
+                        <input type="email" placeholder="На какую почту слать письма" className="w-full p-2 border rounded" />
+                    </div>
+                    <div className="text-sm">
+                        <p>В приложении удобнее</p>
+                        <p className="text-gray-500">Там суперыбстрый поиск и легче следить за ценами на билеты</p>
+                    </div>
+                    <img src="/qr-code.png" alt="QR Code" className="w-24 h-24" />
                 </div>
-                <div className="flex justify-center space-x-6 mb-4">
+                <div className="flex justify-center space-x-6 mb-4 mt-4">
                     {socialIcons.map((icon) => (
-                        <a key={icon.name} href="#" className="text-blue-500 flex gap-2 items-center">
-                            <img src={`/assets/vector/${icon.name}.svg`} alt={icon.label} className="w-6 h-6 mb-1" />
-                            <span className="text-xs lg:inline hidden">{icon.label}</span>
+                        <a key={icon.name} href="#" className="text-blue-500">
+                            <img src={`/assets/vector/${icon.name}.svg`} alt={icon.label} className="w-6 h-6" />
                         </a>
                     ))}
                 </div>
@@ -77,7 +112,7 @@ export const Footer = () => {
                         <a key={index} href="#" className="hover:underline">{link}</a>
                     ))}
                 </div>
-                <div className="text-center text-xs text-gray-500 mb-2">
+                <div className="text-center text-xs text-gray-500">
                     ©2024, Skypass — дешевые авиабилеты
                 </div>
             </div>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import PassengerSelector from "../UI/passenger";
 import DatePicker from "../datePicter";
 import { LogoIcon } from "../icons/logo";
+import { useRouter } from "next/router";
 
 const menuItems = [
     { label: "Авиабилеты", icon: "✈️" },
@@ -21,9 +22,11 @@ export const Header = () => {
     const [selectedDate, setSelectedDate] = useState<Date | null>(null);
     const [isScrolled, setIsScrolled] = useState(false);
 
+    const router = useRouter();
+
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 100);
+            setIsScrolled(window.scrollY > 300);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -54,6 +57,11 @@ export const Header = () => {
     const handleDateSelectTwo = (date: Date) => {
         setSelectedDate(date);
         setShowDatePickerTwo(false);
+    };
+
+
+    const handleSearch = () => {
+        router.push('/search');
     };
 
     return (
@@ -122,6 +130,16 @@ export const Header = () => {
                                 MOW
                             </div>
                         </div>
+                        <div className="flex-1 relative">
+                            <input
+                                type="text"
+                                placeholder="Москва"
+                                className="w-full px-4 h-[60px] text-black focus:outline-none rounded-lg pl-4 pr-16"
+                            />
+                            <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-xs text-gray-400">
+                                MOW
+                            </div>
+                        </div>
                         <div className="flex-1">
                             <div className="relative">
                                 <input
@@ -161,7 +179,7 @@ export const Header = () => {
                         <div className="flex-1">
                             <PassengerSelector />
                         </div>
-                        <button className="w-full md:w-auto px-8 h-[60px] bg-orange-500 text-white font-bold hover:bg-orange-600 transition-colors rounded-lg">
+                        <button onClick={handleSearch} className="w-full md:w-auto px-8 h-[60px] bg-orange-500 text-white font-bold hover:bg-orange-600 transition-colors rounded-lg">
                             Найти билеты
                         </button>
                     </div>
