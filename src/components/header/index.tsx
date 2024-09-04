@@ -180,7 +180,7 @@ export const Header = () => {
                             <PassengerSelector />
                         </div>
                         <button onClick={handleSearch} className="w-full md:w-auto px-8 h-[60px] bg-orange-500 text-white font-bold hover:bg-orange-600 transition-colors rounded-lg">
-                            Найти билеты
+                            Trouver des billets
                         </button>
                     </div>
 

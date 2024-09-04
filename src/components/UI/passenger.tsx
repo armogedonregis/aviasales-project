@@ -9,11 +9,11 @@ interface Passenger {
 const PassengerSelector: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [passengers, setPassengers] = useState<Passenger[]>([
-    { type: 'Взрослые', count: 1, ageDescription: '12 лет и старше' },
-    { type: 'Дети', count: 0, ageDescription: 'от 2 до 11 лет' },
-    { type: 'Младенцы', count: 0, ageDescription: 'Младше 2 лет, без места' },
+    { type: 'Adultes', count: 1, ageDescription: '12 ans et plus' },
+    { type: 'Enfants', count: 0, ageDescription: 'de 2 à 11 ans' },
+    { type: 'Bébés', count: 0, ageDescription: 'Moins de 2 ans, sans siège' },
   ]);
-  const [serviceClass, setServiceClass] = useState('Комфорт');
+  const [serviceClass, setServiceClass] = useState('Confort');
 
   const totalPassengers = passengers.reduce((sum, p) => sum + p.count, 0);
 
@@ -29,13 +29,13 @@ const PassengerSelector: React.FC = () => {
         className="w-full px-4 py-2 text-left bg-white border rounded-lg focus:outline-none flex flex-col"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-semibold">{`${totalPassengers} пассажир${totalPassengers !== 1 ? 'а' : ''}`}</span>
+        <span className="font-semibold">{`${totalPassengers} passager${totalPassengers !== 1 ? 's' : ''}`}</span>
         <span className="text-gray-500 text-sm">{serviceClass}</span>
       </button>
       {isOpen && (
         <div className="absolute z-10 w-72 mt-2 bg-white border rounded-lg shadow-lg">
           <div className="p-4">
-            <h3 className="font-bold mb-4">Количество пассажиров</h3>
+            <h3 className="font-bold mb-4">Nombre de passagers</h3>
             {passengers.map((passenger, index) => (
               <div key={passenger.type} className="flex justify-between items-center mb-4">
                 <div>
@@ -59,8 +59,8 @@ const PassengerSelector: React.FC = () => {
                 </div>
               </div>
             ))}
-            <h3 className="font-bold mt-6 mb-4">Класс обслуживания</h3>
-            {['Эконом', 'Комфорт', 'Бизнес', 'Первый класс'].map((cls) => (
+            <h3 className="font-bold mt-6 mb-4">Classe de service</h3>
+            {['Économique', 'Confort', 'Affaires', 'Première classe'].map((cls) => (
               <div key={cls} className="flex items-center mb-3">
                 <input
                   type="radio"
