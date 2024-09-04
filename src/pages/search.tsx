@@ -91,77 +91,38 @@ interface Flight {
 
 const SearchResult = ({ flight }: { flight: Flight }) => (
     <div className="bg-white rounded-lg shadow-md p-4 mb-4">
-      <div className="flex justify-between">
-        <div className="w-1/4 pr-4">
-          <div className={`text-xs font-semibold mb-1 ${flight.cheapest ? 'text-green-500 bg-green-100' : flight.twoDirectFlights ? 'text-purple-500 bg-purple-100' : ''} rounded-full px-2 py-0.5 inline-block`}>
-            {flight.cheapest ? 'Самый дешёвый' : flight.twoDirectFlights ? 'Всего два прямых' : ''}
-          </div>
-          <div className="text-3xl font-bold mb-2">{flight.price}₽</div>
-          <div className="flex items-center bg-gray-100 rounded-full p-1 mb-2 text-xs">
-            <span className="mr-2">{flight.baggage ? 'Багаж включён' : `Багаж +${flight.baggagePrice}₽`}</span>
-            <label className="inline-flex items-center cursor-pointer">
-              <input type="checkbox" className="sr-only peer" checked={flight.baggage} readOnly />
-              <div className="relative w-8 h-4 bg-gray-300 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-blue-600"></div>
-            </label>
-          </div>
-          <button className="bg-orange-500 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors w-full">
-            Обновить
-          </button>
-        </div>
-        <div className="flex-1 pl-4">
-          <div className="flex justify-between items-start mb-4">
-            <div className="flex items-center">
-              <img src={flight.airlineLogo} alt={flight.airline} className="h-6 mr-2" />
-              <span className="text-sm font-semibold">{flight.airline}</span>
+        <div className="flex justify-between items-start mb-2">
+            <div className={`text-xs font-semibold ${flight.cheapest ? 'text-green-500 bg-green-100' : flight.twoDirectFlights ? 'text-purple-500 bg-purple-100' : ''} rounded-full px-2 py-0.5 inline-block`}>
+                {flight.cheapest ? 'Самый дешёвый' : flight.twoDirectFlights ? 'Всего два прямых' : ''}
             </div>
-            <div className="flex space-x-2">
-              <button className="text-gray-400 hover:text-gray-600">
+            <button className="text-gray-400">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
-              </button>
-              <button className="text-gray-400 hover:text-gray-600">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div className="flex justify-between items-center">
-            <div>
-              <div className="text-2xl font-semibold">{flight.departureTime}</div>
-              <div className="text-sm text-gray-500">{flight.departureCity}</div>
-              <div className="text-sm text-gray-500">{flight.departureDate}</div>
-              <div className="text-sm font-semibold text-blue-500">{flight.departureAirport}</div>
-            </div>
-            <div className="text-center flex flex-col items-center">
-              <div className="text-xs text-gray-500 mb-1">В пути: {flight.duration}</div>
-              <div className="relative w-40">
-                <div className="border-t border-gray-300 my-2"></div>
-                <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
-                  <svg className="w-3 h-3 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3.64 14.26l2.86.95 4.02-4.02-8-4.59 1.16-1.16c.1-.1.26-.14.41-.1l9.3 2.98c1.58-1.58 3.15-3.2 4.77-4.75.31-.33.7-.58 1.16-.73.45-.16.87-.27 1.25-.34.55-.05.98.4.93.93-.07.38-.18.8-.34 1.25-.15.46-.4.85-.73 1.16l-4.75 4.78 2.97 9.29c.05.15 0 .29-.1.41l-1.17 1.16-4.57-8.02L8.8 17.5l.95 2.84L8.6 21.5l-2.48-3.62L2.5 15.4l1.14-1.14z" />
-                  </svg>
-                </div>
-                <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
-                  <svg className="w-3 h-3 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.36 9.74l-2.86-.95-4.02 4.02 8 4.59-1.16 1.16c-.1.1-.26.14-.41.1l-9.3-2.98c-1.58 1.58-3.15 3.2-4.77 4.75-.31.33-.7.58-1.16.73-.45.16-.87.27-1.25.34-.55.05-.98-.4-.93-.93.07-.38.18.8.34-1.25.15-.46.4-.85.73-1.16l4.75-4.78-2.97-9.29c-.05-.15 0-.29.1-.41l1.17-1.16 4.57 8.02 4.02-4.02-.95-2.84 1.15-1.15 2.48 3.62 3.62 2.48-1.14 1.14z" />
-                  </svg>
-                </div>
-              </div>
-              <div className="text-xs text-gray-400">{flight.direct ? 'Прямой' : `${flight.stops} пересадка`}</div>
-            </div>
-            <div className="text-right">
-              <div className="text-2xl font-semibold">{flight.arrivalTime}</div>
-              <div className="text-sm text-gray-500">{flight.arrivalCity}</div>
-              <div className="text-sm text-gray-500">{flight.arrivalDate}</div>
-              <div className="text-sm font-semibold text-blue-500">{flight.arrivalAirport}</div>
-            </div>
-          </div>
+            </button>
         </div>
-      </div>
+        <div className="flex justify-between items-center mb-2">
+            <div className="text-2xl font-bold">{flight.price}₽</div>
+            <div className="text-sm text-gray-500">{flight.baggage ? `С багажом ${flight.baggagePrice}кг` : 'Без багажа'}</div>
+        </div>
+        <div className="flex items-center mb-2">
+            <img src={flight.airlineLogo} alt={flight.airline} className="h-6 mr-2" />
+            <div className="flex-1">
+                <div className="flex justify-between">
+                    <div className="text-sm font-semibold">{flight.departureTime}</div>
+                    <div className="text-sm font-semibold">{flight.arrivalTime}</div>
+                </div>
+                <div className="flex justify-between text-xs text-gray-500">
+                    <div>{flight.departureAirport}</div>
+                    <div>{flight.arrivalAirport}</div>
+                </div>
+            </div>
+        </div>
+        <div className="text-xs text-gray-500 mb-2">
+            {flight.duration} / {flight.direct ? 'Прямой' : `${flight.stops} пересадка`}
+        </div>
     </div>
-  );
+);
 
 export default function Search() {
     const [flights] = useState<Flight[]>([
@@ -334,17 +295,27 @@ export default function Search() {
                 <meta name="description" content="Результаты поиска авиабилетов" />
             </Head>
             <SearchHeader />
-            <main className="container mx-auto px-4 py-8">
-                <h1 className="text-2xl font-bold mb-4">Результаты поиска</h1>
-                <div className="flex flex-col lg:flex-row gap-8">
-                    <div className="lg:w-1/4">
-                        <Filters />
+            <main className="bg-gray-100 min-h-screen">
+                <div className="container mx-auto px-4 py-4">
+                    <div className="bg-white rounded-lg shadow-md p-4 mb-4">
+                        <div className="flex justify-between items-center mb-2">
+                            <div className="font-semibold">MOW - IST</div>
+                            <button className="text-blue-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div className="text-sm text-gray-500">11 сентября</div>
                     </div>
-                    <div className="lg:w-3/4">
-                        {flights.map((flight, index) => (
-                            <SearchResult key={index} flight={flight} />
-                        ))}
+                    <div className="flex space-x-2 mb-4 overflow-x-auto">
+                        <button className="bg-white rounded-full px-4 py-2 text-sm whitespace-nowrap">Пересадки</button>
+                        <button className="bg-white rounded-full px-4 py-2 text-sm whitespace-nowrap">Багаж и тариф</button>
+                        <button className="bg-white rounded-full px-4 py-2 text-sm whitespace-nowrap">Время</button>
                     </div>
+                    {flights.map((flight, index) => (
+                        <SearchResult key={index} flight={flight} />
+                    ))}
                 </div>
             </main>
             <Footer />
