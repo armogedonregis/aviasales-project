@@ -1,0 +1,42 @@
+{
+    "navigation": {
+        "flights": "Vluchten",
+        "hotels": "Hotels",
+        "guides": "Gidsen",
+        "favorites": "Favorieten",
+        "business": "Voor bedrijven"
+    },
+    "userMenu": {
+        "profile": "Profiel",
+        "settings": "Instellingen",
+        "notifications": "Meldingen",
+        "documents": "Documenten",
+        "login": "Inloggen",
+        "support": "Ondersteuning"
+    },
+    "search": {
+        "title": "Zoek vluchten",
+        "from": "Van",
+        "to": "Naar",
+        "departure": "Vertrek",
+        "return": "Terug",
+        "findTickets": "Tickets zoeken",
+        "complexRoute": "Maak een complexe route",
+        "openInNewTab": "Open Ostrovok.ru in een nieuw tabblad"
+    },
+    "cityGuide": {
+        "title": "Korte stadsgidsen",
+        "subtitle": "Gidsen zonder overbodige woorden en saaie feiten",
+        "searchPlaceholder": "Waar gaan we naartoe?",
+        "categories": {
+            "russia": "Reizen in Rusland",
+            "noVisa": "Geen visum nodig",
+            "beach": "Zee en stranden",
+            "kids": "Voor kinderen"
+        }
+    },
+    "hotelSearch": {
+        "title": "Boek hier geweldige hotels",
+        "findHotels": "Hotels zoeken"
+    }
+}

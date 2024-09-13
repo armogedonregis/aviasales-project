@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-background: #0c73fe;
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  font-family: var(--text-font-family);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

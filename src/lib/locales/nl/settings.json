@@ -1,0 +1,30 @@
+{
+    "metaTitle": "Profielinstellingen - Skypass",
+    "metaDescription": "Beheer uw profielinstellingen, regionale voorkeuren en inlogopties op Skypass.",
+    "title": "Uw profiel",
+    "subtitle": "Toegang tot ondersteuning en prijswaarschuwingen",
+    "loginWithGoogle": "Inloggen met Google",
+    "loginWithVK": "Inloggen met VK ID",
+    "otherLoginMethods": "Nog 5 inlogmethoden",
+    "subscribeToNewsletter": "Abonneer op de Skypass nieuwsbrief",
+    "agreementText": "Door in te loggen gaat u akkoord met de Gebruiksvoorwaarden en het Privacybeleid",
+    "nav": {
+      "settings": "Instellingen",
+      "notifications": "Meldingen",
+      "documents": "Documenten"
+    },
+    "regional": {
+      "title": "Regionale instellingen",
+      "description": "Nodig voor het weergeven van geschikte tickets en inreisregels voor het land",
+      "country": "Land",
+      "citizenship": "Staatsburgerschap",
+      "currency": "Valuta",
+      "city": "Woonplaats",
+      "paymentMethod": "Betaalmethode",
+      "selectCountry": "Selecteer een land",
+      "selectCitizenship": "Selecteer staatsburgerschap",
+      "selectCurrency": "Selecteer valuta",
+      "selectCity": "Selecteer een stad",
+      "selectPaymentMethod": "Selecteer een betaalmethode"
+    }
+  }

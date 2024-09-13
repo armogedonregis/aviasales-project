@@ -1,0 +1,28 @@
+{
+    "metaTitle": "Skypass - Votre compagnon de voyage",
+    "metaDescription": "Trouvez les meilleures offres de vols et d'hôtels avec Skypass",
+    "popularDestinations": "Destinations populaires",
+    "helpAndAdvice": "Aide et conseils",
+    "viewAllSection": "VOIR TOUTE LA SECTION →",
+    "popularDirections": [
+      { "city": "Tachkent", "country": "Ouzbékistan", "flag": "🇺🇿" },
+      { "city": "Istanbul", "country": "Turquie", "flag": "🇹🇷" },
+      { "city": "Erevan", "country": "Arménie", "flag": "🇦🇲" },
+      { "city": "Antalya", "country": "Turquie", "flag": "🇹🇷" },
+      { "city": "Bakou", "country": "Azerbaïdjan", "flag": "🇦🇿" },
+      { "city": "Douchanbé", "country": "Tadjikistan", "flag": "🇹🇯" },
+      { "city": "Dubaï", "country": "EAU", "flag": "🇦🇪" },
+      { "city": "Phuket", "country": "Thaïlande", "flag": "🇹🇭" },
+      { "city": "Och", "country": "Kirghizistan", "flag": "🇰🇬" },
+      { "city": "Bichkek", "country": "Kirghizistan", "flag": "🇰🇬" },
+      { "city": "Bangkok", "country": "Thaïlande", "flag": "🇹🇭" },
+      { "city": "Samarcande", "country": "Ouzbékistan", "flag": "🇺🇿" }
+    ],
+    "helpTopics": [
+      "Billet non reçu",
+      "Remboursement ou échange de billet",
+      "À propos des bagages",
+      "Modification des données du passeport",
+      "Voyager avec des enfants"
+    ]
+  }

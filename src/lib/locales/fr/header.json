@@ -1,0 +1,42 @@
+{
+    "navigation": {
+        "flights": "Vols",
+        "hotels": "Hôtels",
+        "guides": "Guides",
+        "favorites": "Favoris",
+        "business": "Pour les entreprises"
+    },
+    "userMenu": {
+        "profile": "Profil",
+        "settings": "Paramètres",
+        "notifications": "Notifications",
+        "documents": "Documents",
+        "login": "Se connecter",
+        "support": "Support"
+    },
+    "search": {
+        "title": "Rechercher des vols",
+        "from": "De",
+        "to": "Vers",
+        "departure": "Départ",
+        "return": "Retour",
+        "findTickets": "Trouver des billets",
+        "complexRoute": "Créer un itinéraire complexe",
+        "openInNewTab": "Ouvrir Ostrovok.ru dans un nouvel onglet"
+    },
+    "cityGuide": {
+        "title": "Guides de ville en bref",
+        "subtitle": "Guides sans mots inutiles ni faits ennuyeux",
+        "searchPlaceholder": "Où allons-nous ?",
+        "categories": {
+            "russia": "Voyages en Russie",
+            "noVisa": "Pas besoin de visa",
+            "beach": "Mer et plages",
+            "kids": "Pour les enfants"
+        }
+    },
+    "hotelSearch": {
+        "title": "Réservez des hôtels incroyables ici",
+        "findHotels": "Trouver des hôtels"
+    }
+}

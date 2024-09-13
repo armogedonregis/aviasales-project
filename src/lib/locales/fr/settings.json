@@ -1,0 +1,30 @@
+{
+    "metaTitle": "Paramètres du profil - Skypass",
+    "metaDescription": "Gérez vos paramètres de profil, vos préférences régionales et vos options de connexion sur Skypass.",
+    "title": "Votre profil",
+    "subtitle": "Accès au support et aux alertes de prix",
+    "loginWithGoogle": "Se connecter avec Google",
+    "loginWithVK": "Se connecter avec VK ID",
+    "otherLoginMethods": "5 autres méthodes de connexion",
+    "subscribeToNewsletter": "S'abonner à la newsletter Skypass",
+    "agreementText": "En vous connectant, vous acceptez les Conditions d'utilisation et la Politique de confidentialité",
+    "nav": {
+      "settings": "Paramètres",
+      "notifications": "Notifications",
+      "documents": "Documents"
+    },
+    "regional": {
+      "title": "Paramètres régionaux",
+      "description": "Nécessaires pour afficher les billets appropriés et les règles d'entrée dans le pays",
+      "country": "Pays",
+      "citizenship": "Citoyenneté",
+      "currency": "Devise",
+      "city": "Ville de résidence",
+      "paymentMethod": "Mode de paiement",
+      "selectCountry": "Sélectionnez un pays",
+      "selectCitizenship": "Sélectionnez une citoyenneté",
+      "selectCurrency": "Sélectionnez une devise",
+      "selectCity": "Sélectionnez une ville",
+      "selectPaymentMethod": "Sélectionnez un mode de paiement"
+    }
+  }

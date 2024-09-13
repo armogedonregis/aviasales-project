@@ -1,0 +1,28 @@
+{
+  "metaTitle": "Skypass - Vind en Boek de Beste Hotels",
+  "metaDescription": "Ontdek een breed scala aan hotels voor elke reis. Vind de perfecte accommodatie met Skypass.",
+  "popularDestinations": "Populaire Hotelbestemmingen",
+  "helpAndAdvice": "Hulp en Advies voor Hotelboeking",
+  "viewAllSection": "BEKIJK ALLE HOTELS →",
+  "popularDirections": [
+    { "city": "Amsterdam", "country": "Nederland", "flag": "🇳🇱" },
+    { "city": "Parijs", "country": "Frankrijk", "flag": "🇫🇷" },
+    { "city": "Londen", "country": "Verenigd Koninkrijk", "flag": "🇬🇧" },
+    { "city": "Barcelona", "country": "Spanje", "flag": "🇪🇸" },
+    { "city": "Rome", "country": "Italië", "flag": "🇮🇹" },
+    { "city": "Berlijn", "country": "Duitsland", "flag": "🇩🇪" },
+    { "city": "Wenen", "country": "Oostenrijk", "flag": "🇦🇹" },
+    { "city": "Praag", "country": "Tsjechië", "flag": "🇨🇿" },
+    { "city": "Kopenhagen", "country": "Denemarken", "flag": "🇩🇰" },
+    { "city": "Stockholm", "country": "Zweden", "flag": "🇸🇪" },
+    { "city": "Athene", "country": "Griekenland", "flag": "🇬🇷" },
+    { "city": "Lissabon", "country": "Portugal", "flag": "🇵🇹" }
+  ],
+  "helpTopics": [
+    "Hoe boek ik een hotel?",
+    "Annulering en wijziging van hotelreservering",
+    "Inchecken en uitchecken",
+    "Hotelfaciliteiten en diensten",
+    "Beoordelingen en ratings van hotels"
+  ]
+}

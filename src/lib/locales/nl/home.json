@@ -1,0 +1,28 @@
+{
+    "metaTitle": "Skypass - Uw reisgenoot",
+    "metaDescription": "Vind de beste aanbiedingen voor vluchten en hotels met Skypass",
+    "popularDestinations": "Populaire bestemmingen",
+    "helpAndAdvice": "Hulp en advies",
+    "viewAllSection": "BEKIJK HELE SECTIE →",
+    "popularDirections": [
+      { "city": "Tasjkent", "country": "Oezbekistan", "flag": "🇺🇿" },
+      { "city": "Istanbul", "country": "Turkije", "flag": "🇹🇷" },
+      { "city": "Jerevan", "country": "Armenië", "flag": "🇦🇲" },
+      { "city": "Antalya", "country": "Turkije", "flag": "🇹🇷" },
+      { "city": "Bakoe", "country": "Azerbeidzjan", "flag": "🇦🇿" },
+      { "city": "Doesjanbe", "country": "Tadzjikistan", "flag": "🇹🇯" },
+      { "city": "Dubai", "country": "VAE", "flag": "🇦🇪" },
+      { "city": "Phuket", "country": "Thailand", "flag": "🇹🇭" },
+      { "city": "Osj", "country": "Kirgizië", "flag": "🇰🇬" },
+      { "city": "Bisjkek", "country": "Kirgizië", "flag": "🇰🇬" },
+      { "city": "Bangkok", "country": "Thailand", "flag": "🇹🇭" },
+      { "city": "Samarkand", "country": "Oezbekistan", "flag": "🇺🇿" }
+    ],
+    "helpTopics": [
+      "Ticket niet ontvangen",
+      "Terugbetaling of omruiling van ticket",
+      "Over bagage",
+      "Wijziging paspoortgegevens",
+      "Reizen met kinderen"
+    ]
+  }

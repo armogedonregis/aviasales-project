@@ -1,0 +1,28 @@
+{
+  "metaTitle": "Skypass - Trouvez et Réservez les Meilleurs Hôtels",
+  "metaDescription": "Découvrez une large gamme d'hôtels pour chaque voyage. Trouvez l'hébergement parfait avec Skypass.",
+  "popularDestinations": "Destinations Hôtelières Populaires",
+  "helpAndAdvice": "Aide et Conseils pour la Réservation d'Hôtel",
+  "viewAllSection": "VOIR TOUS LES HÔTELS →",
+  "popularDirections": [
+    { "city": "Paris", "country": "France", "flag": "🇫🇷" },
+    { "city": "Londres", "country": "Royaume-Uni", "flag": "🇬🇧" },
+    { "city": "Rome", "country": "Italie", "flag": "🇮🇹" },
+    { "city": "Barcelone", "country": "Espagne", "flag": "🇪🇸" },
+    { "city": "Amsterdam", "country": "Pays-Bas", "flag": "🇳🇱" },
+    { "city": "Berlin", "country": "Allemagne", "flag": "🇩🇪" },
+    { "city": "Vienne", "country": "Autriche", "flag": "🇦🇹" },
+    { "city": "Prague", "country": "République Tchèque", "flag": "🇨🇿" },
+    { "city": "Copenhague", "country": "Danemark", "flag": "🇩🇰" },
+    { "city": "Stockholm", "country": "Suède", "flag": "🇸🇪" },
+    { "city": "Athènes", "country": "Grèce", "flag": "🇬🇷" },
+    { "city": "Lisbonne", "country": "Portugal", "flag": "🇵🇹" }
+  ],
+  "helpTopics": [
+    "Comment réserver un hôtel ?",
+    "Annulation et modification de réservation d'hôtel",
+    "Enregistrement et départ",
+    "Équipements et services hôteliers",
+    "Avis et notes des hôtels"
+  ]
+}

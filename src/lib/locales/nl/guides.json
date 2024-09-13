@@ -1,0 +1,38 @@
+{
+    "pageTitle": "Reisgidsen",
+    "youViewed": "U heeft bekeken",
+    "cities": {
+      "Moscow": {
+        "name": "Moskou",
+        "country": "Rusland"
+      },
+      "Minsk": {
+        "name": "Minsk",
+        "country": "Wit-Rusland"
+      },
+      "SaintPetersburg": {
+        "name": "Sint-Petersburg",
+        "country": "Rusland"
+      },
+      "Sochi": {
+        "name": "Sotsji",
+        "country": "Rusland"
+      },
+      "Budapest": {
+        "name": "Boedapest",
+        "country": "Hongarije"
+      },
+      "Kaliningrad": {
+        "name": "Kaliningrad",
+        "country": "Rusland"
+      },
+      "Irkutsk": {
+        "name": "Irkoetsk",
+        "country": "Rusland"
+      },
+      "Ufa": {
+        "name": "Oefa",
+        "country": "Rusland"
+      }
+    }
+  }
