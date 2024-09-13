@@ -1,0 +1,38 @@
+{
+  "pageTitle": "Travel Guides",
+  "youViewed": "You viewed",
+  "cities": {
+    "Moscow": {
+      "name": "Moscow",
+      "country": "Russia"
+    },
+    "Minsk": {
+      "name": "Minsk",
+      "country": "Belarus"
+    },
+    "SaintPetersburg": {
+      "name": "Saint Petersburg",
+      "country": "Russia"
+    },
+    "Sochi": {
+      "name": "Sochi",
+      "country": "Russia"
+    },
+    "Budapest": {
+      "name": "Budapest",
+      "country": "Hungary"
+    },
+    "Kaliningrad": {
+      "name": "Kaliningrad",
+      "country": "Russia"
+    },
+    "Irkutsk": {
+      "name": "Irkutsk",
+      "country": "Russia"
+    },
+    "Ufa": {
+      "name": "Ufa",
+      "country": "Russia"
+    }
+  }
+}

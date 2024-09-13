@@ -1,0 +1,28 @@
+{
+  "metaTitle": "Skypass - Your Travel Companion",
+  "metaDescription": "Find the best flight and hotel deals with Skypass",
+  "popularDestinations": "Popular Destinations",
+  "helpAndAdvice": "Help and Advice",
+  "viewAllSection": "VIEW ENTIRE SECTION →",
+  "popularDirections": [
+    { "city": "Tashkent", "country": "Uzbekistan", "flag": "🇺🇿" },
+    { "city": "Istanbul", "country": "Turkey", "flag": "🇹🇷" },
+    { "city": "Yerevan", "country": "Armenia", "flag": "🇦🇲" },
+    { "city": "Antalya", "country": "Turkey", "flag": "🇹🇷" },
+    { "city": "Baku", "country": "Azerbaijan", "flag": "🇦🇿" },
+    { "city": "Dushanbe", "country": "Tajikistan", "flag": "🇹🇯" },
+    { "city": "Dubai", "country": "UAE", "flag": "🇦🇪" },
+    { "city": "Phuket", "country": "Thailand", "flag": "🇹🇭" },
+    { "city": "Osh", "country": "Kyrgyzstan", "flag": "🇰🇬" },
+    { "city": "Bishkek", "country": "Kyrgyzstan", "flag": "🇰🇬" },
+    { "city": "Bangkok", "country": "Thailand", "flag": "🇹🇭" },
+    { "city": "Samarkand", "country": "Uzbekistan", "flag": "🇺🇿" }
+  ],
+  "helpTopics": [
+    "Ticket not received",
+    "Refund or ticket exchange",
+    "About baggage",
+    "Changing passport data",
+    "Traveling with children"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "metaTitle": "Skypass - Find and Book the Best Hotels",
+  "metaDescription": "Discover a wide range of hotels for every trip. Find the perfect accommodation with Skypass.",
+  "popularDestinations": "Popular Hotel Destinations",
+  "helpAndAdvice": "Help and Advice for Hotel Booking",
+  "viewAllSection": "VIEW ALL HOTELS →",
+  "popularDirections": [
+    { "city": "Paris", "country": "France", "flag": "🇫🇷" },
+    { "city": "London", "country": "United Kingdom", "flag": "🇬🇧" },
+    { "city": "Rome", "country": "Italy", "flag": "🇮🇹" },
+    { "city": "Barcelona", "country": "Spain", "flag": "🇪🇸" },
+    { "city": "Amsterdam", "country": "Netherlands", "flag": "🇳🇱" },
+    { "city": "Berlin", "country": "Germany", "flag": "🇩🇪" },
+    { "city": "Vienna", "country": "Austria", "flag": "🇦🇹" },
+    { "city": "Prague", "country": "Czech Republic", "flag": "🇨🇿" },
+    { "city": "Copenhagen", "country": "Denmark", "flag": "🇩🇰" },
+    { "city": "Stockholm", "country": "Sweden", "flag": "🇸🇪" },
+    { "city": "Athens", "country": "Greece", "flag": "🇬🇷" },
+    { "city": "Lisbon", "country": "Portugal", "flag": "🇵🇹" }
+  ],
+  "helpTopics": [
+    "How to book a hotel?",
+    "Cancellation and modification of hotel reservation",
+    "Check-in and check-out",
+    "Hotel amenities and services",
+    "Hotel reviews and ratings"
+  ]
+}

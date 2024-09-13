@@ -1,0 +1,30 @@
+{
+  "metaTitle": "Profile Settings - Skypass",
+  "metaDescription": "Manage your profile settings, regional preferences, and login options on Skypass.",
+  "title": "Your profile",
+  "subtitle": "Access to support and price alerts",
+  "loginWithGoogle": "Log in with Google",
+  "loginWithVK": "Log in with VK ID",
+  "otherLoginMethods": "5 other login methods",
+  "subscribeToNewsletter": "Subscribe to Skypass newsletter",
+  "agreementText": "By logging in, you agree to the Terms of Use and Privacy Policy",
+  "nav": {
+    "settings": "Settings",
+    "notifications": "Notifications",
+    "documents": "Documents"
+  },
+  "regional": {
+    "title": "Regional settings",
+    "description": "Necessary to display appropriate tickets and country entry rules",
+    "country": "Country",
+    "citizenship": "Citizenship",
+    "currency": "Currency",
+    "city": "City of residence",
+    "paymentMethod": "Payment method",
+    "selectCountry": "Select a country",
+    "selectCitizenship": "Select a citizenship",
+    "selectCurrency": "Select a currency",
+    "selectCity": "Select a city",
+    "selectPaymentMethod": "Select a payment method"
+  }
+}

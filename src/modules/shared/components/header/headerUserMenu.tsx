@@ -5,14 +5,14 @@ import { Listbox, ListboxButton, ListboxOption, ListboxOptions, Menu, MenuButton
 import { ChevronDownIcon, HeartIcon } from '@heroicons/react/20/solid';
 import { Squares2X2Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import LoginModal from '@/components/modals/loginModal';
-import { ProfileIcon, SupportIcon, FrenchFlag, DutchFlag } from '@/components/icons';
+import { ProfileIcon, SupportIcon, FrenchFlag, DutchFlag, EnglishFlag } from '@/components/icons';
 import SettingsIcon from "/public/assets/vector/settingsIcon.svg";
 import NotificationsIcon from "/public/assets/vector/notificationsIcon.svg";
 import DocumentsIcon from "/public/assets/vector/documentsIcon.svg";
 import { Link, useRouter } from '@/lib/i18n/routing';
 
 interface Language {
-    code: 'fr' | 'nl';
+    code: 'fr' | 'nl' | 'en';
     name: string;
     flag: React.ReactNode;
 }
@@ -20,6 +20,7 @@ interface Language {
 const languages: Language[] = [
     { code: 'fr', name: 'Français', flag: <FrenchFlag /> },
     { code: 'nl', name: 'Nederlands', flag: <DutchFlag /> },
+    { code: 'en', name: 'English', flag: <EnglishFlag /> }, 
 ];
 
 const DEFAULT_LANG = 'fr';
@@ -51,7 +52,7 @@ export const HeaderUserMenu: React.FC = () => {
         // Используем router для смены языка
         router.push(pathWithoutLocale, { locale: newLang.code });
     }, [currentLang, router, pathname]);
-    
+
     const handleLoginClick = useCallback((e: React.MouseEvent) => {
         e.preventDefault();
         e.stopPropagation();

@@ -24,7 +24,7 @@ export const DynamicHeader: React.FC = () => {
     const pathParts = pathname.split('/').filter(Boolean);
 
     // Определяем, является ли первая часть пути языковым кодом
-    const isFirstPartLocale = ['fr', 'nl'].includes(pathParts[0]);
+    const isFirstPartLocale = ['fr', 'nl', 'en'].includes(pathParts[0]);
 
     // Получаем ключ для headerConfig, пропуская языковой код, если он присутствует
     const headerKey = isFirstPartLocale ? pathParts[1] || 'home' : pathParts[0] || 'home';
