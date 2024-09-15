@@ -4,7 +4,7 @@ import TutuJarvelPlan from './tutuLarvelPlan';
 
 interface TutuJarvelIntroProps {
     isModal?: boolean;
-    onClose?: () => void;
+    onClose: () => void;
 }
 
 const TutuJarvelIntro: React.FC<TutuJarvelIntroProps> = ({ isModal = false, onClose }) => {
@@ -19,7 +19,7 @@ const TutuJarvelIntro: React.FC<TutuJarvelIntroProps> = ({ isModal = false, onCl
 
     const handlePlanClose = () => {
         setShowPlan(false);
-        setShowIntro(true);
+        setShowIntro(false);
     };
 
     if (!isModal) return null;
@@ -75,7 +75,7 @@ const TutuJarvelIntro: React.FC<TutuJarvelIntroProps> = ({ isModal = false, onCl
                     </div>
                 </div>
             )}
-            {showPlan && <TutuJarvelPlan isOpen={true} onClose={handlePlanClose} />}
+            {showPlan && <TutuJarvelPlan isOpen={true} onClose={() => {handlePlanClose(); onClose()}} />}
         </>
     );
 };
