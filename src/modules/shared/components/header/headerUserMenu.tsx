@@ -10,6 +10,7 @@ import SettingsIcon from "/public/assets/vector/settingsIcon.svg";
 import NotificationsIcon from "/public/assets/vector/notificationsIcon.svg";
 import DocumentsIcon from "/public/assets/vector/documentsIcon.svg";
 import { Link, useRouter } from '@/lib/i18n/routing';
+import TutuJarvelIntro from '../tutuJarvel/tutuJarvelIntro';
 
 interface Language {
     code: 'fr' | 'nl' | 'en';
@@ -66,6 +67,16 @@ export const HeaderUserMenu: React.FC = () => {
         }
     }, []);
 
+    // tutu
+    const [isTutuJarvelOpen, setIsTutuJarvelOpen] = useState<boolean>(false);
+
+    const handleCloseTutuJarvel = useCallback(() => {
+        setIsTutuJarvelOpen(false);
+        if (buttonCloseRef.current) {
+            buttonCloseRef.current();
+        }
+    }, []);
+
     return (
         <div className="flex items-center text-sm space-x-1">
             <Menu as="div" className="relative inline-block text-left z-50">
@@ -116,6 +127,24 @@ export const HeaderUserMenu: React.FC = () => {
                                             </Link>
                                         )}
                                     </MenuItem>
+                                    <MenuItem>
+                                    {({ focus }) => (
+                                        <button
+                                            onClick={() => {
+                                                setIsTutuJarvelOpen(true);
+                                                buttonCloseRef.current = close;
+                                            }}
+                                            className={`${focus ? 'bg-menu_item_hover' : ''} flex w-full items-center rounded-md px-3 py-2 text-sm font-bold text-gray-700`}
+                                        >
+                                            <span className="mr-3 rounded-lg w-8 h-8 inline-flex items-center justify-center bg-menu_icon_wrapper text-menu_icon_color">
+                                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                                                </svg>
+                                            </span>
+                                            {t('userMenu.tutuJarvel')}
+                                        </button>
+                                    )}
+                                </MenuItem>
                                 </div>
                                 <div className="p-6 lg:p-4 lg:pt-0 mt-auto">
                                     <MenuItem>
@@ -184,6 +213,11 @@ export const HeaderUserMenu: React.FC = () => {
             </button>
 
             <LoginModal isOpen={isLoginModalOpen} onClose={handleCloseLoginModal} />
+            {isTutuJarvelOpen && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <TutuJarvelIntro isModal onClose={handleCloseTutuJarvel} />
+                </div>
+            )}
         </div>
     );
 };
