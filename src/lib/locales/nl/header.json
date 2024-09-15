@@ -37,6 +37,24 @@
     },
     "hotelSearch": {
         "title": "Boek hier geweldige hotels",
-        "findHotels": "Hotels zoeken"
+        "findHotels": "Hotels zoeken",
+        "cityOrHotel": "Stad of hotel",
+        "checkIn": "Inchecken",
+        "checkOut": "Uitchecken"
+    },
+    "passengerSelector": {
+        "passengers": "passagier | passagiers",
+        "numberOfPassengers": "Aantal passagiers",
+        "adults": "Volwassenen",
+        "children": "Kinderen",
+        "infants": "Baby's",
+        "adultsAge": "12 jaar en ouder",
+        "childrenAge": "2 tot 11 jaar",
+        "infantsAge": "Jonger dan 2 jaar, zonder stoel",
+        "serviceClass": "Serviceklasse",
+        "economy": "Economy",
+        "comfort": "Comfort",
+        "business": "Business",
+        "firstClass": "Eerste klas"
     }
 }

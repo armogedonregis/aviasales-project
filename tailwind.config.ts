@@ -16,8 +16,21 @@ const config: Config = {
         menu_icon_color: "#9ea9b7",
         menu_item_hover: "rgba(76,84,97,0.04)",
         menu_nav_bg: "rgba(17,33,56,0.12)",
-        menu_text_color: "hsla(0,0%,100%,0.72)"
+        menu_text_color: "hsla(0,0%,100%,0.72)",
+        menu_orange: "#f25122",
+        menu_input_focus: "#0c73fe"
       },
+      boxShadow: {
+        'focus-orange': '0 0 0 2px #f25122',
+      },
+      flex: {
+        '2': '2 0 0'
+      }
+    },
+  },
+  variants: {
+    extend: {
+      boxShadow: ['focus-within'],
     },
   },
   plugins: [],

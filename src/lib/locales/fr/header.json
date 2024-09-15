@@ -37,6 +37,24 @@
     },
     "hotelSearch": {
         "title": "Réservez des hôtels incroyables ici",
-        "findHotels": "Trouver des hôtels"
+        "findHotels": "Trouver des hôtels",
+        "cityOrHotel": "Ville ou hôtel",
+        "checkIn": "Date d'arrivée",
+        "checkOut": "Date de départ"
+    },
+    "passengerSelector": {
+        "passengers": "passager | passagers",
+        "numberOfPassengers": "Nombre de passagers",
+        "adults": "Adultes",
+        "children": "Enfants",
+        "infants": "Bébés",
+        "adultsAge": "12 ans et plus",
+        "childrenAge": "de 2 à 11 ans",
+        "infantsAge": "Moins de 2 ans, sans siège",
+        "serviceClass": "Classe de service",
+        "economy": "Économique",
+        "comfort": "Confort",
+        "business": "Affaires",
+        "firstClass": "Première classe"
     }
 }

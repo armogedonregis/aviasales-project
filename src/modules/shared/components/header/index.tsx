@@ -6,6 +6,7 @@ import { BaseHeader } from './baseHeader';
 import { HotelHeader } from './hotelHeader';
 import { useEffect, useState } from 'react';
 import { CityGuideHeader } from './cityGuideHeader';
+import { SearchHeader } from './searchHeader';
 
 
 
@@ -16,7 +17,8 @@ interface HeaderProps {
 const headerConfig: { [key: string]: React.ComponentType<HeaderProps> } = {
     'home': HomeHeader,
     'hotels': HotelHeader,
-    'guides': CityGuideHeader
+    'guides': CityGuideHeader,
+    'search': SearchHeader
 };
 
 export const DynamicHeader: React.FC = () => {

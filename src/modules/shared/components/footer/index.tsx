@@ -17,17 +17,23 @@ export const Footer = () => {
                 <div className="hidden md:block">
                     <CategoryList categories={categories} />
                 </div>
-                <div className="md:hidden">
+                <div className="md:hidden flex flex-col-reverse gap-6">
                     <NewsletterSignup />
-                    <CategoryList categories={categories} isMobile={true} />
-                </div>
-                <div className="hidden lg:flex justify-between items-center mb-8">
-                    <NewsletterSignup />
-                    <div className="text-sm">
-                        <p>{t('app.convenience')}</p>
-                        <p className="text-gray-500">{t('app.description')}</p>
+                    <div>
+                        <CategoryList categories={categories} isMobile={true} />
                     </div>
-                    <img src="/qr-code.png" alt={t('qrCode.alt')} className="w-24 h-24" />
+                </div>
+                <div className="hidden lg:flex gap-6 mb-8">
+                    <div className='flex-2'>
+                        <NewsletterSignup />
+                    </div>
+                    <div className="text-sm flex flex-1 items-center gap-4 bg-gray-100 pl-6 pr-3 py-3 rounded-xl">
+                        <div>
+                            <p className="text-lg">{t('app.convenience')}</p>
+                            <p className="text-gray-500">{t('app.description')}</p>
+                        </div>
+                        <img src="/assets/images/qr-code.png" alt={t('qrCode.alt')} className="w-24 h-24" />
+                    </div>
                 </div>
                 <SocialIcons icons={socialIcons} />
                 <div className="flex flex-wrap justify-center gap-2 mb-4 text-xs text-gray-500">

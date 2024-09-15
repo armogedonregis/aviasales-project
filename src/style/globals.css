@@ -2,24 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --text-font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+@media (max-width: 1023px) {
+  .indicator-0 { width: 33.33%; left: 0; }
+  .indicator-1 { width: 33.33%; left: 33.33%; }
+  .indicator-2 { width: 33.33%; left: 66.66%; }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --header-background: #0c73fe;
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@media (min-width: 1024px) {
+  .indicator-0 { width: 25%; left: 0; }
+  .indicator-1 { width: 25%; left: 25%; }
+  .indicator-2 { width: 25%; left: 50%; }
+  .indicator-3 { width: 25%; left: 60%; }
 }
 
-body {
-  font-family: var(--text-font-family);
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
 }

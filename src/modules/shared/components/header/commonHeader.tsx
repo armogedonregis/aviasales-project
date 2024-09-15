@@ -4,13 +4,15 @@ import { AnimatePresence, motion } from "framer-motion";
 
 interface CommonHeaderProps {
   isTransitioning?: boolean;
-  title: string;
+  showNavigation?: boolean;
+  title?: string;
+  variant?: 'home' | 'header';
   children: React.ReactNode;
 }
 
-export const CommonHeader: React.FC<CommonHeaderProps> = ({ isTransitioning, title, children }) => {
+export const CommonHeader: React.FC<CommonHeaderProps> = ({ title, children, showNavigation = false, variant = 'home' }) => {
   return (
-    <BaseHeader showNavigation={false}>
+    <BaseHeader showNavigation={showNavigation}>
       <AnimatePresence mode="wait">
         <motion.div
           key="common-content"
@@ -20,26 +22,32 @@ export const CommonHeader: React.FC<CommonHeaderProps> = ({ isTransitioning, tit
           exit={{ opacity: 0, y: -50 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-          <motion.h1
-            className="text-2xl md:text-4xl font-bold mb-6 text-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            {title}
-          </motion.h1>
-          <motion.div
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -50, opacity: 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            <NavigationHeader
-              variant="home"
-              layoutId="navigation"
-            />
-          </motion.div>
+          {title && (
+            <motion.h1
+              className="text-2xl md:text-4xl font-bold mb-6 text-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+            >
+              {title}
+            </motion.h1>
+          )
+          }
+          {!showNavigation && (
+            <motion.div
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -50, opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+            >
+              <NavigationHeader
+                variant={variant}
+                layoutId="navigation"
+              />
+            </motion.div>
+          )
+          }
           {children}
         </motion.div>
       </AnimatePresence>

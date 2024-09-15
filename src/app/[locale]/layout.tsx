@@ -27,9 +27,11 @@ export default async function RootLayout({
         <html className={inter.className}>
             <body>
             <NextIntlClientProvider messages={messages}>
-                    <Header />
-                    <main className="mb-5">{children}</main>
-                    <Footer />
+                <div className="flex flex-col min-h-screen">
+                        <Header />
+                        <main className="mb-5 flex-1 flex flex-col">{children}</main>
+                        <Footer />
+                </div>
                 </NextIntlClientProvider>
             </body>
         </html>

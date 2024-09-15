@@ -37,6 +37,24 @@
     },
     "hotelSearch": {
         "title": "Book amazing hotels here",
-        "findHotels": "Find hotels"
+        "findHotels": "Find hotels",
+        "cityOrHotel": "City or hotel",
+        "checkIn": "Check-in date",
+        "checkOut": "Check-out date"
+    },
+    "passengerSelector": {
+        "passengers": "passenger | passengers",
+        "numberOfPassengers": "Number of passengers",
+        "adults": "Adults",
+        "children": "Children",
+        "infants": "Infants",
+        "adultsAge": "12 years and older",
+        "childrenAge": "2 to 11 years old",
+        "infantsAge": "Under 2 years, without a seat",
+        "serviceClass": "Service class",
+        "economy": "Economy",
+        "comfort": "Comfort",
+        "business": "Business",
+        "firstClass": "First class"
     }
 }

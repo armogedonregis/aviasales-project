@@ -30,6 +30,9 @@ export default getRequestConfig(async ({locale}) => {
     myAccount: {
       ...(await import(`../locales/${locale}/myAccount.json`)).default,
     },
+    aviaSearch: {
+      ...(await import(`../locales/${locale}/aviaSearch.json`)).default,
+    },
   };
 
   return { messages };
