@@ -15,8 +15,8 @@ export default async function Home() {
   const helpTopics: string[] = t.raw('helpTopics') as string[];
 
   return (
-    <div className="flex flex-col lg:flex-row justify-between mt-8 mx-auto max-w-6xl px-4">
-      <div className="w-full lg:w-2/3 lg:pr-8 mb-8 lg:mb-0">
+    <div className="flex flex-col lg:flex-row justify-between mt-8 mx-auto w-full max-w-6xl px-4">
+      <div className="w-full lg:pr-8 mb-8 lg:mb-0">
         <h2 className="text-xl md:text-2xl font-bold mb-4 flex items-start gap-2">
           <PopularIcon />
           {t('popularDestinations')}
@@ -36,7 +36,7 @@ export default async function Home() {
           ))}
         </div>
       </div>
-      <div className="w-full lg:w-1/3">
+      <div className="w-full">
         <h2 className="text-xl md:text-2xl font-bold mb-4 flex items-center gap-2">
           <PopularHelp />
           {t('helpAndAdvice')}
