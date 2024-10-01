@@ -2,41 +2,18 @@ import { Dialog, Transition, TransitionChild, DialogPanel, DialogTitle } from '@
 import { Fragment, useEffect, useState } from 'react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { FcGoogle } from 'react-icons/fc';
-import VK from '/public/assets/vector/vk.svg';
-import { SiMaildotru, SiApple, SiOdnoklassniki } from 'react-icons/si';
+import { SiApple, SiLinkedin } from 'react-icons/si';
 import { FaFacebookF } from 'react-icons/fa';
+import { BsTwitterX } from 'react-icons/bs';
 
-/**
- * Интерфейс пропсов для компонента LoginModal
- * @interface LoginModalProps
- * @property {boolean} isOpen - Флаг, указывающий, открыто ли модальное окно
- * @property {() => void} onClose - Функция для закрытия модального окна
- */
 interface LoginModalProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
-/**
- * Компонент LoginModal
- * 
- * Отображает модальное окно для входа в систему с различными вариантами авторизации
- * 
- * @component
- * @param {LoginModalProps} props - Пропсы компонента
- * @returns {React.ReactElement} Возвращает React элемент
- */
 const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
-    /**
-     * Состояние для отображения дополнительных вариантов входа
-     * @type {boolean}
-     */
     const [showAllOptions, setShowAllOptions] = useState(false);
 
-    
-    /**
-     * Закрываем расширенное меню при открытии модалки
-     */
     useEffect(() => {
         if (isOpen) {
             setShowAllOptions(false)
@@ -72,7 +49,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                             <DialogPanel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                                 <div className="flex justify-between items-center mb-4">
                                     <DialogTitle as="h3" className="text-xl font-medium leading-6 text-gray-900">
-                                        Войдите в профиль
+                                        Log in to your profile
                                     </DialogTitle>
                                     <button
                                         type="button"
@@ -83,34 +60,30 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                                     </button>
                                 </div>
                                 <p className="text-sm text-gray-500 mb-6">
-                                    Чтобы обращаться в поддержку и следить за ценами на нужные билеты
+                                    To contact support and track prices for desired tickets
                                 </p>
                                 <div className="space-y-3">
                                     <button className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100">
                                         <FcGoogle className="h-5 w-5 mr-2" />
-                                        Войти через Google
+                                        Sign in with Google
                                     </button>
                                     <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700">
-                                        <VK className="h-5 w-5 mr-2 text-white" />
-                                        Войти с VK ID
+                                        <FaFacebookF className="h-5 w-5 mr-2" />
+                                        Sign in with Facebook
                                     </button>
                                     {showAllOptions && (
                                         <>
-                                            <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-600">
-                                                <SiMaildotru className="h-5 w-5 mr-2" />
-                                                Mail.ru
-                                            </button>
                                             <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-900">
                                                 <SiApple className="h-5 w-5 mr-2" />
-                                                Apple
+                                                Sign in with Apple
                                             </button>
-                                            <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-orange-500 hover:bg-orange-600">
-                                                <SiOdnoklassniki className="h-5 w-5 mr-2" />
-                                                Одноклассники
+                                            <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-400 hover:bg-blue-500">
+                                                <BsTwitterX className="h-5 w-5 mr-2" />
+                                                Sign in with Twitter
                                             </button>
-                                            <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-800 hover:bg-blue-900">
-                                                <FaFacebookF className="h-5 w-5 mr-2" />
-                                                F*****k
+                                            <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-700 hover:bg-blue-800">
+                                                <SiLinkedin className="h-5 w-5 mr-2" />
+                                                Sign in with LinkedIn
                                             </button>
                                         </>
                                     )}
@@ -120,7 +93,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                                             onClick={() => setShowAllOptions(true)}
                                         >
                                             <span className="mr-2">↓</span>
-                                            Ещё 5 способов
+                                            3 more options
                                         </button>
                                     )}
                                 </div>
@@ -132,11 +105,11 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                                         className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                                     />
                                     <label htmlFor="subscribe" className="ml-2 block text-sm text-gray-500">
-                                        Подписаться на рассылку Авиасейлс
+                                        Subscribe to our newsletter
                                     </label>
                                 </div>
                                 <p className="mt-2 text-xs text-gray-400">
-                                    Авторизуясь, вы соглашаетесь с <a href="#" className="text-blue-600 hover:underline">Лицензионным соглашением</a> и <a href="#" className="text-blue-600 hover:underline">Политикой конфиденциальности</a>
+                                    By logging in, you agree to the <a href="#" className="text-blue-600 hover:underline">License Agreement</a> and <a href="#" className="text-blue-600 hover:underline">Privacy Policy</a>
                                 </p>
                             </DialogPanel>
                         </TransitionChild>

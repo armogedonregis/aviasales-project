@@ -33,8 +33,8 @@ export default getRequestConfig(async ({locale}) => {
     aviaSearch: {
       ...(await import(`../locales/${locale}/aviaSearch.json`)).default,
     },
-    tutuJarvel: {
-      ...(await import(`../locales/${locale}/tutuJarvel.json`)).default,
+    trySky: {
+      ...(await import(`../locales/${locale}/trySky.json`)).default,
     },
   };
 

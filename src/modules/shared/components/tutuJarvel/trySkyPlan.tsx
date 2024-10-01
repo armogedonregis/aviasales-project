@@ -15,43 +15,43 @@ interface TravelDay {
     activities: TravelPlanItem[];
 }
 
-interface TutuJarvelPlanProps {
+interface TrySkyPlanProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
-const TutuJarvelPlan: React.FC<TutuJarvelPlanProps> = ({ isOpen, onClose }) => {
-    const t = useTranslations('tutuJarvel');
+const TrySkyPlan: React.FC<TrySkyPlanProps> = ({ isOpen, onClose }) => {
+    const t = useTranslations('trySky');
 
     const travelPlan: TravelDay[] = [
         {
             title: t('day1Title'),
             activities: [
-                { time: '09:00', activity: t('breakfast'), place: t('laleRestaurant'), cost: '~200₺' },
-                { time: '10:30', activity: t('visit'), place: t('hagiaSophia'), cost: '~400₺', peopleCount: 2 },
-                { time: '13:00', activity: t('lunch'), place: t('matbahRestaurant'), cost: '~350₺' },
-                { time: '15:00', activity: t('tour'), place: t('topkapiPalace'), cost: '~300₺', peopleCount: 2 },
-                { time: '18:00', activity: t('dinner'), place: t('hamdiRestaurant'), cost: '~500₺' },
+                { time: '09:00', activity: t('breakfast'), place: t('restaurant1'), cost: '~200₺' },
+                { time: '10:30', activity: t('visit'), place: t('attraction1'), cost: '~400₺', peopleCount: 2 },
+                { time: '13:00', activity: t('lunch'), place: t('restaurant2'), cost: '~350₺' },
+                { time: '15:00', activity: t('tour'), place: t('attraction2'), cost: '~300₺', peopleCount: 2 },
+                { time: '18:00', activity: t('dinner'), place: t('restaurant3'), cost: '~500₺' },
             ]
         },
         {
             title: t('day2Title'),
             activities: [
-                { time: '09:00', activity: t('breakfast'), place: t('privatoCafe'), cost: '~150₺' },
-                { time: '10:30', activity: t('visit'), place: t('istanbulModernArtMuseum'), cost: '~200₺', details: t('modernArtDetails'), peopleCount: 2 },
-                { time: '13:00', activity: t('lunch'), place: t('pandeliRestaurant'), cost: '~400₺' },
-                { time: '16:00', activity: t('walk'), place: t('galataTower'), cost: '~175₺', details: t('galataTowerDetails'), peopleCount: 1 },
-                { time: '18:00', activity: t('dinner'), place: t('miklaRestaurant'), cost: '~800₺' },
+                { time: '09:00', activity: t('breakfast'), place: t('restaurant4'), cost: '~150₺' },
+                { time: '10:30', activity: t('visit'), place: t('attraction3'), cost: '~200₺', details: t('attraction3Details'), peopleCount: 2 },
+                { time: '13:00', activity: t('lunch'), place: t('restaurant5'), cost: '~400₺' },
+                { time: '16:00', activity: t('walk'), place: t('attraction4'), cost: '~175₺', details: t('attraction4Details'), peopleCount: 1 },
+                { time: '18:00', activity: t('dinner'), place: t('restaurant6'), cost: '~800₺' },
             ]
         },
         {
             title: t('day3Title'),
             activities: [
-                { time: '09:00', activity: t('breakfast'), place: t('vanKahvaltiEvi'), cost: '~300₺' },
-                { time: '10:00', activity: t('trip'), place: t('princeIslands'), cost: '~200₺', details: t('princeIslandsDetails'), peopleCount: 2 },
-                { time: '13:00', activity: t('lunch'), place: t('miltoRestaurant'), cost: '~400₺' },
-                { time: '14:00', activity: t('walk'), place: t('gulhanepark'), details: t('gulhaneparkDetails'), peopleCount: 1 },
-                { time: '16:00', activity: t('visit'), place: t('maidenTower'), cost: '~100₺', details: t('maidenTowerDetails'), peopleCount: 1 },
+                { time: '09:00', activity: t('breakfast'), place: t('restaurant7'), cost: '~300₺' },
+                { time: '10:00', activity: t('trip'), place: t('attraction5'), cost: '~200₺', details: t('attraction5Details'), peopleCount: 2 },
+                { time: '13:00', activity: t('lunch'), place: t('restaurant8'), cost: '~400₺' },
+                { time: '14:00', activity: t('walk'), place: t('attraction6'), details: t('attraction6Details'), peopleCount: 1 },
+                { time: '16:00', activity: t('visit'), place: t('attraction7'), cost: '~100₺', details: t('attraction7Details'), peopleCount: 1 },
                 { time: '18:00', activity: t('dinner'), place: t('choiceRestaurant'), cost: '~500₺' },
             ]
         }
@@ -65,7 +65,7 @@ const TutuJarvelPlan: React.FC<TutuJarvelPlanProps> = ({ isOpen, onClose }) => {
                 <div className="p-4">
                     <div className="flex justify-between items-center mb-4">
                         <button onClick={onClose} className="text-2xl font-bold text-gray-500 hover:text-gray-700">×</button>
-                        <h1 className="text-xl font-bold text-gray-800">{t('jarvel')}</h1>
+                        <h1 className="text-xl font-bold text-gray-800">{t('trySky')}</h1>
                         <div className="w-6"></div>
                     </div>
                     {travelPlan.map((day, dayIndex) => (
@@ -105,4 +105,4 @@ const TutuJarvelPlan: React.FC<TutuJarvelPlanProps> = ({ isOpen, onClose }) => {
     );
 };
 
-export default TutuJarvelPlan;
+export default TrySkyPlan;

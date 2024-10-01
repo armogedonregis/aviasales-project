@@ -1,14 +1,14 @@
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
-import TutuJarvelPlan from './tutuLarvelPlan';
+import TrySkyPlan from './trySkyPlan';
 
-interface TutuJarvelIntroProps {
+interface TrySkyIntroProps {
     isModal?: boolean;
     onClose: () => void;
 }
 
-const TutuJarvelIntro: React.FC<TutuJarvelIntroProps> = ({ isModal = false, onClose }) => {
-    const t = useTranslations('tutuJarvel');
+const TrySkyIntro: React.FC<TrySkyIntroProps> = ({ isModal = false, onClose }) => {
+    const t = useTranslations('trySky');
     const [showIntro, setShowIntro] = useState(true);
     const [showPlan, setShowPlan] = useState(false);
 
@@ -75,9 +75,9 @@ const TutuJarvelIntro: React.FC<TutuJarvelIntroProps> = ({ isModal = false, onCl
                     </div>
                 </div>
             )}
-            {showPlan && <TutuJarvelPlan isOpen={true} onClose={() => {handlePlanClose(); onClose()}} />}
+            {showPlan && <TrySkyPlan isOpen={true} onClose={() => {handlePlanClose(); onClose()}} />}
         </>
     );
 };
 
-export default TutuJarvelIntro;
+export default TrySkyIntro;

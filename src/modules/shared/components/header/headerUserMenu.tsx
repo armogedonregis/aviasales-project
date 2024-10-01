@@ -10,7 +10,7 @@ import SettingsIcon from "/public/assets/vector/settingsIcon.svg";
 import NotificationsIcon from "/public/assets/vector/notificationsIcon.svg";
 import DocumentsIcon from "/public/assets/vector/documentsIcon.svg";
 import { Link, useRouter } from '@/lib/i18n/routing';
-import TutuJarvelIntro from '../tutuJarvel/tutuJarvelIntro';
+import TrySkyIntro from '../tutuJarvel/trySkyIntro';
 
 interface Language {
     code: 'fr' | 'nl' | 'en';
@@ -141,7 +141,7 @@ export const HeaderUserMenu: React.FC = () => {
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                                                 </svg>
                                             </span>
-                                            {t('userMenu.tutuJarvel')}
+                                            {t('userMenu.trySky')}
                                         </button>
                                     )}
                                 </MenuItem>
@@ -215,7 +215,7 @@ export const HeaderUserMenu: React.FC = () => {
             <LoginModal isOpen={isLoginModalOpen} onClose={handleCloseLoginModal} />
             {isTutuJarvelOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <TutuJarvelIntro isModal onClose={handleCloseTutuJarvel} />
+                    <TrySkyIntro isModal onClose={handleCloseTutuJarvel} />
                 </div>
             )}
         </div>
