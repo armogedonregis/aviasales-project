@@ -92,7 +92,7 @@ export const NavigationHeader: React.FC<NavigationProps> = ({ variant, layoutId 
         <path d="M12 0L14.91 8.91L24 12L14.91 15.09L12 24L9.09 15.09L0 12L9.09 8.91L12 0Z" />
       </svg>
     ),
-    text: "Try sky",
+    text: "SKAI",
     hideOnMobile: true,
     additionalClassName: '!flex-row !gap-2',
     onClick: () => {
