@@ -5,18 +5,16 @@
     "helpAndAdvice": "Aide et conseils",
     "viewAllSection": "VOIR TOUTE LA SECTION →",
     "popularDirections": [
-      { "city": "Tachkent", "country": "Ouzbékistan", "flag": "🇺🇿" },
-      { "city": "Istanbul", "country": "Turquie", "flag": "🇹🇷" },
-      { "city": "Erevan", "country": "Arménie", "flag": "🇦🇲" },
-      { "city": "Antalya", "country": "Turquie", "flag": "🇹🇷" },
-      { "city": "Bakou", "country": "Azerbaïdjan", "flag": "🇦🇿" },
-      { "city": "Douchanbé", "country": "Tadjikistan", "flag": "🇹🇯" },
-      { "city": "Dubaï", "country": "EAU", "flag": "🇦🇪" },
-      { "city": "Phuket", "country": "Thaïlande", "flag": "🇹🇭" },
-      { "city": "Och", "country": "Kirghizistan", "flag": "🇰🇬" },
-      { "city": "Bichkek", "country": "Kirghizistan", "flag": "🇰🇬" },
-      { "city": "Bangkok", "country": "Thaïlande", "flag": "🇹🇭" },
-      { "city": "Samarcande", "country": "Ouzbékistan", "flag": "🇺🇿" }
+      { "city": "Londres", "country": "Royaume-Uni", "flag": "🇬🇧" },
+      { "city": "Paris", "country": "France", "flag": "🇫🇷" },
+      { "city": "Berlin", "country": "Allemagne", "flag": "🇩🇪" },
+      { "city": "Rome", "country": "Italie", "flag": "🇮🇹" },
+      { "city": "Madrid", "country": "Espagne", "flag": "🇪🇸" },
+      { "city": "Amsterdam", "country": "Pays-Bas", "flag": "🇳🇱" },
+      { "city": "Prague", "country": "République tchèque", "flag": "🇨🇿" },
+      { "city": "Vienne", "country": "Autriche", "flag": "🇦🇹" },
+      { "city": "Lisbonne", "country": "Portugal", "flag": "🇵🇹" },
+      { "city": "Bruxelles", "country": "Belgique", "flag": "🇧🇪" }
     ],
     "helpTopics": [
       "Billet non reçu",

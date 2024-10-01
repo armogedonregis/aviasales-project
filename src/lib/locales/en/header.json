@@ -22,18 +22,17 @@
         "departure": "Departure",
         "return": "Return",
         "findTickets": "Find tickets",
-        "complexRoute": "Create a complex route",
-        "openInNewTab": "Open Ostrovok.ru in a new tab"
+        "complexRoute": "Create a complex route"
     },
     "cityGuide": {
         "title": "City guides in brief",
         "subtitle": "Guides without unnecessary words or boring facts",
         "searchPlaceholder": "Where are we going?",
         "categories": {
-            "russia": "Trips in Russia",
             "noVisa": "No visa needed",
             "beach": "Sea and beaches",
-            "kids": "For children"
+            "kids": "For children",
+            "culture": "Cultural experiences"
         }
     },
     "hotelSearch": {

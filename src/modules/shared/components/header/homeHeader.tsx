@@ -2,7 +2,7 @@ import { useState } from "react";
 import { CommonHeader } from "./commonHeader";
 import DatePicker from "../datePicter";
 import { format } from "date-fns";
-import { ru } from "date-fns/locale/ru";
+import { enUS } from "date-fns/locale";
 import { useTranslations } from 'next-intl';
 import { PassengerAvia } from "../passengerSelectors/passengerAvia";
 import { useRouter } from "@/lib/i18n/routing";
@@ -50,7 +50,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ isTransitioning }) => {
               value={fromCity}
               onChange={(e) => setFromCity(e.target.value)}
             />
-            <div className="text-xs text-gray-500 px-4">MOW</div>
+            <div className="text-xs text-gray-500 px-4">ANR</div>
           </div>
           <div className="flex items-center focus-within:shadow-focus-orange lg:flex-1 bg-white">
             <input
@@ -68,7 +68,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ isTransitioning }) => {
                   type="text"
                   placeholder={t('search.departure')}
                   className="w-full min-h-[60px] py-2.5 pr-12 pl-3.5 bg-transparent text-black focus:outline-none"
-                  value={departDate ? format(departDate, 'dd MMM yyyy', { locale: ru }) : ''}
+                  value={departDate ? format(departDate, 'dd MMM yyyy', { locale: enUS }) : ''}
                   onClick={() => setShowDepartDatePicker(!showDepartDatePicker)}
                   readOnly
                 />
@@ -90,7 +90,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ isTransitioning }) => {
                   type="text"
                   placeholder={t('search.return')}
                   className="w-full min-h-[60px] py-2.5 pr-12 pl-3.5 bg-transparent text-black focus:outline-none"
-                  value={returnDate ? format(returnDate, 'dd MMM yyyy', { locale: ru }) : ''}
+                  value={returnDate ? format(returnDate, 'dd MMM yyyy', { locale: enUS }) : ''}
                   onClick={() => setShowReturnDatePicker(!showReturnDatePicker)}
                   readOnly
                 />
@@ -123,10 +123,6 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ isTransitioning }) => {
       </div>
       <div className="text-sm flex justify-between lg:flex-row flex-col items-center lg:pr-40">
         <button className="text-white underline">{t('search.complexRoute')}</button>
-        <label className="flex items-center">
-          <input type="checkbox" className="mr-2 hidden lg:block" />
-          <span className="text-white hidden lg:block">{t('search.openInNewTab')}</span>
-        </label>
       </div>
     </CommonHeader>
   );

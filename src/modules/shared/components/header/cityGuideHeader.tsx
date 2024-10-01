@@ -6,10 +6,10 @@ export const CityGuideHeader: React.FC = () => {
   const t = useTranslations('header');
 
   const categories = [
-    { name: t('cityGuide.categories.russia'), icon: "🇷🇺", color: "bg-pink-100 text-pink-600" },
     { name: t('cityGuide.categories.noVisa'), icon: "🌍", color: "bg-green-100 text-green-600" },
     { name: t('cityGuide.categories.beach'), icon: "🏖️", color: "bg-orange-100 text-orange-600" },
-    { name: t('cityGuide.categories.kids'), icon: "🧸", color: "bg-blue-100 text-blue-600" }
+    { name: t('cityGuide.categories.kids'), icon: "🧸", color: "bg-blue-100 text-blue-600" },
+    { name: t('cityGuide.categories.culture'), icon: "🏛️", color: "bg-purple-100 text-purple-600" }
   ];
 
   return (

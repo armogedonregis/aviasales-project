@@ -22,18 +22,17 @@
         "departure": "Vertrek",
         "return": "Terug",
         "findTickets": "Tickets zoeken",
-        "complexRoute": "Maak een complexe route",
-        "openInNewTab": "Open Ostrovok.ru in een nieuw tabblad"
+        "complexRoute": "Maak een complexe route"
     },
     "cityGuide": {
         "title": "Korte stadsgidsen",
         "subtitle": "Gidsen zonder overbodige woorden en saaie feiten",
         "searchPlaceholder": "Waar gaan we naartoe?",
         "categories": {
-            "russia": "Reizen in Rusland",
             "noVisa": "Geen visum nodig",
             "beach": "Zee en stranden",
-            "kids": "Voor kinderen"
+            "kids": "Voor kinderen",
+            "culture": "Culturele ervaringen"
         }
     },
     "hotelSearch": {

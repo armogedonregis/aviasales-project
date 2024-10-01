@@ -1,12 +1,12 @@
 {
   "categories": [
-    { "title": "COUNTRIES", "items": ["Russia", "Thailand", "Montenegro", "Cyprus", "Bulgaria", "Georgia", "All countries →"] },
-    { "title": "CITIES", "items": ["Moscow", "Saint Petersburg", "Adler", "Yekaterinburg", "London", "All cities →"] },
-    { "title": "AIRLINES", "items": ["Aeroflot", "Air France", "Alitalia", "Air Baltic", "Emirates", "KLM", "All airlines →"] },
-    { "title": "AIRPORTS", "items": ["Sheremetyevo", "Kurumoch", "Domodedovo", "Tolmachevo", "Vladivostok", "Hamburg", "All airports →"] },
-    { "title": "SERVICES", "items": ["Anywhere", "PSKR Magazine", "Support"] },
-    { "title": "DESTINATIONS", "items": ["Moscow – Sochi", "Moscow – Tivat", "Moscow – Mineralnye Vody", "Saint Petersburg – Moscow", "Moscow – Bangkok"] }
-  ],
+  { "title": "COUNTRIES", "items": ["France", "Italy", "Spain", "Germany", "United Kingdom", "Greece"] },
+  { "title": "CITIES", "items": ["Paris", "Rome", "Berlin", "Amsterdam", "Barcelona"] },
+  { "title": "AIRLINES", "items": ["Lufthansa", "British Airways", "SAS", "Iberia", "Ryanair", "EasyJet"] },
+  { "title": "AIRPORTS", "items": ["Heathrow", "Charles de Gaulle", "Frankfurt", "Schiphol", "Barajas", "Fiumicino"] },
+  { "title": "SERVICES", "items": ["SKAI", "sky Magazine", "Support"] },
+  { "title": "DESTINATIONS", "items": ["London – Paris", "Paris – Amsterdam", "Berlin – Munich", "Madrid – Barcelona", "Rome – Milan", "Prague – Vienna"] }
+],
   "newsletter": {
     "description": "We know how to save on vacations,<br />catch discounts and fly without visas.<br />And we'll tell you about it",
     "placeholder": "Which email address to send to"
@@ -16,14 +16,12 @@
     "description": "The search is super fast there and it's easier to track ticket prices"
   },
   "socialIcons": [
-    { "name": "vk", "label": "VKontakte" },
-    { "name": "telegram", "label": "Telegram" },
-    { "name": "twitter", "label": "Twitter" },
-    { "name": "tiktok", "label": "TikTok" },
-    { "name": "zen", "label": "Zen" },
-    { "name": "viber", "label": "Viber" },
-    { "name": "youtube", "label": "YouTube" }
-  ],
+  { "name": "telegram", "label": "Telegram" },
+  { "name": "twitter", "label": "Twitter" },
+  { "name": "tiktok", "label": "TikTok" },
+  { "name": "viber", "label": "Viber" },
+  { "name": "youtube", "label": "YouTube" }
+],
   "links": ["About", "Partner Program", "Advertising", "Press Center", "Careers", "Support", "Legal Documents"],
   "copyright": "©{year}, Skypass — cheap airline tickets",
   "qrCode": {

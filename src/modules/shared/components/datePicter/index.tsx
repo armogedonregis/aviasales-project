@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { format, addMonths, startOfMonth, endOfMonth, isSameMonth, isSameDay, addDays } from 'date-fns';
-import { ru } from 'date-fns/locale';
+import { enUS } from 'date-fns/locale';
 
 interface DatePickerProps {
   onSelectDate: (date: Date) => void;
@@ -13,6 +13,7 @@ const DatePicker: React.FC<DatePickerProps> = ({ onSelectDate, initialDate, isRe
   const [currentDate, setCurrentDate] = useState(initialDate || new Date());
   const [selectedDate, setSelectedDate] = useState<Date | null>(initialDate || null);
   const [dateType, setDateType] = useState<'exact' | 'flexible' | 'period'>('exact');
+
 
   const renderCalendar = (monthOffset: number = 0) => {
     const monthStart = startOfMonth(addMonths(currentDate, monthOffset));
@@ -69,16 +70,16 @@ const DatePicker: React.FC<DatePickerProps> = ({ onSelectDate, initialDate, isRe
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 w-[600px]">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-semibold text-gray-800">{isReturnDate ? "Обратно" : "Когда"}</h2>
+        <h2 className="text-xl font-semibold text-gray-800">{isReturnDate ? "Return" : "When"}</h2>
         {isReturnDate && (
           <button className="text-sm text-blue-500 hover:underline" onClick={onClose}>
-            Обратный билет не нужен
+            No return ticket needed
           </button>
         )}
       </div>
       <div className="flex">
         <div className="w-1/4 pr-4 border-r">
-          {['Точные даты', 'Гибкие даты', 'Период поездки'].map((type, index) => (
+          {['Exact dates', 'Flexible dates', 'Travel period'].map((type, index) => (
             <button
               key={type}
               className={`w-full py-3 px-4 mb-2 text-left rounded-lg text-sm ${
@@ -99,10 +100,10 @@ const DatePicker: React.FC<DatePickerProps> = ({ onSelectDate, initialDate, isRe
           <div className="flex justify-between items-center mb-4">
             <button onClick={prevMonth} className="text-gray-500 hover:text-gray-700">&lt;</button>
             <h3 className="text-lg font-semibold text-gray-700">
-              {format(currentDate, 'LLLL yyyy', { locale: ru })}
+              {format(currentDate, 'LLLL yyyy', { locale: enUS })}
             </h3>
             <h3 className="text-lg font-semibold text-gray-700">
-              {format(addMonths(currentDate, 1), 'LLLL yyyy', { locale: ru })}
+              {format(addMonths(currentDate, 1), 'LLLL yyyy', { locale: enUS })}
             </h3>
             <button onClick={nextMonth} className="text-gray-500 hover:text-gray-700">&gt;</button>
           </div>
@@ -110,7 +111,7 @@ const DatePicker: React.FC<DatePickerProps> = ({ onSelectDate, initialDate, isRe
             {[0, 1].map((offset) => (
               <div key={offset} className={`w-1/2 ${offset === 0 ? 'pr-2' : 'pl-2'}`}>
                 <div className="grid grid-cols-7 gap-1 text-center text-xs font-medium text-gray-500 mb-2">
-                  {['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'].map(day => (
+                  {['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'].map(day => (
                     <div key={day}>{day}</div>
                   ))}
                 </div>

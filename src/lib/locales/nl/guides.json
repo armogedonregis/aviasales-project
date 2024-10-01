@@ -1,37 +1,37 @@
 {
-    "youViewed": "U heeft bekeken",
-    "cities": {
-      "Moscow": {
-        "name": "Moskou",
-        "country": "Rusland"
-      },
-      "Minsk": {
-        "name": "Minsk",
-        "country": "Wit-Rusland"
-      },
-      "SaintPetersburg": {
-        "name": "Sint-Petersburg",
-        "country": "Rusland"
-      },
-      "Sochi": {
-        "name": "Sotsji",
-        "country": "Rusland"
-      },
-      "Budapest": {
-        "name": "Boedapest",
-        "country": "Hongarije"
-      },
-      "Kaliningrad": {
-        "name": "Kaliningrad",
-        "country": "Rusland"
-      },
-      "Irkutsk": {
-        "name": "Irkoetsk",
-        "country": "Rusland"
-      },
-      "Ufa": {
-        "name": "Oefa",
-        "country": "Rusland"
-      }
+  "youViewed": "U heeft bekeken",
+  "cities": {
+    "Paris": {
+      "name": "Parijs",
+      "country": "Frankrijk"
+    },
+    "Rome": {
+      "name": "Rome",
+      "country": "Italië"
+    },
+    "Barcelona": {
+      "name": "Barcelona",
+      "country": "Spanje"
+    },
+    "Amsterdam": {
+      "name": "Amsterdam",
+      "country": "Nederland"
+    },
+    "Prague": {
+      "name": "Praag",
+      "country": "Tsjechië"
+    },
+    "Vienna": {
+      "name": "Wenen",
+      "country": "Oostenrijk"
+    },
+    "Berlin": {
+      "name": "Berlijn",
+      "country": "Duitsland"
+    },
+    "London": {
+      "name": "Londen",
+      "country": "Verenigd Koninkrijk"
     }
   }
+}

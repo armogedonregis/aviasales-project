@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/lib/i18n/routing';
 
 interface NavItemProps {
-  href: string;
+  href?: string;
   icon: React.ReactElement;
   text: string;
   isActive: boolean;
@@ -12,6 +12,7 @@ interface NavItemProps {
   hideOnMobile?: boolean;
   onClick?: () => void;
   variant: 'header' | 'home';
+  additionalClassName?: string;
 }
 
 interface NavigationProps {
@@ -65,7 +66,7 @@ export const NavigationHeader: React.FC<NavigationProps> = ({ variant, layoutId 
   ];
 
   const activeIndex = useMemo(() => {
-    const index = menuItems.findIndex(item => 
+    const index = menuItems.findIndex(item =>
       typeof item.isActive === 'function' ? item.isActive(pathname) : item.href === pathname
     );
     return index >= 0 ? index : 0;
@@ -85,6 +86,21 @@ export const NavigationHeader: React.FC<NavigationProps> = ({ variant, layoutId 
     hideOnMobile: true
   };
 
+  const trySkyMenuItem = {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0L14.91 8.91L24 12L14.91 15.09L12 24L9.09 15.09L0 12L9.09 8.91L12 0Z" />
+      </svg>
+    ),
+    text: "Try sky",
+    hideOnMobile: true,
+    additionalClassName: '!flex-row !gap-2',
+    onClick: () => {
+      console.log('Open Try sky modal');
+    }
+  };
+
+
   return (
     <motion.nav
       layoutId={layoutId}
@@ -95,6 +111,13 @@ export const NavigationHeader: React.FC<NavigationProps> = ({ variant, layoutId 
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <div className={`flex ${variant === 'home' ? 'gap-3' : 'gap-2'}`}>
+        <ul className={`hidden lg:flex bg-menu_nav_bg ${variant === 'home' ? 'rounded-xl p-1' : 'rounded-lg p-1'}`}>
+          <NavItem
+            {...trySkyMenuItem}
+            variant={variant}
+            isActive={false}
+          />
+        </ul>
         <ul className={`flex relative items-center lg:bg-menu_nav_bg ${variant === 'home' ? 'rounded-xl p-1 space-x-0.5' : 'rounded-lg p-1 space-x-2'}`}>
           {variant === 'home' && (
             <motion.div
@@ -134,9 +157,23 @@ export const NavigationHeader: React.FC<NavigationProps> = ({ variant, layoutId 
   );
 };
 
-const NavItem: React.FC<NavItemProps> = ({ href, icon, text, isActive, isExternal, variant, onClick, hideOnMobile }) => {
-  const ItemWrapper = isExternal ? 'a' : Link;
-  const itemProps = isExternal ? { target: "_blank", rel: "nofollow noreferrer" } : {};
+
+const NavItem: React.FC<NavItemProps> = ({ href, icon, text, isActive, isExternal, variant, onClick, hideOnMobile, additionalClassName = '' }) => {
+  let ItemWrapper: any;
+  let itemProps: any;
+
+  if (href) {
+    if (isExternal) {
+      ItemWrapper = 'a';
+      itemProps = { href, target: "_blank", rel: "nofollow noreferrer" };
+    } else {
+      ItemWrapper = Link;
+      itemProps = { href };
+    }
+  } else {
+    ItemWrapper = 'button';
+    itemProps = { type: "button" as const };
+  }
 
   const content = (
     <>
@@ -150,10 +187,11 @@ const NavItem: React.FC<NavItemProps> = ({ href, icon, text, isActive, isExterna
     </>
   );
 
-  const className = `${variant === 'home'
+  const className = `${additionalClassName} ${variant === 'home'
     ? `rounded-xl flex flex-col py-2 items-center justify-center h-full transition-colors min-w-[102px] ${isActive ? "text-black " : "text-menu_text_color bg-menu_hover lg:bg-transparent hover:bg-menu_hover_second"}`
     : `flex items-center py-2 px-2.5 rounded-lg transition-colors ${isActive ? 'bg-white text-black' : 'hover:bg-menu_hover text-white'}`
-  } ${hideOnMobile ? 'hidden lg:flex' : ''}`;
+  } ${hideOnMobile ? 'hidden lg:flex' : ''} ${additionalClassName}`;  // Добавляем additionalClassName
+
 
 
   return (

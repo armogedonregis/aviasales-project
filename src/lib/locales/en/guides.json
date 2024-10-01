@@ -1,37 +1,37 @@
 {
   "youViewed": "You viewed",
   "cities": {
-    "Moscow": {
-      "name": "Moscow",
-      "country": "Russia"
+    "Paris": {
+      "name": "Paris",
+      "country": "France"
     },
-    "Minsk": {
-      "name": "Minsk",
-      "country": "Belarus"
+    "Rome": {
+      "name": "Rome",
+      "country": "Italy"
     },
-    "SaintPetersburg": {
-      "name": "Saint Petersburg",
-      "country": "Russia"
+    "Barcelona": {
+      "name": "Barcelona",
+      "country": "Spain"
     },
-    "Sochi": {
-      "name": "Sochi",
-      "country": "Russia"
+    "Amsterdam": {
+      "name": "Amsterdam",
+      "country": "Netherlands"
     },
-    "Budapest": {
-      "name": "Budapest",
-      "country": "Hungary"
+    "Prague": {
+      "name": "Prague",
+      "country": "Czech Republic"
     },
-    "Kaliningrad": {
-      "name": "Kaliningrad",
-      "country": "Russia"
+    "Vienna": {
+      "name": "Vienna",
+      "country": "Austria"
     },
-    "Irkutsk": {
-      "name": "Irkutsk",
-      "country": "Russia"
+    "Berlin": {
+      "name": "Berlin",
+      "country": "Germany"
     },
-    "Ufa": {
-      "name": "Ufa",
-      "country": "Russia"
+    "London": {
+      "name": "London",
+      "country": "United Kingdom"
     }
   }
 }

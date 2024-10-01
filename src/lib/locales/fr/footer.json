@@ -1,12 +1,13 @@
 {
-    "categories": [
-      { "title": "PAYS", "items": ["Russie", "Thaïlande", "Monténégro", "Chypre", "Bulgarie", "Géorgie", "Tous les pays →"] },
-      { "title": "VILLES", "items": ["Moscou", "Saint-Pétersbourg", "Adler", "Ekaterinbourg", "Londres", "Toutes les villes →"] },
-      { "title": "COMPAGNIES AÉRIENNES", "items": ["Aeroflot", "Air France", "Alitalia", "Air Baltic", "Emirates", "KLM", "Toutes les compagnies →"] },
-      { "title": "AÉROPORTS", "items": ["Sheremetyevo", "Kurumoch", "Domodedovo", "Tolmachevo", "Vladivostok", "Hambourg", "Tous les aéroports →"] },
-      { "title": "SERVICES", "items": ["N'importe où", "Magazine PSKR", "Support"] },
-      { "title": "DESTINATIONS", "items": ["Moscou – Sotchi", "Moscou – Tivat", "Moscou – Eaux Minérales", "Saint-Pétersbourg – Moscou", "Moscou – Bangkok"] }
-    ],
+    
+  "categories": [
+    { "title": "PAYS", "items": ["France", "Italie", "Espagne", "Allemagne", "Royaume-Uni", "Grèce"] },
+    { "title": "VILLES", "items": ["Paris", "Rome", "Berlin", "Amsterdam", "Barcelone"] },
+    { "title": "COMPAGNIES AÉRIENNES", "items": ["Lufthansa", "British Airways", "SAS", "Iberia", "Ryanair", "EasyJet"] },
+    { "title": "AÉROPORTS", "items": ["Heathrow", "Charles de Gaulle", "Francfort", "Schiphol", "Barajas", "Fiumicino"] },
+    { "title": "SERVICES", "items": ["SKAI", "sky Magazine", "Support"] },
+    { "title": "DESTINATIONS", "items": ["Londres – Paris", "Paris – Amsterdam", "Berlin – Munich", "Madrid – Barcelone", "Rome – Milan", "Prague – Vienne"] }
+  ],
     "newsletter": {
       "description": "Nous savons comment économiser sur les vacances,<br />attraper des réductions et voler sans visa.<br />Et nous vous le dirons",
       "placeholder": "À quelle adresse envoyer les e-mails"
@@ -16,14 +17,12 @@
       "description": "La recherche y est super rapide et il est plus facile de suivre les prix des billets"
     },
     "socialIcons": [
-      { "name": "vk", "label": "VKontakte" },
-      { "name": "telegram", "label": "Telegram" },
-      { "name": "twitter", "label": "Twitter" },
-      { "name": "tiktok", "label": "TikTok" },
-      { "name": "zen", "label": "Zen" },
-      { "name": "viber", "label": "Viber" },
-      { "name": "youtube", "label": "YouTube" }
-    ],
+  { "name": "telegram", "label": "Telegram" },
+  { "name": "twitter", "label": "Twitter" },
+  { "name": "tiktok", "label": "TikTok" },
+  { "name": "viber", "label": "Viber" },
+  { "name": "youtube", "label": "YouTube" }
+],
     "links": ["À propos", "Programme partenaire", "Publicité", "Centre de presse", "Carrières", "Support", "Documents juridiques"],
     "copyright": "©{year}, Skypass — billets d'avion pas chers",
     "qrCode": {

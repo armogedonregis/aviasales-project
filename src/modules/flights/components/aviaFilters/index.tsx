@@ -18,7 +18,7 @@ export const AviaFilters = () => {
                     <label key={stop} className="flex items-center mb-2">
                         <input type="checkbox" className="mr-2" />
                         <span>{t(stop)}</span>
-                        <span className="ml-auto text-gray-500">{6793 + index * 7000}₽</span>
+                        <span className="ml-auto text-gray-500">€{150 + index * 50}</span>
                     </label>
                 ))}
             </div>
@@ -35,7 +35,7 @@ export const AviaFilters = () => {
                     onChange={(e) => setStopDuration(Number(e.target.value))}
                 />
                 <div className="flex justify-between text-sm text-gray-500">
-                    <span>{t('upTo')} {stopDuration}ч</span>
+                    <span>{t('upTo')} {stopDuration}h</span>
                 </div>
             </div>
 
@@ -52,15 +52,15 @@ export const AviaFilters = () => {
             </label>
 
             {[
-                'departureToMoscow',
-                'returnToCheboksary',
+                'departureTime',
+                'arrivalTime',
                 'baggageAndFare',
                 'airlines',
                 'alliances',
                 'flightTime',
                 'connectingAirports',
-                'moscowAirports',
-                'cheboksaryAirports',
+                'departureAirports',
+                'arrivalAirports',
                 'price',
                 'agencies',
                 'paymentMethods',

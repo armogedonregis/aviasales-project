@@ -1,12 +1,12 @@
 {
-  "categories": [
-    { "title": "LANDEN", "items": ["Rusland", "Thailand", "Montenegro", "Cyprus", "Bulgarije", "Georgië", "Alle landen →"] },
-    { "title": "STEDEN", "items": ["Moskou", "Sint-Petersburg", "Adler", "Jekaterinenburg", "Londen", "Alle steden →"] },
-    { "title": "LUCHTVAARTMAATSCHAPPIJEN", "items": ["Aeroflot", "Air France", "Alitalia", "Air Baltic", "Emirates", "KLM", "Alle luchtvaartmaatschappijen →"] },
-    { "title": "LUCHTHAVENS", "items": ["Sheremetyevo", "Kurumoch", "Domodedovo", "Tolmachevo", "Vladivostok", "Hamburg", "Alle luchthavens →"] },
-    { "title": "DIENSTEN", "items": ["Overal naartoe", "PSKR Magazine", "Ondersteuning"] },
-    { "title": "BESTEMMINGEN", "items": ["Moskou – Sochi", "Moskou – Tivat", "Moskou – Mineralnye Vody", "Sint-Petersburg – Moskou", "Moskou – Bangkok"] }
-  ],
+"categories": [
+  { "title": "LANDEN", "items": ["Frankrijk", "Italië", "Spanje", "Duitsland", "Verenigd Koninkrijk", "Griekenland"] },
+  { "title": "STEDEN", "items": ["Parijs", "Rome", "Berlijn", "Amsterdam", "Barcelona"] },
+  { "title": "LUCHTVAARTMAATSCHAPPIJEN", "items": ["Lufthansa", "British Airways", "SAS", "Iberia", "Ryanair", "EasyJet"] },
+  { "title": "LUCHTHAVENS", "items": ["Heathrow", "Charles de Gaulle", "Frankfurt", "Schiphol", "Barajas", "Fiumicino"] },
+  { "title": "DIENSTEN", "items": ["SKAI", "sky Magazine", "Ondersteuning"] },
+  { "title": "BESTEMMINGEN", "items": ["Londen – Parijs", "Parijs – Amsterdam", "Berlijn – München", "Madrid – Barcelona", "Rome – Milaan", "Praag – Wenen"] }
+],
   "newsletter": {
     "description": "Wij weten hoe je kunt besparen op vakanties,<br />kortingen kunt vangen en zonder visum kunt vliegen.<br />En we zullen het je vertellen",
     "placeholder": "Naar welk adres moeten we e-mails sturen"
@@ -16,14 +16,12 @@
     "description": "Het zoeken is daar supersnel en het is gemakkelijker om ticketprijzen te volgen"
   },
   "socialIcons": [
-    { "name": "vk", "label": "VKontakte" },
-    { "name": "telegram", "label": "Telegram" },
-    { "name": "twitter", "label": "Twitter" },
-    { "name": "tiktok", "label": "TikTok" },
-    { "name": "zen", "label": "Zen" },
-    { "name": "viber", "label": "Viber" },
-    { "name": "youtube", "label": "YouTube" }
-  ],
+  { "name": "telegram", "label": "Telegram" },
+  { "name": "twitter", "label": "Twitter" },
+  { "name": "tiktok", "label": "TikTok" },
+  { "name": "viber", "label": "Viber" },
+  { "name": "youtube", "label": "YouTube" }
+],
   "links": ["Over ons", "Partnerprogramma", "Adverteren", "Perscentrum", "Carrières", "Ondersteuning", "Juridische documenten"],
   "copyright": "©{year}, Skypass — goedkope vliegtickets",
   "qrCode": {
