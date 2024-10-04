@@ -24,12 +24,18 @@ const TrySkyPlan: React.FC = () => {
     const [suggestionsStep, setSuggestionsStep] = useState(0);
     const [selectedInitialSuggestion, setSelectedInitialSuggestion] = useState<string | null>(null);
 
+    const messagesContainerRef = useRef<HTMLDivElement>(null);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+        if (messagesContainerRef.current && messagesEndRef.current) {
+            const scrollContainer = messagesContainerRef.current;
+            const scrollHeight = scrollContainer.scrollHeight;
+            const height = scrollContainer.clientHeight;
+            const maxScrollTop = scrollHeight - height;
+            scrollContainer.scrollTop = maxScrollTop > 0 ? maxScrollTop : 0;
+        }
     };
-
     useEffect(() => {
         scrollToBottom();
     }, [messages, isTyping]);
@@ -98,11 +104,11 @@ const TrySkyPlan: React.FC = () => {
     };
 
     return (
-        <div className="bg-white rounded-lg shadow-sm w-full h-[calc(100vh-2rem)] flex flex-col">
+        <div className="bg-white rounded-lg shadow-sm w-full h-[calc(100vh-20%)] flex flex-col">
             <div className="flex justify-between items-center p-4 border-b bg-indigo-900 text-white">
                 <span className="font-bold">SKAI</span>
             </div>
-            <div className="flex-grow overflow-y-auto p-4 space-y-4">
+            <div ref={messagesContainerRef} className="flex-grow overflow-y-auto p-4 space-y-4 h-[300px]">
                 {messages.map((message, index) => (
                     <div key={index} className={`flex ${message.type === 'assistant' ? 'justify-start' : 'justify-end'}`}>
                         <div className={`rounded-lg p-3 ${message.type === 'assistant' ? 'text-black' : 'bg-indigo-500 text-white'}`}>

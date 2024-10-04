@@ -5,6 +5,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTrySky } from './trySkyContext';
 import TrySkyModal from './trySkyModal';
+import TrySkyPlan from './trySkyPlan';
 
 const TrySkyIntro: React.FC = () => {
     const t = useTranslations('trySky');
@@ -47,6 +48,9 @@ const TrySkyIntro: React.FC = () => {
                     transition={{ duration: 0.3 }}
                 >
                     <div className="container mx-auto px-4 py-6">
+                        <TrySkyPlan />
+                    </div>
+                    {/* <div className="container mx-auto px-4 py-6">
                         <div className="bg-indigo-700 text-white rounded-lg p-4">
                             <p className="font-bold mb-2">SKAI:</p>
                             {t('introMessage').split('\n').map((line, index) => (
@@ -92,7 +96,7 @@ const TrySkyIntro: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <TrySkyModal isOpen={isModalOpen} onClose={handleCloseModal} />
+                    <TrySkyModal isOpen={isModalOpen} onClose={handleCloseModal} /> */}
                 </motion.div>
             )}
         </AnimatePresence>
