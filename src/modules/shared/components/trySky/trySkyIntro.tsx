@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTrySky } from './trySkyContext';
 import TrySkyModal from './trySkyModal';
@@ -10,6 +10,7 @@ const TrySkyIntro: React.FC = () => {
     const t = useTranslations('trySky');
     const [isModalOpen, setIsModalOpen] = useState(false);
     const { isTrySkyOpen, closeTrySky } = useTrySky();
+    const containerRef = useRef<HTMLDivElement>(null);
 
     const handleYesClick = () => {
         setIsModalOpen(true);
@@ -19,11 +20,27 @@ const TrySkyIntro: React.FC = () => {
         setIsModalOpen(false);
     };
 
+
+    useEffect(() => {
+        if (isTrySkyOpen && containerRef.current) {
+            containerRef.current.focus();
+            
+            setTimeout(() => {
+                const yOffset = containerRef.current?.getBoundingClientRect().top ?? 0;
+                const y = yOffset + window.scrollY - 100;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }, 100);
+        }
+    }, [isTrySkyOpen]);
+
+
     return (
         <AnimatePresence>
             {isTrySkyOpen && (
                 <motion.div
-                    className="w-full bg-sky-100 shadow-md"
+                    ref={containerRef}
+                    tabIndex={-1}
+                    className="w-full bg-sky-100 shadow-md focus:outline-none"
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
