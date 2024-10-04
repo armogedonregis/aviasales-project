@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import SuggestedPlans from './SuggestedPlans';
 import TypingAnimation from './TypingAnimation';
@@ -23,6 +23,16 @@ const TrySkyPlan: React.FC = () => {
     const [isTyping, setIsTyping] = useState(false);
     const [suggestionsStep, setSuggestionsStep] = useState(0);
     const [selectedInitialSuggestion, setSelectedInitialSuggestion] = useState<string | null>(null);
+
+    const messagesEndRef = useRef<HTMLDivElement>(null);
+
+    const scrollToBottom = () => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    useEffect(() => {
+        scrollToBottom();
+    }, [messages, isTyping]);
 
     const handlePlanClick = (plan: string) => {
         setMessages([...messages, { type: 'user', content: plan }]);
@@ -152,6 +162,7 @@ const TrySkyPlan: React.FC = () => {
                     </div>
                 ))}
                 {isTyping && <TypingAnimation />}
+                <div ref={messagesEndRef} /> 
             </div>
             <div className="p-4">
                 {suggestionsStep === 0 && <p className="text-sm text-right text-gray-600 mb-2">{t('dontKnowWhatToAsk')}</p>}

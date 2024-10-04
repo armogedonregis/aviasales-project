@@ -35,7 +35,7 @@ const TrySkyModal: React.FC<TrySkyModalProps> = ({ isOpen, onClose }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <DialogPanel className="w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
+              <DialogPanel className="w-full max-w-2xl transform overflow-x-hidden overflow-y-auto rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
                 <div className="absolute right-0 top-0 pr-4 pt-4">
                   <button
                     type="button"

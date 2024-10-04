@@ -51,5 +51,8 @@
   "checkInAmsterdamLisbonResponse": "I can directly check you in for your flight from Amsterdam to Lisbon. You're all set! Here's your boarding pass. Would you like to receive it by email or SMS?",
   "transportationMadridResponse": "You have several options: a city bus for €5, a taxi for approximately €30, or I can book a private shuttle for you at €40. Which option would you prefer?",
   "travelRestrictionsLondonNewYorkResponse": "Currently, travelers from London to New York must show proof of vaccination and a negative COVID-19 test taken no more than 72 hours before departure. Would you like assistance with arranging a test?",
-  "setAlertsDealsResponse": "I can set up alerts for you right now. Just let me know your favorite destinations and your preferred travel dates, and I'll notify you as soon as there are deals."
+  "setAlertsDealsResponse": "I can set up alerts for you right now. Just let me know your favorite destinations and your preferred travel dates, and I'll notify you as soon as there are deals.",
+  "showMore": "Show more",
+  "showLess": "Show less",
+   "placeholderResponse": "I understand your question. Let me think for a moment and I'll get back to you with an answer as soon as possible."
 }

@@ -51,5 +51,8 @@
   "checkInAmsterdamLisbonResponse": "Je peux vous enregistrer directement pour votre vol d'Amsterdam à Lisbonne. Tout est prêt ! Voici votre carte d'embarquement. Voulez-vous la recevoir par e-mail ou par SMS ?",
   "transportationMadridResponse": "Vous avez plusieurs options : un bus de ville pour 5 €, un taxi pour environ 30 €, ou je peux réserver une navette privée pour vous à 40 €. Quelle option préférez-vous ?",
   "travelRestrictionsLondonNewYorkResponse": "Actuellement, les voyageurs de Londres à New York doivent présenter une preuve de vaccination et un test COVID-19 négatif effectué au plus tard 72 heures avant le départ. Voulez-vous de l'aide pour organiser un test ?",
-  "setAlertsDealsResponse": "Je peux configurer des alertes pour vous dès maintenant. Faites-moi savoir vos destinations préférées et vos dates de voyage préférées, et je vous informerai dès qu'il y aura des offres."
+  "setAlertsDealsResponse": "Je peux configurer des alertes pour vous dès maintenant. Faites-moi savoir vos destinations préférées et vos dates de voyage préférées, et je vous informerai dès qu'il y aura des offres.",
+  "showMore": "Afficher plus",
+  "showLess": "Afficher moins",
+  "placeholderResponse": "Je comprends votre question. Laissez-moi réfléchir un instant et je vous répondrai dès que possible."
 }

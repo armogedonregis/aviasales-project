@@ -110,58 +110,83 @@ export const NavigationHeader: React.FC<NavigationProps> = ({ variant, layoutId 
 
 
   return (
-    <motion.nav
-      layoutId={layoutId}
-      className={`flex justify-center ${variant === 'home' ? 'mx-auto w-full' : 'hidden lg:flex'}`}
-      initial={variant === 'home' ? { y: 50, opacity: 0 } : { y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={variant === 'home' ? { y: 50, opacity: 0 } : { y: -50, opacity: 0 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-    >
-      <div className={`flex ${variant === 'home' ? 'gap-3' : 'gap-2'}`}>
-        <ul className={`hidden lg:flex bg-menu_nav_bg ${variant === 'home' ? 'rounded-xl p-1' : 'rounded-lg p-1'}`}>
-          <NavItem
-            {...trySkyMenuItem}
-            variant={variant}
-            isActive={false}
-          />
-        </ul>
-        <ul className={`flex relative items-center lg:bg-menu_nav_bg ${variant === 'home' ? 'rounded-xl p-1 space-x-0.5' : 'rounded-lg p-1 space-x-2'}`}>
-          {variant === 'home' && (
-            <motion.div
-              className={`absolute bg-white rounded-lg indicator-${activeIndex}`}
-              layoutId="indicator"
-              initial={false}
-              transition={{
-                type: "spring",
-                stiffness: 500,
-                damping: 30
-              }}
-              style={{
-                height: 'calc(100% - 8px)',
-                top: 4,
-              }}
-            />
-          )}
-          {menuItems.map((item, index) => (
-            <NavItem
-              key={index}
-              {...item}
-              variant={variant}
-              isActive={typeof item.isActive === 'function' ? item.isActive(pathname) : pathname === item.href}
-            />
-          ))}
-        </ul>
-        <ul className={`hidden lg:flex bg-menu_nav_bg ${variant === 'home' ? 'rounded-xl p-1' : 'rounded-lg p-1'}`}>
-          <NavItem
-            {...businessMenuItem}
-            variant={variant}
-            isActive={false}
-            onClick={() => { }}
-          />
-        </ul>
+    <>
+      <div className='lg:hidden flex justify-center mb-4'>
+        <button
+          onClick={handleTrySkyClick}
+          className={`
+      rounded-full px-4 py-2 font-semibold text-sm flex items-center gap-2
+      transition-colors duration-300 ease-in-out
+      ${isTrySkyOpen
+              ? 'bg-white text-blue-600 shadow-md'
+              : 'bg-blue-600 text-white hover:bg-blue-700'}
+    `}
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 0L14.91 8.91L24 12L14.91 15.09L12 24L9.09 15.09L0 12L9.09 8.91L12 0Z" />
+          </svg>
+          SKAI
+        </button>
       </div>
-    </motion.nav>
+      <motion.nav
+        layoutId={layoutId}
+        className={`flex justify-center ${variant === 'home' ? 'mx-auto w-full' : 'hidden lg:flex'}`}
+        initial={variant === 'home' ? { y: 50, opacity: 0 } : { y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={variant === 'home' ? { y: 50, opacity: 0 } : { y: -50, opacity: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
+        <div className={`flex ${variant === 'home' ? 'gap-3' : 'gap-2'}`}>
+          <ul className={`hidden lg:flex bg-menu_nav_bg ${variant === 'home' ? 'rounded-xl p-1' : 'rounded-lg p-1'}`}>
+            <NavItem
+              {...trySkyMenuItem}
+              variant={variant}
+              isActive={false}
+            />
+          </ul>
+          <ul className={`flex relative items-center lg:bg-menu_nav_bg ${variant === 'home' ? 'rounded-xl p-1 space-x-0.5' : 'rounded-lg p-1 space-x-2'}`}>
+            {variant === 'home' && (
+              <motion.div
+                className={`absolute bg-white rounded-lg indicator-${activeIndex}`}
+                layoutId="indicator"
+                initial={false}
+                transition={{
+                  type: "spring",
+                  stiffness: 500,
+                  damping: 30
+                }}
+                style={{
+                  height: 'calc(100% - 8px)',
+                  top: 4,
+                }}
+              />
+            )}
+            {menuItems.map((item, index) => (
+              <NavItem
+                key={index}
+                {...item}
+                variant={variant}
+                isActive={typeof item.isActive === 'function' ? item.isActive(pathname) : pathname === item.href}
+              />
+            ))}
+          </ul>
+          <ul className={`hidden lg:flex bg-menu_nav_bg ${variant === 'home' ? 'rounded-xl p-1' : 'rounded-lg p-1'}`}>
+            <NavItem
+              {...businessMenuItem}
+              variant={variant}
+              isActive={false}
+              onClick={() => { }}
+            />
+          </ul>
+        </div>
+      </motion.nav>
+    </>
   );
 };
 
@@ -198,7 +223,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, icon, text, isActive, isExterna
   const className = `${additionalClassName} ${variant === 'home'
     ? `rounded-xl flex flex-col py-2 items-center justify-center h-full transition-colors min-w-[102px] ${isActive ? "text-black " : "text-menu_text_color bg-menu_hover lg:bg-transparent hover:bg-menu_hover_second"}`
     : `flex items-center py-2 px-2.5 rounded-lg transition-colors ${isActive ? 'bg-white text-black' : 'hover:bg-menu_hover text-white'}`
-  } ${hideOnMobile ? 'hidden lg:flex' : ''} ${additionalClassName}`;  // Добавляем additionalClassName
+    } ${hideOnMobile ? 'hidden lg:flex' : ''} ${additionalClassName}`;  // Добавляем additionalClassName
 
 
 

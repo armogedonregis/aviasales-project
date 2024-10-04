@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface AdditionalQuestionsProps {
@@ -7,6 +7,7 @@ interface AdditionalQuestionsProps {
 
 const AdditionalQuestions: React.FC<AdditionalQuestionsProps> = ({ onQuestionClick }) => {
     const t = useTranslations('trySky');
+    const [isExpanded, setIsExpanded] = useState(false);
 
     const questions = [
         t('cheapestFlightsLondonRome'),
@@ -21,20 +22,35 @@ const AdditionalQuestions: React.FC<AdditionalQuestionsProps> = ({ onQuestionCli
         t('setAlertsDeals')
     ];
 
+    const visibleQuestions = isExpanded ? questions : questions.slice(0, 3);
+
+    const handleQuestionClick = (question: string) => {
+        onQuestionClick(question);
+        setIsExpanded(false);
+    };
+
     return (
-        <div className="mt-4">
+        <div className="my-4">
             <h3 className="text-sm font-semibold mb-2">{t('additionalQuestions')}</h3>
             <div className="space-y-2">
-                {questions.map((question, index) => (
+                {visibleQuestions.map((question, index) => (
                     <button
                         key={index}
                         className="text-left text-sm text-blue-600 hover:underline block"
-                        onClick={() => onQuestionClick(question)}
+                        onClick={() => handleQuestionClick(question)}
                     >
                         {question}
                     </button>
                 ))}
             </div>
+            {questions.length > 3 && (
+                <button
+                    className="text-sm text-blue-600 hover:underline mt-2"
+                    onClick={() => setIsExpanded(!isExpanded)}
+                >
+                    {isExpanded ? t('showLess') : t('showMore')}
+                </button>
+            )}
         </div>
     );
 };

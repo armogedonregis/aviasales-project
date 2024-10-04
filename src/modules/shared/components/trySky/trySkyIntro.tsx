@@ -49,11 +49,11 @@ const TrySkyIntro: React.FC = () => {
                             <div className="flex justify-between items-center mb-4">
                                 <div className="flex space-x-2">
                                     <div className="bg-white p-2 rounded shadow-sm">
-                                        <p className="text-sm font-semibold">7974₽</p>
+                                        <p className="text-sm font-semibold">79€</p>
                                         <p className="text-xs text-gray-500">10:30 - 15:45</p>
                                     </div>
                                     <div className="bg-white p-2 rounded shadow-sm">
-                                        <p className="text-sm font-semibold">7974₽</p>
+                                        <p className="text-sm font-semibold">79€</p>
                                         <p className="text-xs text-gray-500">10:30 - 15:45</p>
                                     </div>
                                 </div>

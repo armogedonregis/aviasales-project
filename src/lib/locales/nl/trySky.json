@@ -51,5 +51,8 @@
   "checkInAmsterdamLisbonResponse": "Ik kan u direct inchecken voor uw vlucht van Amsterdam naar Lissabon. U bent helemaal klaar! Hier is uw instapkaart. Wilt u deze per e-mail of SMS ontvangen?",
   "transportationMadridResponse": "U heeft verschillende opties: een stadsbus voor €5, een taxi voor ongeveer €30, of ik kan een privéshuttle voor u boeken voor €40. Welke optie heeft uw voorkeur?",
   "travelRestrictionsLondonNewYorkResponse": "Momenteel moeten reizigers van Londen naar New York een bewijs van vaccinatie en een negatieve COVID-19 test tonen die niet ouder is dan 72 uur voor vertrek. Wilt u hulp bij het regelen van een test?",
-  "setAlertsDealsResponse": "Ik kan nu waarschuwingen voor u instellen. Laat me weten wat uw favoriete bestemmingen en voorkeursreisdata zijn, en ik zal u op de hoogte stellen zodra er aanbiedingen zijn."
+  "setAlertsDealsResponse": "Ik kan nu waarschuwingen voor u instellen. Laat me weten wat uw favoriete bestemmingen en voorkeursreisdata zijn, en ik zal u op de hoogte stellen zodra er aanbiedingen zijn.",
+  "showMore": "Toon meer",
+  "showLess": "Toon minder",
+  "placeholderResponse": "Ik begrijp uw vraag. Laat me even nadenken en ik kom zo snel mogelijk met een antwoord."
 }
