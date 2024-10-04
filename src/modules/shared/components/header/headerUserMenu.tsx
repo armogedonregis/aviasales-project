@@ -10,7 +10,6 @@ import SettingsIcon from "/public/assets/vector/settingsIcon.svg";
 import NotificationsIcon from "/public/assets/vector/notificationsIcon.svg";
 import DocumentsIcon from "/public/assets/vector/documentsIcon.svg";
 import { Link, useRouter } from '@/lib/i18n/routing';
-import TrySkyIntro from '../tutuJarvel/trySkyIntro';
 
 interface Language {
     code: 'fr' | 'nl' | 'en';
@@ -62,16 +61,6 @@ export const HeaderUserMenu: React.FC = () => {
 
     const handleCloseLoginModal = useCallback(() => {
         setIsLoginModalOpen(false);
-        if (buttonCloseRef.current) {
-            buttonCloseRef.current();
-        }
-    }, []);
-
-    // tutu
-    const [isTutuJarvelOpen, setIsTutuJarvelOpen] = useState<boolean>(false);
-
-    const handleCloseTutuJarvel = useCallback(() => {
-        setIsTutuJarvelOpen(false);
         if (buttonCloseRef.current) {
             buttonCloseRef.current();
         }
@@ -131,7 +120,6 @@ export const HeaderUserMenu: React.FC = () => {
                                     {({ focus }) => (
                                         <button
                                             onClick={() => {
-                                                setIsTutuJarvelOpen(true);
                                                 buttonCloseRef.current = close;
                                             }}
                                             className={`${focus ? 'bg-menu_item_hover' : ''} flex w-full items-center rounded-md px-3 py-2 text-sm font-bold text-gray-700`}
@@ -213,11 +201,6 @@ export const HeaderUserMenu: React.FC = () => {
             </button>
 
             <LoginModal isOpen={isLoginModalOpen} onClose={handleCloseLoginModal} />
-            {isTutuJarvelOpen && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <TrySkyIntro isModal onClose={handleCloseTutuJarvel} />
-                </div>
-            )}
         </div>
     );
 };

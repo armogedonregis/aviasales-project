@@ -3,8 +3,9 @@ import { Inter } from 'next/font/google'
 import "@/style/globals.css";
 import { Footer, Header } from "@/modules/shared/components";
 import { NextIntlClientProvider } from "next-intl";
-import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
+import { TrySkyProvider } from "@/modules/shared/components/trySky/trySkyContext";
+import TrySkyIntro from "@/modules/shared/components/trySky/trySkyIntro";
 
 const inter = Inter({
     subsets: ['latin'],
@@ -26,12 +27,15 @@ export default async function RootLayout({
     return (
         <html className={inter.className}>
             <body>
-            <NextIntlClientProvider messages={messages}>
-                <div className="flex flex-col min-h-screen">
-                        <Header />
-                        <main className="mb-5 flex-1 flex flex-col">{children}</main>
-                        <Footer />
-                </div>
+                <NextIntlClientProvider messages={messages}>
+                    <TrySkyProvider>
+                        <div className="flex flex-col min-h-screen">
+                            <Header />
+                            <TrySkyIntro />
+                            <main className="mb-5 flex-1 flex flex-col">{children}</main>
+                            <Footer />
+                        </div>
+                    </TrySkyProvider>
                 </NextIntlClientProvider>
             </body>
         </html>

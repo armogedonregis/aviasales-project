@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/lib/i18n/routing';
+import { useTrySky } from '../trySky/trySkyContext';
 
 interface NavItemProps {
   href?: string;
@@ -23,6 +24,15 @@ interface NavigationProps {
 export const NavigationHeader: React.FC<NavigationProps> = ({ variant, layoutId }) => {
   const pathname = usePathname();
   const t = useTranslations('header.navigation');
+  const { isTrySkyOpen, openTrySky, closeTrySky } = useTrySky();
+
+  const handleTrySkyClick = () => {
+    if (isTrySkyOpen) {
+      closeTrySky();
+    } else {
+      openTrySky();
+    }
+  };
 
   const menuItems = [
     {
@@ -94,10 +104,8 @@ export const NavigationHeader: React.FC<NavigationProps> = ({ variant, layoutId 
     ),
     text: "SKAI",
     hideOnMobile: true,
-    additionalClassName: '!flex-row !gap-2',
-    onClick: () => {
-      console.log('Open Try sky modal');
-    }
+    additionalClassName: `!flex-row !gap-2 ${isTrySkyOpen ? '!bg-white !text-blue-600' : ''}`,
+    onClick: handleTrySkyClick
   };
 
 

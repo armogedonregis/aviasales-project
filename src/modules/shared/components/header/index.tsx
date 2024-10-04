@@ -9,7 +9,6 @@ import { CityGuideHeader } from './cityGuideHeader';
 import { SearchHeader } from './searchHeader';
 
 
-
 interface HeaderProps {
     isTransitioning?: boolean;
 }
