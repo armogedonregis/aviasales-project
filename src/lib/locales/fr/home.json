@@ -1,26 +1,66 @@
 {
-    "metaTitle": "Skypass - Votre compagnon de voyage",
-    "metaDescription": "Trouvez les meilleures offres de vols et d'hôtels avec Skypass",
-    "popularDestinations": "Destinations populaires",
-    "helpAndAdvice": "Aide et conseils",
-    "viewAllSection": "VOIR TOUTE LA SECTION →",
-    "popularDirections": [
-      { "city": "Londres", "country": "Royaume-Uni", "flag": "🇬🇧" },
-      { "city": "Paris", "country": "France", "flag": "🇫🇷" },
-      { "city": "Berlin", "country": "Allemagne", "flag": "🇩🇪" },
-      { "city": "Rome", "country": "Italie", "flag": "🇮🇹" },
-      { "city": "Madrid", "country": "Espagne", "flag": "🇪🇸" },
-      { "city": "Amsterdam", "country": "Pays-Bas", "flag": "🇳🇱" },
-      { "city": "Prague", "country": "République tchèque", "flag": "🇨🇿" },
-      { "city": "Vienne", "country": "Autriche", "flag": "🇦🇹" },
-      { "city": "Lisbonne", "country": "Portugal", "flag": "🇵🇹" },
-      { "city": "Bruxelles", "country": "Belgique", "flag": "🇧🇪" }
-    ],
-    "helpTopics": [
-      "Billet non reçu",
-      "Remboursement ou échange de billet",
-      "À propos des bagages",
-      "Modification des données du passeport",
-      "Voyager avec des enfants"
-    ]
-  }
+  "metaTitle": "Skypass - Votre compagnon de voyage",
+  "metaDescription": "Trouvez les meilleures offres de vols et d'hôtels avec Skypass",
+  "popularDestinations": "Destinations populaires",
+  "helpAndAdvice": "Aide et conseils",
+  "viewAllSection": "VOIR TOUTE LA SECTION →",
+  "popularDirections": [
+    {
+      "city": "Londres",
+      "country": "Royaume-Uni",
+      "flag": "gb"
+    },
+    {
+      "city": "Paris",
+      "country": "France",
+      "flag": "frb"
+    },
+    {
+      "city": "Berlin",
+      "country": "Allemagne",
+      "flag": "de"
+    },
+    {
+      "city": "Rome",
+      "country": "Italie",
+      "flag": "it"
+    },
+    {
+      "city": "Madrid",
+      "country": "Espagne",
+      "flag": "es"
+    },
+    {
+      "city": "Amsterdam",
+      "country": "Pays-Bas",
+      "flag": "nl"
+    },
+    {
+      "city": "Prague",
+      "country": "République tchèque",
+      "flag": "cz"
+    },
+    {
+      "city": "Vienne",
+      "country": "Autriche",
+      "flag": "at"
+    },
+    {
+      "city": "Lisbonne",
+      "country": "Portugal",
+      "flag": "pt"
+    },
+    {
+      "city": "Bruxelles",
+      "country": "Belgique",
+      "flag": "be"
+    }
+  ],
+  "helpTopics": [
+    "Billet non reçu",
+    "Remboursement ou échange de billet",
+    "À propos des bagages",
+    "Modification des données du passeport",
+    "Voyager avec des enfants"
+  ]
+}

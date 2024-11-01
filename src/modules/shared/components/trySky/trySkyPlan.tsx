@@ -104,71 +104,71 @@ const TrySkyPlan: React.FC = () => {
     };
 
     return (
-        <div className="bg-white rounded-lg shadow-sm w-full h-[calc(100vh-20%)] flex flex-col">
-            <div className="flex justify-between items-center p-4 border-b bg-indigo-900 text-white">
-                <span className="font-bold">SKAI</span>
-            </div>
+        <div className="rounded-lg shadow-sm w-full h-[calc(100vh-20%)] flex flex-col">
             <div ref={messagesContainerRef} className="flex-grow overflow-y-auto p-4 space-y-4 h-[300px]">
                 {messages.map((message, index) => (
-                    <div key={index} className={`flex ${message.type === 'assistant' ? 'justify-start' : 'justify-end'}`}>
-                        <div className={`rounded-lg p-3 ${message.type === 'assistant' ? 'text-black' : 'bg-indigo-500 text-white'}`}>
-                            {message.isLifehacks ? (
-                                <div>
-                                    <p className="font-bold mb-2">{t('lifehacksResponse').split('\n\n')[0]}</p>
-                                    <ol className="list-decimal pl-5 space-y-2">
-                                        {t('lifehacksResponse').split('\n\n').slice(1, -1).map((item, i) => (
-                                            <li key={i}>{item.substring(3)}</li>
-                                        ))}
-                                    </ol>
-                                    <p className="mt-2">{t('lifehacksResponse').split('\n\n').slice(-1)[0]}</p>
-                                </div>
-                            ) : message.isParisExcursions ? (
-                                <div>
-                                    <p className="font-bold mb-2">{t('parisExcursionsResponse').split('\n\n')[0]}</p>
-                                    <ol className="list-decimal pl-5 space-y-2">
-                                        {t('parisExcursionsResponse').split('\n\n').slice(1, -1).map((item, i) => (
-                                            <li key={i}>{item}</li>
-                                        ))}
-                                    </ol>
-                                </div>
-                            ) : message.isRomeAttractions ? (
-                                <div>
-                                    <p className="font-bold mb-2">{t('romeAttractionsResponse').split('\n\n')[0]}</p>
-                                    <ol className="list-decimal pl-5 space-y-2">
-                                        {t('romeAttractionsResponse').split('\n\n').slice(1, -1).map((item, i) => (
-                                            <li key={i}>{item}</li>
-                                        ))}
-                                    </ol>
-                                    <p className="mt-2">{t('romeAttractionsResponse').split('\n\n').slice(-1)[0]}</p>
-                                </div>
-                            ) : message.isAmsterdamWeekend ? (
-                                <div>
-                                    <p className="font-bold mb-2">{t('amsterdamWeekendResponse').split('\n\n')[0]}</p>
-                                    <ol className="list-decimal pl-5 space-y-2">
-                                        {t('amsterdamWeekendResponse').split('\n\n').slice(1, -1).map((item, i) => (
-                                            <li key={i}>{item}</li>
-                                        ))}
-                                    </ol>
-                                    <p className="mt-2">{t('amsterdamWeekendResponse').split('\n\n').slice(-1)[0]}</p>
-                                </div>
-                            ) : message.isLandmarks ? (
-                                <div>
-                                    <p className="font-bold mb-2">{t('landmarksResponse').split('\n\n')[0]}</p>
-                                    <ol className="list-decimal pl-5 space-y-2">
-                                        {t('landmarksResponse').split('\n\n').slice(1, -1).map((item, i) => (
-                                            <li key={i}>{item}</li>
-                                        ))}
-                                    </ol>
-                                    <p className="mt-2">{t('landmarksResponse').split('\n\n').slice(-1)[0]}</p>
-                                </div>
-                            ) : (
-                                <p className="text-sm">{message.content}</p>
-                            )}
+                    <div key={index} className={`flex ${message.type === 'assistant' ? 'justify-start max-w-[50%]' : 'justify-end'}`}>
+                        <div>
+                            <div className="text-lg font-medium px-5 text-white">{message.type === 'assistant' ? "Skai" : "You"}</div>
+                            <div className={`rounded-[37px] p-3 font-medium text-2xl text-black ${message.type === 'assistant' ? 'bg-white/50' : 'bg-white'}`}>
+                                {message.isLifehacks ? (
+                                    <div>
+                                        <p className="font-bold mb-2">{t('lifehacksResponse').split('\n\n')[0]}</p>
+                                        <ol className="list-decimal pl-5 space-y-2">
+                                            {t('lifehacksResponse').split('\n\n').slice(1, -1).map((item, i) => (
+                                                <li key={i}>{item.substring(3)}</li>
+                                            ))}
+                                        </ol>
+                                        <p className="mt-2">{t('lifehacksResponse').split('\n\n').slice(-1)[0]}</p>
+                                    </div>
+                                ) : message.isParisExcursions ? (
+                                    <div>
+                                        <p className="font-bold mb-2">{t('parisExcursionsResponse').split('\n\n')[0]}</p>
+                                        <ol className="list-decimal pl-5 space-y-2">
+                                            {t('parisExcursionsResponse').split('\n\n').slice(1, -1).map((item, i) => (
+                                                <li key={i}>{item}</li>
+                                            ))}
+                                        </ol>
+                                    </div>
+                                ) : message.isRomeAttractions ? (
+                                    <div>
+                                        <p className="font-bold mb-2">{t('romeAttractionsResponse').split('\n\n')[0]}</p>
+                                        <ol className="list-decimal pl-5 space-y-2">
+                                            {t('romeAttractionsResponse').split('\n\n').slice(1, -1).map((item, i) => (
+                                                <li key={i}>{item}</li>
+                                            ))}
+                                        </ol>
+                                        <p className="mt-2">{t('romeAttractionsResponse').split('\n\n').slice(-1)[0]}</p>
+                                    </div>
+                                ) : message.isAmsterdamWeekend ? (
+                                    <div>
+                                        <p className="font-bold mb-2">{t('amsterdamWeekendResponse').split('\n\n')[0]}</p>
+                                        <ol className="list-decimal pl-5 space-y-2">
+                                            {t('amsterdamWeekendResponse').split('\n\n').slice(1, -1).map((item, i) => (
+                                                <li key={i}>{item}</li>
+                                            ))}
+                                        </ol>
+                                        <p className="mt-2">{t('amsterdamWeekendResponse').split('\n\n').slice(-1)[0]}</p>
+                                    </div>
+                                ) : message.isLandmarks ? (
+                                    <div>
+                                        <p className="font-bold mb-2">{t('landmarksResponse').split('\n\n')[0]}</p>
+                                        <ol className="list-decimal pl-5 space-y-2">
+                                            {t('landmarksResponse').split('\n\n').slice(1, -1).map((item, i) => (
+                                                <li key={i}>{item}</li>
+                                            ))}
+                                        </ol>
+                                        <p className="mt-2">{t('landmarksResponse').split('\n\n').slice(-1)[0]}</p>
+                                    </div>
+                                ) : (
+                                    <p className="text-sm">{message.content}</p>
+                                )}
+                            </div>
                         </div>
                     </div>
                 ))}
                 {isTyping && <TypingAnimation />}
-                <div ref={messagesEndRef} /> 
+                <div ref={messagesEndRef} />
             </div>
             <div className="p-4">
                 {suggestionsStep === 0 && <p className="text-sm text-right text-gray-600 mb-2">{t('dontKnowWhatToAsk')}</p>}
@@ -186,7 +186,7 @@ const TrySkyPlan: React.FC = () => {
                         placeholder={t('enterQuery')}
                         className="w-full border rounded-lg pl-4 pr-12 py-3 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
-                    <button type="submit" className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-2">
+                    <button type="submit" className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-purple_primary text-white rounded-full p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                         </svg>

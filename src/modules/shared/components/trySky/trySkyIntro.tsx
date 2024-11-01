@@ -25,6 +25,8 @@ const TrySkyIntro: React.FC = () => {
     useEffect(() => {
         if (isTrySkyOpen && containerRef.current) {
             containerRef.current.focus();
+            containerRef.current.parentElement?.classList.add('bg-gradient-try-sky');
+        
             
             setTimeout(() => {
                 const yOffset = containerRef.current?.getBoundingClientRect().top ?? 0;
@@ -32,6 +34,9 @@ const TrySkyIntro: React.FC = () => {
                 window.scrollTo({ top: y, behavior: 'smooth' });
             }, 100);
         }
+        return () => {
+            containerRef.current?.parentElement?.classList.remove('bg-gradient-try-sky');
+        };
     }, [isTrySkyOpen]);
 
 
@@ -41,13 +46,13 @@ const TrySkyIntro: React.FC = () => {
                 <motion.div
                     ref={containerRef}
                     tabIndex={-1}
-                    className="w-full bg-sky-100 shadow-md focus:outline-none"
+                    className="w-full shadow-md focus:outline-none"
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                 >
-                    <div className="container mx-auto px-4 py-6">
+                    <div className="container mx-auto px-4 pt-6 pb-14">
                         <TrySkyPlan />
                     </div>
                     {/* <div className="container mx-auto px-4 py-6">

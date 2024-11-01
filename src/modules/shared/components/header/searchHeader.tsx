@@ -41,7 +41,7 @@ export const SearchHeader: React.FC = () => {
                         />
                         <div className="text-xs text-gray-500 px-4">MOW</div>
                     </div>
-                    <div className="flex items-center focus-within:shadow-focus-orange lg:flex-1 bg-white">
+                    <div className="flex items-center focus-within:shadow-focus-orange lg:flex-1 bg-menu_white_17">
                         <input
                             type="text"
                             placeholder={t('search.to')}
@@ -51,7 +51,7 @@ export const SearchHeader: React.FC = () => {
                         />
                     </div>
                     <div className="grid grid-cols-2 lg:flex items-center lg:flex-2 gap-0.5">
-                        <div className="bg-white focus-within:shadow-focus-orange">
+                        <div className="bg-menu_white_17 focus-within:shadow-focus-orange">
                             <div className="relative">
                                 <input
                                     type="text"

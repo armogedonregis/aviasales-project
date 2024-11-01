@@ -104,7 +104,7 @@ export const NavigationHeader: React.FC<NavigationProps> = ({ variant, layoutId 
     ),
     text: "SKAI",
     hideOnMobile: true,
-    additionalClassName: `!flex-row !gap-2 ${isTrySkyOpen ? '!bg-white !text-blue-600' : ''}`,
+    additionalClassName: `!flex-row !gap-2 !bg-skai-button`,
     onClick: handleTrySkyClick
   };
 

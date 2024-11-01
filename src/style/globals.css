@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: var(--font-gaultier), system-ui, sans-serif;
+  }
+}
+
 
 @media (max-width: 1023px) {
   .indicator-0 { width: 33.33%; left: 0; }
@@ -23,4 +29,9 @@
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;  /* Chrome, Safari and Opera */
+}
+
+
+.bg-gradient-try-sky {
+  background: linear-gradient(180.18deg, #030537 2.64%, #06097A 21.81%, #FA99A4 66.41%, #FEE5C2 84.36%, #FFFCE9 94.71%);
 }

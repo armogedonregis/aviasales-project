@@ -5,18 +5,16 @@
   "helpAndAdvice": "Hulp en Advies voor Hotelboeking",
   "viewAllSection": "BEKIJK ALLE HOTELS →",
   "popularDirections": [
-    { "city": "Amsterdam", "country": "Nederland", "flag": "🇳🇱" },
-    { "city": "Parijs", "country": "Frankrijk", "flag": "🇫🇷" },
-    { "city": "Londen", "country": "Verenigd Koninkrijk", "flag": "🇬🇧" },
-    { "city": "Barcelona", "country": "Spanje", "flag": "🇪🇸" },
-    { "city": "Rome", "country": "Italië", "flag": "🇮🇹" },
-    { "city": "Berlijn", "country": "Duitsland", "flag": "🇩🇪" },
-    { "city": "Wenen", "country": "Oostenrijk", "flag": "🇦🇹" },
-    { "city": "Praag", "country": "Tsjechië", "flag": "🇨🇿" },
-    { "city": "Kopenhagen", "country": "Denemarken", "flag": "🇩🇰" },
-    { "city": "Stockholm", "country": "Zweden", "flag": "🇸🇪" },
-    { "city": "Athene", "country": "Griekenland", "flag": "🇬🇷" },
-    { "city": "Lissabon", "country": "Portugal", "flag": "🇵🇹" }
+    { "city": "London", "country": "United Kingdom", "flag": "gb" },
+    { "city": "Paris", "country": "France", "flag": "frb" },
+    { "city": "Berlin", "country": "Germany", "flag": "de" },
+    { "city": "Rome", "country": "Italy", "flag": "it" },
+    { "city": "Madrid", "country": "Spain", "flag": "es" },
+    { "city": "Amsterdam", "country": "Netherlands", "flag": "nl" },
+    { "city": "Prague", "country": "Czech Republic", "flag": "cz" },
+    { "city": "Vienna", "country": "Austria", "flag": "at" },
+    { "city": "Lisbon", "country": "Portugal", "flag": "pt" },
+    { "city": "Brussels", "country": "Belgium", "flag": "be" }
   ],
   "helpTopics": [
     "Hoe boek ik een hotel?",

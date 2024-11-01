@@ -40,11 +40,11 @@ export const PassengerAvia: React.FC = () => {
   return (
     <div className="relative text-black">
       <button
-        className="w-full px-4 py-2 text-left focus-within:shadow-focus-orange bg-white rounded-b-2xl lg:rounded-l-none lg:rounded-r-2xl focus:outline-none flex flex-col"
+        className="w-full px-4 py-2 text-left focus-within:shadow-focus-orange bg-menu_white_17 rounded-b-2xl lg:rounded-l-none lg:rounded-r-2xl focus:outline-none flex flex-col"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-semibold">{t('passengers', { count: totalPassengers })}</span>
-        <span className="text-gray-500 text-sm">{t(serviceClass)}</span>
+        <span className="font-semibold text-white">{t('passengers', { count: totalPassengers })}</span>
+        <span className="text-white text-sm">{t(serviceClass)}</span>
       </button>
       {isOpen && (
         <div className="absolute z-10 w-72 mt-2 bg-white border rounded-lg shadow-lg">

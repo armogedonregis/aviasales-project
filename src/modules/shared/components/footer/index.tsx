@@ -12,7 +12,7 @@ export const Footer = () => {
     const links = t.raw('links') as string[];
 
     return (
-        <footer className="bg-white py-4 md:py-8 border-t">
+        <footer className="py-4 md:py-8 border-t bg-white lg:bg-inherit">
             <div className="container mx-auto px-4">
                 <div className="hidden md:block">
                     <CategoryList categories={categories} />
@@ -27,21 +27,21 @@ export const Footer = () => {
                     <div className='flex-2'>
                         <NewsletterSignup />
                     </div>
-                    <div className="text-sm flex flex-1 items-center gap-4 bg-gray-100 pl-6 pr-3 py-3 rounded-xl">
+                    <div className="text-xl flex flex-1 items-center gap-4 text-blue_primary bg-white pl-6 pr-3 py-3 rounded-xl">
                         <div>
-                            <p className="text-lg">{t('app.convenience')}</p>
-                            <p className="text-gray-500">{t('app.description')}</p>
+                            <p className="font-semibold">{t('app.convenience')}</p>
+                            <p className="font-medium">{t('app.description')}</p>
                         </div>
                         <img src="/assets/images/qr-code.png" alt={t('qrCode.alt')} className="w-24 h-24" />
                     </div>
                 </div>
                 <SocialIcons icons={socialIcons} />
-                <div className="flex flex-wrap justify-center gap-2 mb-4 text-xs text-gray-500">
+                <div className="flex flex-wrap justify-center gap-2 mb-4 text-lg text-black_primary font-medium lg:text-blue_primary">
                     {Array.isArray(links) ? links.map((link, index) => (
                         <Link key={index} href="#" className="hover:underline">{link}</Link>
                     )) : null}
                 </div>
-                <div className="text-center text-xs text-gray-500">
+                <div className="text-center text-lg text-black_primary/50 font-medium lg:text-blue_primary">
                     {t('copyright', { year: new Date().getFullYear() })}
                 </div>
             </div>

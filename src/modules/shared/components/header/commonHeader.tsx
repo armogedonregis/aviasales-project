@@ -16,7 +16,7 @@ export const CommonHeader: React.FC<CommonHeaderProps> = ({ title, children, sho
       <AnimatePresence mode="wait">
         <motion.div
           key="common-content"
-          className={`container mx-auto px-4 py-8`}
+          className={`container mx-auto px-4 lg:pt-20 pt-8 pb-8`}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
@@ -24,7 +24,7 @@ export const CommonHeader: React.FC<CommonHeaderProps> = ({ title, children, sho
         >
           {title && (
             <motion.h1
-              className="text-2xl md:text-4xl font-bold mb-6 text-center"
+              className="text-4xl md:text-[56px] font-450 mb-6 text-center lg:text-left"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}

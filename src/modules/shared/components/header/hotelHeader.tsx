@@ -38,6 +38,7 @@ export const HotelHeader: React.FC<HotelHeaderProps> = ({ isTransitioning }) => 
     <CommonHeader
       isTransitioning={isTransitioning}
       title={t('title')}
+      showNavigation
     >
       <div className="grid grid-cols-1 mt-6 lg:grid-cols-4 w-full gap-0.5">
         <div className="focus-within:shadow-focus-orange h-[60px] rounded-t-2xl lg:rounded-r-none lg:rounded-l-2xl bg-white">
@@ -102,7 +103,7 @@ export const HotelHeader: React.FC<HotelHeaderProps> = ({ isTransitioning }) => 
         <div className="">
           <button
             onClick={handleSearch}
-            className="px-6 h-[60px] w-full mt-2 lg:mt-0 lg:w-auto lg:ml-1.5 bg-orange-500 text-white font-bold hover:bg-orange-600 transition-colors rounded-2xl"
+            className="px-6 py-4 w-full bg-white text-blue_primary font-550 uppercase text-2xl hover:opacity-70 transition-all rounded-2xl"
           >
             {t('findHotels')}
           </button>

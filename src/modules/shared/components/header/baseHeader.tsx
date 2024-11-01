@@ -12,7 +12,7 @@ interface BaseHeaderProps {
 export const BaseHeader = ({ children, showNavigation = true, isTransitioning }: BaseHeaderProps) => {
   return (
       <motion.header
-        className="bg-head_bg text-white"
+        className="text-white"
         initial={{ height: showNavigation ? 'auto' : 'auto' }}
         animate={{
           height: showNavigation ? 'auto' : '100%',
