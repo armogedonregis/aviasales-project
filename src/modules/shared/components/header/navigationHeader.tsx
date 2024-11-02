@@ -34,6 +34,10 @@ export const NavigationHeader: React.FC<NavigationProps> = ({ variant, layoutId 
     }
   };
 
+  // Добавим проверку путей
+  const hiddenPaths = ['/', '/hotels', '/search'];
+  const shouldShowTrySky = !hiddenPaths.includes(pathname);
+
   const menuItems = [
     {
       href: "/",
@@ -143,13 +147,15 @@ export const NavigationHeader: React.FC<NavigationProps> = ({ variant, layoutId 
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         <div className={`flex ${variant === 'home' ? 'gap-3' : 'gap-2'}`}>
-          <ul className={`hidden lg:flex ${variant === 'home' ? 'rounded-xl p-1' : 'rounded-lg p-1'}`}>
-            <NavItem
-              {...trySkyMenuItem}
-              variant={variant}
-              isActive={false}
-            />
-          </ul>
+          {shouldShowTrySky && (
+            <ul className={`hidden lg:flex ${variant === 'home' ? 'rounded-xl p-1' : 'rounded-lg p-1'}`}>
+              <NavItem
+                {...trySkyMenuItem}
+                variant={variant}
+                isActive={false}
+              />
+            </ul>
+          )}
           <ul className={`flex relative items-center lg:bg-menu_nav_bg ${variant === 'home' ? 'rounded-xl p-1 space-x-0.5' : 'rounded-[42px] p-1 space-x-2'}`}>
             {variant === 'home' && (
               <motion.div
