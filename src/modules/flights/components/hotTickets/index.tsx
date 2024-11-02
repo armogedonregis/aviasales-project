@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useRef, useState } from "react";
+import { Link } from '@/lib/i18n/routing';
 
 interface HotTicketsProps {
     tickets: ITicket[];
@@ -191,9 +192,11 @@ export const HotTickets = ({ tickets }: HotTicketsProps) => {
                 </Slider>
 
                 <div className="flex justify-center mt-4">
-                    <button className="text-white text-[22px] font-550 w-full lg:w-[425px] h-[55px] bg-[#9CCDFC] px-4 py-1.5 rounded-[17px] hover:bg-white/20 transition-colors">
-                        More Hot Tickets
-                    </button>
+                    <Link href="/search">
+                        <button className="text-white text-[22px] font-550 w-full lg:w-[425px] h-[55px] bg-[#9CCDFC] px-4 py-1.5 rounded-[17px] hover:bg-white/20 transition-colors">
+                            More Hot Tickets
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
