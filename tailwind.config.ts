@@ -6,6 +6,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: '1rem',
+        screens: {
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1280px',
+          '2xl': '1920px',
+        },
+      },
       fontFamily: {
         gaultier: ['var(--font-gaultier)'],
       },
@@ -20,7 +31,8 @@ const config: Config = {
         'skai-button': `
           linear-gradient(89.95deg, #030537 -22.62%, #06097A 24.95%, #FA99A4 91.21%, #FEE5C2 113.65%, #FFFCE9 128.48%)
         `,
-        'skay-open': `linear-gradient(180.18deg, #030537 2.64%, #06097A 21.81%, #FA99A4 66.41%, #FEE5C2 84.36%, #FFFCE9 94.71%)`
+        'skay-open': `linear-gradient(180.18deg, #030537 2.64%, #06097A 21.81%, #FA99A4 66.41%, #FEE5C2 84.36%, #FFFCE9 94.71%)`,
+        'btn-tickets': `linear-gradient(97.41deg, #DA874D -58.8%, #FFEE00 224.78%)`
       },
       colors: {
         head_bg: "#0c73fe",

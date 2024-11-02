@@ -15,7 +15,7 @@ export default async function Home() {
 
   return (
     <>
-      <div className="container mx-auto px-4 mt-8 hidden lg:block">
+      <div className="container mx-auto px-2.5 lg:px-[150px] mt-16 hidden lg:block">
         <div className="flex gap-4 pb-4 w-full">
           <div className="relative min-w-[275px] h-[412px] rounded-2xl overflow-hidden ">
             <Image
@@ -47,9 +47,9 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-between mt-8 gap-10 container mx-auto px-4">
+      <div className="flex flex-col lg:flex-row justify-between mt-8 gap-10 container mx-auto px-2.5 lg:px-[150px]">
         <div className="w-full lg:pr-8 mb-8 lg:mb-0 bg-white_15 py-6 px-5 lg:py-11 lg:px-10 rounded-3xl">
-          <h2 className="text-3xl font-semibold md:text-4xl mb-10 text-white lg:text-left text-center gap-2">
+          <h2 className="text-3xl font-550 md:text-4xl mb-10 text-white lg:text-left text-center gap-2">
             {t('popularDestinations')}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -75,7 +75,7 @@ export default async function Home() {
           </div>
         </div>
         <div className="w-full bg-white_15 py-6 px-5 lg:py-11 lg:px-10 rounded-3xl">
-          <h2 className="text-3xl font-semibold md:text-4xl text-white mb-10 lg:text-left text-center gap-2">
+          <h2 className="text-3xl font-550 md:text-4xl text-white mb-10 lg:text-left text-center gap-2">
             {t('helpAndAdvice')}
           </h2>
           <div className="space-y-3">

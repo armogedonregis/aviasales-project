@@ -74,10 +74,10 @@ export const AviaTicketModal = ({ ticket, onClose }: { ticket: ITicket; onClose:
                 </div>
                 <div className="flex justify-between items-center">
                     <div>
-                        <p className="text-2xl font-bold">€{ticket.price}</p>
+                        <p className="text-[45px] font-semibold text-[#202020]">€{ticket.price}</p>
                         <p className="text-sm text-gray-500">On the website</p>
                     </div>
-                    <button className="bg-orange-500 text-white px-6 py-2 rounded-full font-semibold">
+                    <button className="bg-blue_primary text-white px-6 py-2 rounded-full font-semibold">
                         Buy
                     </button>
                 </div>

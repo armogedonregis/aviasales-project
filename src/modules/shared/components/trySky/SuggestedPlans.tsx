@@ -91,18 +91,18 @@ const SuggestedPlans: React.FC<SuggestedPlansProps> = ({ onPlanClick, step, sele
                     <Slider ref={sliderRef} {...sliderSettings}>
                         {hotels.map((hotel, index) => (
                             <div key={index} className="px-2 py-2 h-full">
-                                <div className="bg-white rounded-lg shadow-md p-2 flex flex-col h-[150px]">
+                                <div className="bg-white rounded-lg shadow-md p-2 flex flex-col h-[130px] lg:h-[200px]">
                                     {index === 0 ? (
-                                        <div className="w-full h-14 flex items-center justify-center bg-blue-100 rounded-t-lg flex-shrink-0">
+                                        <div className="w-full h-14 lg:h-[130px] flex items-center justify-center bg-blue-100 rounded-t-lg flex-shrink-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                             </svg>
                                         </div>
                                     ) : (
-                                        <img src={hotel.image} alt={hotel.name} className="w-full h-14 object-cover rounded-t-lg flex-shrink-0" />
+                                        <img src={hotel.image} alt={hotel.name} className="w-full h-14 lg:h-[130px] object-cover rounded-t-lg flex-shrink-0" />
                                     )}
                                     <div className="mt-2 flex flex-col justify-between flex-grow">
-                                        <p className="text-[10px] font-semibold">{hotel.name}</p>
+                                        <p className="text-[10px] lg:text-[16px] font-semibold">{hotel.name}</p>
                                         {hotel.price && <p className="text-sm text-gray-600 mt-auto">{hotel.price}</p>}
                                     </div>
                                 </div>

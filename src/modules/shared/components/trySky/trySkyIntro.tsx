@@ -1,38 +1,20 @@
 'use client'
 
 import { useTranslations } from 'next-intl';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTrySky } from './trySkyContext';
-import TrySkyModal from './trySkyModal';
 import TrySkyPlan from './trySkyPlan';
 
 const TrySkyIntro: React.FC = () => {
     const t = useTranslations('trySky');
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const { isTrySkyOpen, closeTrySky } = useTrySky();
+    const { isTrySkyOpen } = useTrySky();
     const containerRef = useRef<HTMLDivElement>(null);
-
-    const handleYesClick = () => {
-        setIsModalOpen(true);
-    };
-
-    const handleCloseModal = () => {
-        setIsModalOpen(false);
-    };
 
 
     useEffect(() => {
         if (isTrySkyOpen && containerRef.current) {
-            containerRef.current.focus();
             containerRef.current.parentElement?.classList.add('bg-gradient-try-sky');
-        
-            
-            setTimeout(() => {
-                const yOffset = containerRef.current?.getBoundingClientRect().top ?? 0;
-                const y = yOffset + window.scrollY - 100;
-                window.scrollTo({ top: y, behavior: 'smooth' });
-            }, 100);
         }
         return () => {
             containerRef.current?.parentElement?.classList.remove('bg-gradient-try-sky');

@@ -19,7 +19,7 @@ export const BaseHeader = ({ children, showNavigation = true, isTransitioning }:
         }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
-        <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+        <div className="container mx-auto px-5 lg:px-[50px] pt-[30px] flex justify-between items-center">
           <HeaderLogo />
 
           <AnimatePresence mode="wait">

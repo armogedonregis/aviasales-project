@@ -13,7 +13,7 @@ export const Footer = () => {
 
     return (
         <footer className="py-4 md:py-8 border-t bg-white lg:bg-inherit">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-2.5 lg:px-[150px]">
                 <div className="hidden md:block">
                     <CategoryList categories={categories} />
                 </div>
@@ -29,7 +29,7 @@ export const Footer = () => {
                     </div>
                     <div className="text-xl flex flex-1 items-center gap-4 text-blue_primary bg-white pl-6 pr-3 py-3 rounded-xl">
                         <div>
-                            <p className="font-semibold">{t('app.convenience')}</p>
+                            <p className="font-550">{t('app.convenience')}</p>
                             <p className="font-medium">{t('app.description')}</p>
                         </div>
                         <img src="/assets/images/qr-code.png" alt={t('qrCode.alt')} className="w-24 h-24" />

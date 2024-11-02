@@ -67,7 +67,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                                         <FcGoogle className="h-5 w-5 mr-2" />
                                         Sign in with Google
                                     </button>
-                                    <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700">
+                                    <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue_primary hover:bg-blue-700">
                                         <FaFacebookF className="h-5 w-5 mr-2" />
                                         Sign in with Facebook
                                     </button>

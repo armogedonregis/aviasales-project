@@ -14,7 +14,7 @@ export const AviaSearchTicket = ({ ticket, onSelect }: AviaSearchTicketProps) =>
                 <div className="w-full sm:w-1/4 sm:pr-4 flex flex-col justify-between mb-4 sm:mb-0">
                     <div>
                         <div className="flex justify-between items-center sm:block">
-                            <div className="text-2xl font-bold mb-2">€{ticket.price}</div>
+                            <div className="text-[45px] font-semibold mb-2">€{ticket.price}</div>
                             <div className="flex sm:hidden">
                                 <button className="mr-2 text-gray-500">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -29,18 +29,18 @@ export const AviaSearchTicket = ({ ticket, onSelect }: AviaSearchTicketProps) =>
                             </div>
                         </div>
                         <div className="flex items-center mb-2">
-                            <span className="text-sm text-blue-600 mr-2">Baggage +€{ticket.baggagePrice}</span>
+                            <span className="text-[22px] font-550 text-[#6EB9FF] mr-2">Baggage +€{ticket.baggagePrice}</span>
                             <label className="relative inline-flex items-center cursor-pointer">
                                 <input type="checkbox" value="" className="sr-only peer" />
                                 <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>
                         </div>
-                        <button onClick={() => onSelect(ticket)} className="w-full bg-orange-500 rounded-2xl text-white py-2 font-semibold mb-2">
+                        <button onClick={() => onSelect(ticket)} className="w-full bg-blue_primary rounded-2xl text-[22px] font-medium text-white py-2 mb-2">
                             {t('selectTicket')}
                         </button>
                     </div>
                     {ticket.remainingTickets && (
-                        <div className="text-xs text-red-500 text-center">
+                        <div className="text-lg text-[#202020] text-center">
                             {ticket.remainingTickets} tickets left at this price
                         </div>
                     )}
@@ -49,26 +49,26 @@ export const AviaSearchTicket = ({ ticket, onSelect }: AviaSearchTicketProps) =>
                     <div className="flex justify-between items-center mb-4">
                         <div className="flex items-center">
                             <img src={ticket.airlineLogo} alt={ticket.airline} className="h-6 mr-2" />
-                            <span className="text-lg font-semibold">{ticket.airline}</span>
+                            <span className="text-[30px] text-[#202020] font-semibold">{ticket.airline}</span>
                         </div>
                     </div>
                     <div className="flex justify-between items-center">
                         <div className="flex flex-col items-start">
-                            <div className="text-xl font-semibold">{ticket.departureTime}</div>
+                            <div className="text-[35px] text-[#202020]">{ticket.departureTime}</div>
                             <div className="text-sm text-gray-500">{ticket.departureCity}</div>
-                            <div className="text-xs text-gray-400">{ticket.departureDate}</div>
-                            <div className="text-xs text-blue-600">{ticket.departureAirport}</div>
+                            <div className="text-lg text-gray-400">{ticket.departureDate}</div>
+                            <div className="text-lg text-blue_primary -mt-2">{ticket.departureAirport}</div>
                         </div>
                         <div className="flex flex-col items-center">
-                            <div className="text-sm text-gray-500">Duration: {ticket.duration}</div>
+                            <div className="text-xl text-[#20202099]">Duration: {ticket.duration}</div>
                             <div className="w-32 h-px bg-gray-300 my-2"></div>
-                            <div className="text-xs text-blue-600">{ticket.direct ? 'Direct' : `${ticket.stops} stop${ticket.stops > 1 ? 's' : ''}`}</div>
+                            <div className="text-xs text-blue_primary">{ticket.direct ? 'Direct' : `${ticket.stops} stop${ticket.stops > 1 ? 's' : ''}`}</div>
                         </div>
                         <div className="flex flex-col items-end">
-                            <div className="text-xl font-semibold">{ticket.arrivalTime}</div>
+                            <div className="text-[35px] text-[#202020]">{ticket.arrivalTime}</div>
                             <div className="text-sm text-gray-500">{ticket.arrivalCity}</div>
-                            <div className="text-xs text-gray-400">{ticket.arrivalDate}</div>
-                            <div className="text-xs text-blue-600">{ticket.arrivalAirport}</div>
+                            <div className="text-lg text-gray-400">{ticket.arrivalDate}</div>
+                            <div className="text-lg text-blue_primary -mt-2">{ticket.arrivalAirport}</div>
                         </div>
                     </div>
                 </div>

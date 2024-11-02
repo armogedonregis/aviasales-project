@@ -26,7 +26,7 @@ const gaultier = localFont({
             style: 'normal',
         },
         {
-            path: '../../style/font/Gaultier-ExtraLight.otf',
+            path: '../../style/font/Gaultier-SemiBold.otf',
             weight: '550',
             style: 'normal',
         },

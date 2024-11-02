@@ -32,7 +32,7 @@ export default async function Guides() {
                                 </span>
                             </div>
                         )}
-                        <div className="relative h-32 sm:h-40 md:h-64">
+                        <div className="relative h-32 sm:h-40 md:h-[400px]">
                             <Image
                                 src={city.image}
                                 alt={t(`cities.${city.key}.name`)}

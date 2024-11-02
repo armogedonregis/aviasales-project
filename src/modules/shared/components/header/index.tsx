@@ -17,7 +17,7 @@ const headerConfig: { [key: string]: React.ComponentType<HeaderProps> } = {
     'home': HomeHeader,
     'hotels': HotelHeader,
     'guides': CityGuideHeader,
-    'search': SearchHeader
+    'search': HomeHeader
 };
 
 export const DynamicHeader: React.FC = () => {

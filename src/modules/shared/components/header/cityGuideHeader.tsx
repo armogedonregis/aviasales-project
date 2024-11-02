@@ -15,19 +15,19 @@ export const CityGuideHeader: React.FC = () => {
   return (
     <BaseHeader>
        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-10 pt-4 sm:pt-8 pb-6 sm:pb-12">
-        <div className="flex flex-col sm:flex-row justify-between items-center mb-4 sm:mb-0">
+        <div className="flex flex-col sm:flex-row justify-between items-center mb-4 sm:mb-10">
           <div className="">
-            <h1 className="text-3xl lg:text-5xl font-bold text-white">{t('cityGuide.title')}</h1>
+            <h1 className="text-3xl lg:text-5xl font-550 text-white">{t('cityGuide.title')}</h1>
             <p className="text-white">{t('cityGuide.subtitle')}</p>
           </div>
-          <div className="hidden sm:block">
+          {/* <div className="hidden sm:block">
             <Image
               src="/assets/images/city-guide-illustration.png"
               alt="City Guide Illustration"
               width={200}
               height={200}
             />
-          </div>
+          </div> */}
         </div>
         <div className="relative py-2 bg-white rounded-xl mb-4">
           <input
@@ -43,7 +43,7 @@ export const CityGuideHeader: React.FC = () => {
           {categories.map((category, index) => (
             <button 
               key={index} 
-              className={`${category.color} px-4 py-3 rounded-2xl text-sm font-medium flex items-center justify-center flex-shrink-0 sm:flex-grow`}
+              className={`${category.color} px-4 py-3 rounded-2xl text-[20px] font-medium flex items-center justify-center flex-shrink-0 sm:flex-grow`}
             >
               <span className="mr-2 text-xl">{category.icon}</span>
               {category.name}

@@ -14,14 +14,14 @@ export const ProfileSidebar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-white shadow rounded-lg p-4">
+    <nav className="bg-white/10 rounded-lg p-4">
       <ul className="space-y-2">
         {navItems.map((item) => (
           <li key={item.key}>
             <Link 
               href={item.href}
               className={`flex items-center p-2 rounded-lg ${
-                pathname === item.href ? 'bg-blue-100 text-blue-600' : 'text-gray-600 hover:bg-gray-100'
+                pathname === item.href ? 'bg-white text-blue_primary' : 'text-white hover:text-blue_primary hover:bg-gray-100'
               }`}
             >
               <span className="mr-2">{item.icon}</span>

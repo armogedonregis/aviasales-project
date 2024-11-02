@@ -2,8 +2,8 @@ import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions, Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react';
-import { ChevronDownIcon, HeartIcon } from '@heroicons/react/20/solid';
-import { Squares2X2Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { HeartIcon } from '@heroicons/react/20/solid';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import LoginModal from '@/components/modals/loginModal';
 import { ProfileIcon, SupportIcon, FrenchFlag, DutchFlag, EnglishFlag } from '@/components/icons';
 import SettingsIcon from "/public/assets/vector/settingsIcon.svg";
@@ -20,8 +20,9 @@ interface Language {
 const languages: Language[] = [
     { code: 'fr', name: 'Français', flag: <FrenchFlag /> },
     { code: 'nl', name: 'Nederlands', flag: <DutchFlag /> },
-    { code: 'en', name: 'English', flag: <EnglishFlag /> }, 
+    { code: 'en', name: 'English', flag: <EnglishFlag /> },
 ];
+
 
 const DEFAULT_LANG = 'fr';
 
@@ -43,12 +44,12 @@ export const HeaderUserMenu: React.FC = () => {
 
     const handleLanguageChange = useCallback((newLang: Language) => {
         if (newLang.code === currentLang) return;
-    
+
         setSelectedLanguage(newLang);
         setCurrentLang(newLang.code);
 
         const pathWithoutLocale = '/' + pathname.split('/').slice(2).join('/');
-    
+
         // Используем router для смены языка
         router.push(pathWithoutLocale, { locale: newLang.code });
     }, [currentLang, router, pathname]);
@@ -73,7 +74,7 @@ export const HeaderUserMenu: React.FC = () => {
                     <>
                         <MenuButton className="flex items-center hover:bg-menu_hover rounded-lg p-1.5 lg:px-3 lg:py-2">
                             <span className="lg:mr-1"><ProfileIcon /></span>
-                            <span className="lg:inline hidden">{t('userMenu.profile')}</span>
+                            <span className="lg:inline hidden text-xl font-550">{t('userMenu.profile')}</span>
                         </MenuButton>
                         <Transition
                             as={Fragment}
@@ -117,29 +118,29 @@ export const HeaderUserMenu: React.FC = () => {
                                         )}
                                     </MenuItem>
                                     <MenuItem>
-                                    {({ focus }) => (
-                                        <button
-                                            onClick={() => {
-                                                buttonCloseRef.current = close;
-                                            }}
-                                            className={`${focus ? 'bg-menu_item_hover' : ''} flex w-full items-center rounded-md px-3 py-2 text-sm font-bold text-gray-700`}
-                                        >
-                                            <span className="mr-3 rounded-lg w-8 h-8 inline-flex items-center justify-center bg-menu_icon_wrapper text-menu_icon_color">
-                                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                                                </svg>
-                                            </span>
-                                            {t('userMenu.trySky')}
-                                        </button>
-                                    )}
-                                </MenuItem>
+                                        {({ focus }) => (
+                                            <button
+                                                onClick={() => {
+                                                    buttonCloseRef.current = close;
+                                                }}
+                                                className={`${focus ? 'bg-menu_item_hover' : ''} flex w-full items-center rounded-md px-3 py-2 text-sm font-bold text-gray-700`}
+                                            >
+                                                <span className="mr-3 rounded-lg w-8 h-8 inline-flex items-center justify-center bg-menu_icon_wrapper text-menu_icon_color">
+                                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                                                    </svg>
+                                                </span>
+                                                {t('userMenu.trySky')}
+                                            </button>
+                                        )}
+                                    </MenuItem>
                                 </div>
                                 <div className="p-6 lg:p-4 lg:pt-0 mt-auto">
                                     <MenuItem>
                                         <button onClick={(e) => {
                                             handleLoginClick(e);
                                             buttonCloseRef.current = close;
-                                        }} className="flex w-full items-center justify-center rounded-xl lg:rounded-md px-3 py-3 lg:py-2 text-base lg:text-sm text-white font-bold bg-head_bg hover:bg-head_bg/90">
+                                        }} className="flex w-full items-center justify-center rounded-xl lg:rounded-md px-3 py-3 lg:py-2 text-base lg:text-sm text-white font-bold bg-blue_primary hover:bg-head_bg/90">
                                             {t('userMenu.login')}
                                         </button>
                                     </MenuItem>
@@ -156,15 +157,16 @@ export const HeaderUserMenu: React.FC = () => {
 
             <Link href="/support" className="flex items-center hover:bg-menu_hover rounded-lg p-1.5 lg:px-3 lg:py-2">
                 <span className="mr-1"><SupportIcon /></span>
-                <span className="lg:inline hidden">{t('userMenu.support')}</span>
+                <span className="lg:inline hidden text-xl font-550">{t('userMenu.support')}</span>
             </Link>
 
             <Listbox value={selectedLanguage} onChange={handleLanguageChange}>
                 <div className="relative z-40">
-                    <ListboxButton className="text-white hover:bg-menu_hover rounded-lg flex items-center space-x-2 p-1.5 lg:px-3 lg:py-2">
-                        <span>{selectedLanguage.flag}</span>
-                        <span className="w-20 text-left lg:inline hidden">{selectedLanguage.name}</span>
-                        <ChevronDownIcon className="w-5 h-5 lg:inline hidden" />
+                    <ListboxButton className="text-white bg-white_15 hover:bg-menu_hover rounded-[42px] w-[66px] h-[66px] justify-center flex items-center space-x-2">
+                        <span className="uppercase text-xl">{selectedLanguage.code}</span>
+                        <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 14L2.70244e-07 -1.82822e-07L13 9.53674e-07L6.5 14Z" fill="white" />
+                        </svg>
                     </ListboxButton>
                     <Transition
                         as={Fragment}
@@ -196,9 +198,6 @@ export const HeaderUserMenu: React.FC = () => {
                 </div>
             </Listbox>
 
-            <button className="flex lg:hidden items-center hover:bg-menu_hover rounded-lg p-1.5">
-                <Squares2X2Icon className="h-6 w-6" />
-            </button>
 
             <LoginModal isOpen={isLoginModalOpen} onClose={handleCloseLoginModal} />
         </div>

@@ -16,7 +16,7 @@ export default async function Hotels() {
   const helpTopics: string[] = t.raw('helpTopics') as string[];
 
   return (
-    <div className="flex flex-col lg:flex-row justify-between mt-8 gap-10 container mx-auto px-4">
+    <div className="flex flex-col lg:flex-row justify-between mt-8 gap-10 container mx-auto px-[150px]">
       <div className="w-full lg:pr-8 mb-8 lg:mb-0 bg-white_15 py-6 px-5 lg:py-11 lg:px-10 rounded-3xl">
         <h2 className="text-3xl font-semibold md:text-4xl mb-10 text-white lg:text-left text-center gap-2">
           {t('popularDestinations')}
@@ -44,7 +44,7 @@ export default async function Hotels() {
         </div>
       </div>
       <div className="w-full bg-white_15 py-6 px-5 lg:py-11 lg:px-10 rounded-3xl">
-      <h2 className="text-3xl font-semibold md:text-4xl text-white mb-10 lg:text-left text-center gap-2">
+      <h2 className="text-3xl font-550 md:text-4xl text-white mb-10 lg:text-left text-center gap-2">
           {t('helpAndAdvice')}
         </h2>
         <div className="space-y-2">

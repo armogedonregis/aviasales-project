@@ -422,7 +422,7 @@ export const AviaSearchResult = () => {
 
     return (
 
-        <div className="md:w-3/4">
+        <div className="md:w-3/4 lg:w-full">
             {tickets.map((ticket, index) => (
                 <AviaSearchTicket key={index} ticket={ticket} onSelect={() => handleTicketSelect(ticket)} />
             ))}

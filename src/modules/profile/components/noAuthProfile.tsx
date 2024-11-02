@@ -3,11 +3,11 @@ import { getTranslations } from "next-intl/server";
 export const NoAuthProfile = async () => {
   const t = await getTranslations('settings');
   return (
-    <div className="bg-white shadow rounded-lg p-4 sm:p-6 mb-8">
+    <div className="bg-white/10 shadow rounded-lg p-4 sm:p-6 mb-8">
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
         <div className="mb-4 sm:mb-0">
-          <h1 className="text-xl sm:text-2xl font-bold mb-1">{t('title')}</h1>
-          <p className="text-gray-600">{t('subtitle')}</p>
+          <h1 className="text-xl text-white sm:text-2xl font-bold mb-1">{t('title')}</h1>
+          <p className="text-white">{t('subtitle')}</p>
         </div>
         <div className="space-y-2 w-full sm:w-64">
           <button className="w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-lg py-2 px-4 flex items-center justify-center hover:bg-gray-200">
@@ -16,10 +16,10 @@ export const NoAuthProfile = async () => {
           </button>
           <div className="mt-4 sm:mt-6">
             <label className="flex items-center">
-              <input type="checkbox" className="form-checkbox text-blue-500" />
-              <span className="ml-2 text-sm">{t('subscribeToNewsletter')}</span>
+              <input type="checkbox" className="form-checkbox text-blue_primary" />
+              <span className="ml-2 text-sm text-white">{t('subscribeToNewsletter')}</span>
             </label>
-            <p className="text-xs text-gray-500 mt-1">{t('agreementText')}</p>
+            <p className="text-xs text-white mt-1">{t('agreementText')}</p>
           </div>
         </div>
       </div>
