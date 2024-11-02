@@ -1,3 +1,4 @@
+import { HotTickets } from '@/modules/flights/components/hotTickets';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
@@ -13,8 +14,73 @@ export default async function Home() {
   const directions: Direction[] = t.raw('popularDirections') as Direction[];
   const helpTopics: string[] = t.raw('helpTopics') as string[];
 
+
+  const ticketsMap = [
+    {
+        price: 458,
+        airline: 'EasyJet',
+        airlineLogo: 'https://placehold.co/200x100/orange/white?text=EasyJet',
+        departureTime: '22:00',
+        arrivalTime: '23:30',
+        departureCity: 'London',
+        arrivalCity: 'Paris',
+        departureAirport: 'LGW',
+        arrivalAirport: 'CDG',
+        departureDate: 'Sep 16, Mon',
+        arrivalDate: 'Sep 16, Mon',
+        duration: '1h 30m',
+        direct: true,
+        stops: 0,
+        baggagePrice: 161,
+        remainingTickets: 4,
+        tag: 'Cheapest',
+        baggageIncluded: false,
+    },
+    {
+        price: 745,
+        airline: 'Ryanair',
+        airlineLogo: 'https://placehold.co/200x100/blue/white?text=Ryanair',
+        departureTime: '09:40',
+        arrivalTime: '11:10',
+        departureCity: 'Berlin',
+        arrivalCity: 'Rome',
+        departureAirport: 'TXL',
+        arrivalAirport: 'FCO',
+        departureDate: 'Sep 16, Mon',
+        arrivalDate: 'Sep 16, Mon',
+        duration: '1h 30m',
+        direct: true,
+        stops: 0,
+        baggagePrice: 191,
+        remainingTickets: 6,
+        tag: 'Morning',
+        baggageIncluded: false,
+    },
+    {
+        price: 532,
+        airline: 'Lufthansa',
+        airlineLogo: 'https://placehold.co/200x100/yellow/black?text=Lufthansa',
+        departureTime: '14:15',
+        arrivalTime: '16:45',
+        departureCity: 'Frankfurt',
+        arrivalCity: 'Madrid',
+        departureAirport: 'FRA',
+        arrivalAirport: 'MAD',
+        departureDate: 'Sep 16, Mon',
+        arrivalDate: 'Sep 16, Mon',
+        duration: '2h 30m',
+        direct: true,
+        stops: 0,
+        baggagePrice: 175,
+        remainingTickets: 3,
+        tag: 'Afternoon',
+        baggageIncluded: false,
+    }
+]
+
   return (
     <>
+    <HotTickets tickets={[...ticketsMap, ...ticketsMap, ...ticketsMap, ...ticketsMap, ...ticketsMap, ...ticketsMap, ...ticketsMap, ...ticketsMap]} />
       <div className="container mx-auto px-2.5 lg:px-[150px] mt-16 hidden lg:block">
         <div className="flex gap-4 pb-4 w-full">
           <div className="relative w-2/12 h-[412px] rounded-2xl overflow-hidden ">

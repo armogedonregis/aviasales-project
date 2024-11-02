@@ -8,6 +8,7 @@ import DatePicker from "../datePicter";
 import { BaseHeader } from "./baseHeader";
 import { motion } from "framer-motion";
 import { useTrySky } from "../trySky/trySkyContext";
+import { NavigationHeader } from "./navigationHeader";
 
 interface HotelHeaderProps {
   isTransitioning?: boolean;
@@ -72,6 +73,22 @@ export const HotelHeader: React.FC<HotelHeaderProps> = ({ isTransitioning }) => 
             {"   with AI"}
           </motion.span>
         </motion.h1>
+
+        <div className="lg:hidden">
+          <div className="flex justify-center">
+            <button onClick={handleTrySkyClick} className={`flex mb-6 -mt-6 items-center justify-center rounded-[42px] w-[126px] min-h-[45px] ${isTrySkyOpen ? "bg-white text-[#06097A]" : "bg-skai-button"}`}>
+              <span className="mr-2">
+                <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.5 0L23.606 8.39396L32 11.5L23.606 14.606L20.5 23L17.394 14.606L9 11.5L17.394 8.39396L20.5 0Z" fill={isTrySkyOpen ? "#06097A" : "white"} />
+                  <path d="M7 16L8.89064 21.1094L14 23L8.89064 24.8906L7 30L5.10936 24.8906L0 23L5.10936 21.1094L7 16Z" fill={isTrySkyOpen ? "#06097A" : "white"} />
+                  <circle cx="7.5" cy="4.5" r="1.5" fill={isTrySkyOpen ? "#06097A" : "white"} />
+                </svg>
+              </span>
+              <span className="text-[25px] font-550">SK.AI</span>
+            </button>
+          </div>
+          <NavigationHeader variant="home" />
+        </div>
         <div className="lg:flex lg:flex-row flex-col w-full items-center gap-0.5 mt-6">
           <div className="grid grid-cols-1 lg:flex lg:items-center gap-0.5">
             <button onClick={handleTrySkyClick} className="lg:flex hidden lg:items-center lg:justify-center rounded-tl-2xl rounded-bl-2xl lg:min-w-[157px] min-h-[77px] bg-skai-button">
@@ -142,7 +159,7 @@ export const HotelHeader: React.FC<HotelHeaderProps> = ({ isTransitioning }) => 
             <div>
               <button
                 onClick={handleSearch}
-               className="px-6 py-4 w-full mt-6 lg:mt-0 lg:min-h-[77px] bg-white text-blue_primary lg:bg-btn-tickets lg:text-white rounded-3xl lg:rounded-none lg:rounded-tr-3xl lg:rounded-br-3xl font-550 uppercase text-[22px] lg:text-2xl hover:opacity-70 transition-all"
+                className="px-6 py-4 w-full mt-6 lg:mt-0 lg:min-h-[77px] bg-white text-blue_primary lg:bg-btn-tickets lg:text-white rounded-3xl lg:rounded-none lg:rounded-tr-3xl lg:rounded-br-3xl font-550 uppercase text-[22px] lg:text-2xl hover:opacity-70 transition-all"
               >
                 {t('findHotels')}
               </button>

@@ -148,7 +148,7 @@ export const NavigationHeader: React.FC<NavigationProps> = ({ variant, layoutId 
       >
         <div className={`flex ${variant === 'home' ? 'gap-3' : 'gap-2'}`}>
           {shouldShowTrySky && (
-            <ul className={`hidden lg:flex ${variant === 'home' ? 'rounded-xl p-1' : 'rounded-lg p-1'}`}>
+            <ul className={`hidden lg:flex ${variant === 'home' ? 'rounded-[42px] p-1' : 'rounded-[42px] p-1'}`}>
               <NavItem
                 {...trySkyMenuItem}
                 variant={variant}
@@ -156,10 +156,10 @@ export const NavigationHeader: React.FC<NavigationProps> = ({ variant, layoutId 
               />
             </ul>
           )}
-          <ul className={`flex relative items-center lg:bg-menu_nav_bg ${variant === 'home' ? 'rounded-xl p-1 space-x-0.5' : 'rounded-[42px] p-1 space-x-2'}`}>
+          <ul className={`flex relative items-center lg:bg-menu_nav_bg ${variant === 'home' ? 'rounded-[42px] p-1 space-x-0.5' : 'rounded-[42px] p-1 space-x-2'}`}>
             {variant === 'home' && (
               <motion.div
-                className={`absolute bg-white rounded-lg indicator-${activeIndex}`}
+                className={`absolute bg-white rounded-[42px] indicator-${activeIndex}`}
                 layoutId="indicator"
                 initial={false}
                 transition={{
@@ -182,7 +182,7 @@ export const NavigationHeader: React.FC<NavigationProps> = ({ variant, layoutId 
               />
             ))}
           </ul>
-          <ul className={`hidden lg:flex bg-menu_nav_bg ${variant === 'home' ? 'rounded-xl p-1' : 'rounded-[42px] p-1'}`}>
+          <ul className={`hidden lg:flex bg-menu_nav_bg ${variant === 'home' ? 'rounded-[42px] p-1' : 'rounded-[42px] p-1'}`}>
             <NavItem
               {...businessMenuItem}
               variant={variant}
@@ -227,7 +227,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, icon, text, isActive, isExterna
   );
 
   const className = `${additionalClassName} ${variant === 'home'
-    ? `rounded-xl flex flex-col py-2 items-center justify-center h-full transition-colors min-w-[102px] ${isActive ? "text-black " : "text-menu_text_color bg-menu_hover lg:bg-transparent hover:bg-menu_hover_second"}`
+    ? `rounded-[42px] flex flex-col py-2 items-center justify-center h-full transition-colors min-w-[102px] ${isActive ? "text-black " : "text-menu_text_color bg-menu_hover lg:bg-transparent hover:bg-menu_hover_second"}`
     : `flex items-center py-2 px-2.5 rounded-[42px] transition-colors ${isActive ? 'bg-white text-blue_primary' : 'hover:bg-menu_hover text-white'}`
     } ${hideOnMobile ? 'hidden lg:flex' : ''} ${additionalClassName}`;  // Добавляем additionalClassName
 
