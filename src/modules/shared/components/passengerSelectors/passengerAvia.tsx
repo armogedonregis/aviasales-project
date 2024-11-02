@@ -40,7 +40,7 @@ export const PassengerAvia: React.FC = () => {
   return (
     <div className="relative text-black">
       <button
-        className="lg:w-[350px] w-full h-[77px] px-4 py-2 bg-menu_white_17 rounded-br-3xl rounded-bl-3xl lg:rounded-none focus:outline-none flex flex-col items-center"
+        className="lg:w-[250px] 2xl:2xl:w-[350px] w-full h-[77px] px-4 py-2 bg-menu_white_17 rounded-br-3xl rounded-bl-3xl lg:rounded-none focus:outline-none flex flex-col lg:items-center"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="font-550 text-[22px] text-white">{t('passengers', { count: totalPassengers })}</span>

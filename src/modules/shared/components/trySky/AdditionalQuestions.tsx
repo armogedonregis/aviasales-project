@@ -31,12 +31,12 @@ const AdditionalQuestions: React.FC<AdditionalQuestionsProps> = ({ onQuestionCli
 
     return (
         <div className="my-4">
-            <h3 className="text-sm font-semibold mb-2">{t('additionalQuestions')}</h3>
+            <h3 className="text-sm font-semibold mb-2 text-white">{t('additionalQuestions')}</h3>
             <div className="space-y-2">
                 {visibleQuestions.map((question, index) => (
                     <button
                         key={index}
-                        className="text-left text-sm text-blue-600 hover:underline block"
+                        className="text-left text-[16px] font-500 text-blue_primary hover:underline block"
                         onClick={() => handleQuestionClick(question)}
                     >
                         {question}
@@ -45,7 +45,7 @@ const AdditionalQuestions: React.FC<AdditionalQuestionsProps> = ({ onQuestionCli
             </div>
             {questions.length > 3 && (
                 <button
-                    className="text-sm text-blue-600 hover:underline mt-2"
+                    className="text-sm text-blue_primary hover:underline mt-2"
                     onClick={() => setIsExpanded(!isExpanded)}
                 >
                     {isExpanded ? t('showLess') : t('showMore')}

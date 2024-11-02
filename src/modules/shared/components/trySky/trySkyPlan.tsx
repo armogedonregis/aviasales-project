@@ -110,58 +110,58 @@ const TrySkyPlan: React.FC = () => {
                     <div key={index} className={`flex ${message.type === 'assistant' ? 'justify-start max-w-[50%]' : 'justify-end'}`}>
                         <div>
                             <div className="text-lg font-medium px-5 text-white">{message.type === 'assistant' ? "Skai" : "You"}</div>
-                            <div className={`rounded-[37px] p-3 font-medium text-2xl text-black ${message.type === 'assistant' ? 'bg-white/50' : 'bg-white'}`}>
+                            <div className={`rounded-[37px] p-3 font-medium text-2xl text-white ${message.type === 'assistant' ? 'bg-white/50' : 'bg-white/10'}`}>
                                 {message.isLifehacks ? (
                                     <div>
-                                        <p className="font-bold mb-2">{t('lifehacksResponse').split('\n\n')[0]}</p>
+                                        <p className="font-medium mb-2">{t('lifehacksResponse').split('\n\n')[0]}</p>
                                         <ol className="list-decimal pl-5 space-y-2">
                                             {t('lifehacksResponse').split('\n\n').slice(1, -1).map((item, i) => (
-                                                <li key={i}>{item.substring(3)}</li>
+                                                <li className="text-[20px] font-medium" key={i}>{item.substring(3)}</li>
                                             ))}
                                         </ol>
                                         <p className="mt-2">{t('lifehacksResponse').split('\n\n').slice(-1)[0]}</p>
                                     </div>
                                 ) : message.isParisExcursions ? (
                                     <div>
-                                        <p className="font-bold mb-2">{t('parisExcursionsResponse').split('\n\n')[0]}</p>
+                                        <p className="font-medium mb-2">{t('parisExcursionsResponse').split('\n\n')[0]}</p>
                                         <ol className="list-decimal pl-5 space-y-2">
                                             {t('parisExcursionsResponse').split('\n\n').slice(1, -1).map((item, i) => (
-                                                <li key={i}>{item}</li>
+                                                <li className="text-[20px] font-medium" key={i}>{item}</li>
                                             ))}
                                         </ol>
                                     </div>
                                 ) : message.isRomeAttractions ? (
                                     <div>
-                                        <p className="font-bold mb-2">{t('romeAttractionsResponse').split('\n\n')[0]}</p>
+                                        <p className="font-medium mb-2">{t('romeAttractionsResponse').split('\n\n')[0]}</p>
                                         <ol className="list-decimal pl-5 space-y-2">
                                             {t('romeAttractionsResponse').split('\n\n').slice(1, -1).map((item, i) => (
-                                                <li key={i}>{item}</li>
+                                                <li className="text-[20px] font-medium" key={i}>{item}</li>
                                             ))}
                                         </ol>
                                         <p className="mt-2">{t('romeAttractionsResponse').split('\n\n').slice(-1)[0]}</p>
                                     </div>
                                 ) : message.isAmsterdamWeekend ? (
                                     <div>
-                                        <p className="font-bold mb-2">{t('amsterdamWeekendResponse').split('\n\n')[0]}</p>
+                                        <p className="font-medium mb-2">{t('amsterdamWeekendResponse').split('\n\n')[0]}</p>
                                         <ol className="list-decimal pl-5 space-y-2">
                                             {t('amsterdamWeekendResponse').split('\n\n').slice(1, -1).map((item, i) => (
-                                                <li key={i}>{item}</li>
+                                                <li className="text-[20px] font-medium" key={i}>{item}</li>
                                             ))}
                                         </ol>
                                         <p className="mt-2">{t('amsterdamWeekendResponse').split('\n\n').slice(-1)[0]}</p>
                                     </div>
                                 ) : message.isLandmarks ? (
                                     <div>
-                                        <p className="font-bold mb-2">{t('landmarksResponse').split('\n\n')[0]}</p>
+                                        <p className="font-medium text-[20px] mb-2">{t('landmarksResponse').split('\n\n')[0]}</p>
                                         <ol className="list-decimal pl-5 space-y-2">
                                             {t('landmarksResponse').split('\n\n').slice(1, -1).map((item, i) => (
-                                                <li key={i}>{item}</li>
+                                                <li className="text-[20px] font-550" key={i}>{item}</li>
                                             ))}
                                         </ol>
-                                        <p className="mt-2">{t('landmarksResponse').split('\n\n').slice(-1)[0]}</p>
+                                        <p className="mt-2 text-[20px] font-medium">{t('landmarksResponse').split('\n\n').slice(-1)[0]}</p>
                                     </div>
                                 ) : (
-                                    <p className="text-sm">{message.content}</p>
+                                    <p className="text-[20px] font-medium">{message.content}</p>
                                 )}
                             </div>
                         </div>
