@@ -53,7 +53,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ isTransitioning }) => {
     <BaseHeader
       isTransitioning={isTransitioning}
     >
-      <div className="container mx-auto px-2.5 xl:px-[120px] 2xl:px-[150px] pt-[80px]">
+      <div className="container w-full mx-auto px-2.5 lg:px-[150px] pt-[80px]">
         <motion.h1
           className="text-[40px] md:text-[76px] font-450 mb-12 text-center lg:text-left"
           initial={{ opacity: 0 }}
@@ -76,7 +76,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ isTransitioning }) => {
           </motion.span>
         </motion.h1>
         <div className="flex lg:flex-row flex-col w-full items-center gap-0.5 mt-6">
-          <div className="grid grid-cols-1 lg:flex lg:items-center gap-0.5 max-w-6xl">
+          <div className="grid grid-cols-1 lg:flex lg:items-center gap-0.5 w-full lg:justify-center">
             <button onClick={handleTrySkyClick} className="lg:flex hidden lg:items-center lg:justify-center rounded-tl-2xl rounded-bl-2xl lg:min-w-[157px] min-h-[77px] bg-skai-button">
               <span className="mr-2 lg:inline hidden">
                 <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +85,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ isTransitioning }) => {
                   <circle cx="7.5" cy="4.5" r="1.5" fill="white" />
                 </svg>
               </span>
-              <span className="text-2xl font-650">SKAI</span>
+              <span className="text-2xl font-550">SK.AI</span>
             </button>
             <div className="flex items-center lg:flex-1 rounded-t-2xl lg:rounded-r-none lg:rounded-l-none bg-menu_white_17">
               <input
@@ -153,14 +153,14 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ isTransitioning }) => {
             <div className="lg:flex-1">
               <PassengerAvia />
             </div>
-          </div>
-          <div className="lg:w-[350px] w-full lg:flex-1 mt-4 lg:mt-0">
-            <button
-              onClick={handleSearch}
-              className="px-6 py-4 w-full lg:min-h-[77px] bg-white text-blue_primary lg:bg-btn-tickets lg:text-white rounded-3xl lg:rounded-none lg:rounded-tr-3xl lg:rounded-br-3xl font-550 uppercase lg:text-[22px] lg:text-2xl hover:opacity-70 transition-all"
-            >
-              {t('search.findTickets')}
-            </button>
+            <div className="lg:w-[250px] w-full mt-4 lg:mt-0">
+              <button
+                onClick={handleSearch}
+                className="px-6 py-4 w-full lg:min-h-[77px] bg-white text-blue_primary lg:bg-btn-tickets lg:text-white rounded-3xl lg:rounded-none lg:rounded-tr-3xl lg:rounded-br-3xl font-550 uppercase lg:text-[22px] lg:text-2xl hover:opacity-70 transition-all"
+              >
+                {t('search.findTickets')}
+              </button>
+            </div>
           </div>
         </div>
       </div>

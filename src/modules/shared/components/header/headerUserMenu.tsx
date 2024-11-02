@@ -179,14 +179,11 @@ export const HeaderUserMenu: React.FC = () => {
                                 <ListboxOption
                                     key={language.code}
                                     value={language}
-                                    className="relative cursor-default px-1.5 select-none py-2 lg:pl-10 lg:pr-4 text-gray-900 ui-active:bg-blue-100 ui-active:text-blue-900 ui-not-active:bg-white ui-not-active:text-gray-900 hover:bg-blue-50 transition-colors duration-150 ease-in-out"
+                                    className="relative cursor-default px-5 select-none py-2 text-gray-900 ui-active:bg-blue-100 ui-active:text-blue-900 ui-not-active:bg-white ui-not-active:text-gray-900 hover:bg-blue-50 transition-colors duration-150 ease-in-out"
                                 >
                                     {({ selected }) => (
                                         <>
-                                            <span className={`hidden lg:block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
-                                                {language.name}
-                                            </span>
-                                            <span className="lg:absolute inset-y-0 left-0 flex items-center lg:pl-3">
+                                            <span className="flex items-center">
                                                 {language.flag}
                                             </span>
                                         </>

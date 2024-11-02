@@ -17,7 +17,7 @@ export default async function Home() {
     <>
       <div className="container mx-auto px-2.5 lg:px-[150px] mt-16 hidden lg:block">
         <div className="flex gap-4 pb-4 w-full">
-          <div className="relative min-w-[275px] h-[412px] rounded-2xl overflow-hidden ">
+          <div className="relative w-2/12 h-[412px] rounded-2xl overflow-hidden ">
             <Image
               src="/assets/images/home_page_1.png"
               alt=""
@@ -25,7 +25,7 @@ export default async function Home() {
               className="object-cover"
             />
           </div>
-          <div className="relative w-[680px] h-[412px] rounded-2xl overflow-hidden flex-shrink-0">
+          <div className="relative w-6/12 h-[412px] rounded-2xl overflow-hidden flex-shrink-0">
             <Image
               src="/assets/images/home_page_2.png"
               alt=""
@@ -36,7 +36,7 @@ export default async function Home() {
               LONDON TRIP
             </div>
           </div>
-          <div className="relative min-w-[465px] w-full h-[412px] rounded-2xl overflow-hidden">
+          <div className="relative w-4/12 h-[412px] rounded-2xl overflow-hidden">
             <Image
               src="/assets/images/home_page_3.png"
               alt=""

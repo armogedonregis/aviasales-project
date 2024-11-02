@@ -50,7 +50,7 @@ export const HotelHeader: React.FC<HotelHeaderProps> = ({ isTransitioning }) => 
     <BaseHeader
       isTransitioning={isTransitioning}
     >
-      <div className="container mx-auto px-5 lg:px-[150px] pt-[80px]">
+      <div className="container mx-auto px-5 lg:px-[120px] 2xl:px-[150px] pt-[80px]">
         <motion.h1
           className="text-4xl md:text-[76px] font-450 mb-12 text-center lg:text-left"
           initial={{ opacity: 0 }}
